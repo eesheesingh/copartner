@@ -1,0 +1,150 @@
+/* src/assets/blog/Blog.css */
+
+.blog-container {
+    display: flex;
+    margin-bottom: 1rem;
+    padding: 0 5rem;
+  }
+  
+  .blog-content-left {
+    flex: 1;
+    padding: 1rem;
+    align-content: center;
+    justify-content: center;
+  }
+  
+  .blog-content-left h2 {
+    color: #FFFFFF;
+  }
+  
+  .blog-content-right {
+    flex: 1;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .blog-box-content {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+  }
+  
+  .blog-box-three,
+  .blog-box-two {
+    flex: 1.5; /* Adjust the flex property for the left column box to make it wider */
+    margin: 0.5rem;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; /* Arrange the contents in a column */
+  }
+  
+  .blog-box-three img,
+  .blog-box-two img {
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+  }
+  
+  .apps-img {
+    width: 100%; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .left-box {
+    flex: 2; /* Adjust the flex property to make the left box wider */
+  }
+  
+  .blog-box-three .box-contents,
+  .blog-box-two .box-contents {
+    padding: 1rem 1.5rem;
+    margin-top: auto; /* Push content to the bottom */
+  }
+  
+  .blog-box-three p,
+  .blog-box-two p {
+    color: #ffffff6b;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+  
+  .blog-box-three,
+  .blog-box-two {
+    /* border: 1px solid #2C2735; */
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+  
+  .blog-box-three h3,
+  .blog-box-two h3 {
+    color: #FFFFFF;
+    margin-top: 0.5rem;
+  }
+  
+  .box-contents h3 {
+    font-size: 1.2rem;
+    font-weight: 100;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem; /* Add margin to separate the button from the blog boxes */
+  }
+
+  .explore-btn a{
+    font-size: 1rem;
+  box-shadow: inset 0 0 0 0 #fff;
+  border: 1.2px solid #fff;
+  border-radius:10px;
+  background-color: #fff;
+  color: #000;
+  text-decoration: none;
+  margin: 0 -.25rem;
+  padding: 1rem 1rem;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+  -webkit-border-radius:10px;
+  -moz-border-radius:10px;
+  -ms-border-radius:10px;
+  -o-border-radius:10px;
+  }
+
+  .explore-btn a:hover {
+    box-shadow: inset 200px 0 0 0 #000;
+    color: #fff;
+  }
+
+  .darken-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff19;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .blog-box-three:hover .darken-overlay,
+  .blog-box-two:hover .darken-overlay {
+    opacity: 1;
+  }
+  
+
+  @media screen and (max-width: 768px) {
+
+    .blog-container{
+        text-align: center;
+        flex-direction: column;
+        padding: 0 1rem;
+    }
+
+    .blog-box-content{
+        flex-direction: column;
+    }
+  }
