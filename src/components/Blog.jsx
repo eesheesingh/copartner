@@ -1,23 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Blog.css';
 import { blog1, blog2, blog3, blog4, blog5 } from '../assets';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
 
 const Blog = () => {
-  const [ref, inView] = useInView({
-    threshold: 0.5, // Trigger animation when at least 50% of the component is in view
-    triggerOnce: true, // Trigger animation only once
-  });
-
   return (
-    <motion.section
-      ref={ref}
-      className="section"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: inView ? 1 : 0 }} // Fade in when in view, fade out when not in view
-      transition={{ duration: 1 }}
-    >
+    <section className="section">
       <div className="blog-container">
         <div className="blog-content-left">
           <h2 className="subheading-color font-bold md:text-5xl text-3xl md:leading-[80px] leading-[40px]">
@@ -29,8 +16,8 @@ const Blog = () => {
             With Cobalt, managing your business finances is effortless,
             empowering, and anything but boring. Our intuitive platform brings
             clarity to your cash flow, simplifies your financial
-            decision-making, and fingertips.{" "}
-            <span style={{ color: "#FFF" }}>
+            decision-making, and fingertips.{' '}
+            <span style={{ color: '#FFF' }}>
               Say no to spreadsheets and tools designed in the 80s.
             </span>
           </p>
@@ -102,10 +89,10 @@ const Blog = () => {
       </div>
       <div className="button-container">
         <a href="#home" className="main-button">
-          Explore More +{" "}
+          Explore More +{' '}
         </a>
       </div>
-    </motion.section>
+    </section>
   );
 };
 

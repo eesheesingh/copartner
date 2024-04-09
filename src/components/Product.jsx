@@ -51,14 +51,16 @@ const Product = () => {
               </h3>
               <h4 className="text-xl font-semibold py-2">{step.title}</h4>
               <p className="mb-4 text-lg">{step.content}</p>
+              
+              {/* Image */}
+              
+                <img
+                  src={step.image}
+                  alt={`Product ${index + 1}`}
+                  className="w-30 self-end mx-auto"
+                />
+             
             </div>
-            {expandedStep === index && (
-              <img
-                src={step.image}
-                alt={`Product ${index + 1}`}
-                className="w-30 self-end mx-auto"
-              />
-            )}
           </div>
         ))}
       </div>
@@ -75,6 +77,7 @@ const Product = () => {
               <h4 className="text-2xl font-semibold text-white mb-4">
                 {step.title}
               </h4>
+              {/* Image */}
               {expandedStep === index && (
                 <div className="flex-1">
                   <img
@@ -93,11 +96,7 @@ const Product = () => {
                     ? step.content
                     : `${step.content.slice(0, 50)}...`}
                 </p>
-                {expandedStep !== index && (
-                  <span className="text-[#4ab4ed] text-xl cursor-pointer">
-                    ...
-                  </span>
-                )}
+                
               </div>
             </div>
           </div>
