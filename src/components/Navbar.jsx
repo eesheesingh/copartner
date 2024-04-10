@@ -75,7 +75,7 @@ const Navbar = () => {
             </div>
 
             
-            <div className="sm:hidden flex flex-1 justify-end items-center">
+            <div className="sm:hidden flex flex-1 justify-center items-center">
               <img
                 src={toggle ? undefined : menu}
                 alt="Menu"

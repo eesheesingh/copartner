@@ -22,78 +22,74 @@ import BlogPage from './components/BlogPage';
 
 const Home = () => {
   return (
-    <div className='text-white bg-[#06030E]'
-    >
-        <Navbar />
-        <div className={`md:mt-[5rem] mt-[5rem] ${styles.boxWidth}`} id='home'>
-          <Hero/>
-        </div>
+    <div className='text-white bg-[#06030E] px-4'> {/* Added padding-x */}
+      <Navbar />
+      <div className={`md:mt-[5rem] mt-[5rem] ${styles.boxWidth}`} id='home'>
+        <Hero/>
+      </div>
 
 
-        <div className={`md:mt-[2rem] mt-[1rem] ${styles.boxWidth}`}>
-          <Partner />
-          <div className='md:hidden'>
+      <div className={`md:mt-[2rem] mt-[1rem] ${styles.boxWidth}`}>
+        <Partner />
+        <div className='md:hidden'>
           <PartnersCarousel />
-          </div>
         </div>
-        <div className={`md:mt-[5rem] mt-[5rem] ${styles.boxWidth}`}>
-          <AboutUs />
-        </div>
-        <div className={`md:mt-[5rem] mt-[5rem] p-1 ${styles.boxWidth}`} id='features'>
-          <Features />
-        </div>
-        <div className={`md:mt-[1rem] md:px-[4rem] mt-[1rem] ${styles.boxWidth}`}>
-          <IconBox />
-        </div>
+      </div>
+      <div className={`md:mt-[5rem] mt-[5rem] ${styles.boxWidth}`}>
+        <AboutUs />
+      </div>
+      <div className={`md:mt-[5rem] mt-[5rem] p-1 ${styles.boxWidth}`} id='features'>
+        <Features />
+      </div>
+      <div className={`md:mt-[1rem] md:px-[4rem] mt-[1rem] ${styles.boxWidth}`}>
+        <IconBox />
+      </div>
 
-        <div className={`md:mt-[5rem] md:px-[10rem] mt-[5rem] md:block hidden ${styles.boxWidth}`}>
-          <Counter />
-        </div>
+      <div className={`md:mt-[5rem] md:px-[10rem] mt-[5rem] md:block hidden ${styles.boxWidth}`}>
+        <Counter />
+      </div>
 
-        <div className={`md:mt-[5rem] mt-[1rem] md:hidden ${styles.boxWidth}`}>
-          <CounterMob />
-        </div>
+      <div className={`md:mt-[5rem] mt-[1rem] md:hidden ${styles.boxWidth}`}>
+        <CounterMob />
+      </div>
 
-        <div className={`md:mt-[5rem] mt-[1rem] ${styles.boxWidth}`}>
-          <WhyUs />
-        </div>
+      <div className={`md:mt-[5rem] mt-[1rem] ${styles.boxWidth}`}>
+        <WhyUs />
+      </div>
 
-        <div className={`md:mt-[5rem] md:px-[5rem] mt-[1rem] md:block hidden ${styles.boxWidth}`} id='expertise'>
-          <Expertise />
-        </div>
+      <div className={`md:mt-[5rem] md:px-[5rem] mt-[1rem] md:block hidden ${styles.boxWidth}`} id='expertise'>
+        <Expertise />
+      </div>
 
-        <div className={`md:mt-[5rem] mt-[1rem] md:hidden ${styles.boxWidth}`} id='expertise'>
-          <ExpertMob />
-        </div>
+      <div className={`md:mt-[5rem] mt-[1rem] md:hidden ${styles.boxWidth}`} id='expertise'>
+        <ExpertMob />
+      </div>
 
-        <div className={`md:mt-[5rem] md:px-[5rem] mt-[1rem]${styles.boxWidth}`} >
-          <Product />
-        </div>
+      <div className={`md:mt-[5rem] md:px-[5rem] mt-[1rem]${styles.boxWidth}`} >
+        <Product />
+      </div>
 
-        <div className={`md:mt-[5rem] md:px-[5rem] mt-[1rem]${styles.boxWidth}`}>
-          <Stock />
-        </div>
+      <div className={`md:mt-[5rem] md:px-[5rem] mt-[1rem]${styles.boxWidth}`}>
+        <Stock />
+      </div>
 
-        <div className={`md:mt-[5rem] md:px-[2rem] mt-[1rem]${styles.boxWidth}`} id='blogs'>
-          <Blog />
-        </div>
+      <div className={`md:mt-[5rem] md:px-[2rem] mt-[1rem]${styles.boxWidth}`} id='blogs'>
+        <Blog />
+      </div>
 
-        <div className={`md:mt-[5rem] md:px-[2rem] mt-[1rem]${styles.boxWidth}`}>
-          <Testimonial />
-        </div>
+      <div className={`md:mt-[5rem] md:px-[2rem] mt-[1rem]${styles.boxWidth}`}>
+        <Testimonial />
+      </div>
 
-        <div className={`md:mt-[5rem] mt-[1rem] ${styles.boxWidth}`}>
-          <BlogPage />
-        </div>
+      <div className={`md:mt-[5rem] mt-[1rem] ${styles.boxWidth}`}>
+        <BlogPage />
+      </div>
 
-        <div className={`md:my-[5rem] mt-[1rem] ${styles.boxWidth}`}>
-          <Footer />
-        </div>
-
-        
-
-        </div>
+      <div className={`md:my-[5rem] mt-[1rem] ${styles.boxWidth}`}>
+        <Footer />
+      </div>
+    </div>
   )
 }
 
-export default Home
+export default Home;
