@@ -86,7 +86,7 @@ const Home = () => {
           <BlogPage />
         </div>
 
-        <div className={`md:mt-[5rem] mt-[1rem] ${styles.boxWidth}`}>
+        <div className={`md:my-[5rem] mt-[1rem] ${styles.boxWidth}`}>
           <Footer />
         </div>
 
