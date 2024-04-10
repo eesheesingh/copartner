@@ -1,19 +1,14 @@
 // Navbar.jsx
 import React, { useState } from "react";
-import Login from './SignUp';
+import Login from "./SignUp";
 import { logo, menu, hamburgerBg, close } from "../assets";
-import style from '../style'
-import { motion } from "framer-motion";
+import style from "../style";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [active, setActive] = useState("Home");
   const [toggle, setToggle] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
-
-  const menuVariants = {
-    hidden: { opacity: 0, scale: 0.5 },
-    visible: { opacity: 1, scale: 1 },
-  };
 
   const menuItems = [
     { id: "home", title: "Home" },
@@ -26,19 +21,17 @@ const Navbar = () => {
   const handleMenuItemClick = (menuItem) => {
     setActive(menuItem.title);
     setToggle(false);
-    
+
     const targetElement = document.getElementById(menuItem.id);
     if (targetElement) {
-      targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
 
   return (
     <>
       <div
-        className={`${style.paddingX} ${
-          style.flexCenter
-        } fixed top-0 z-50 w-full bg-[#06030E]`}
+        className={`${style.paddingX} ${style.flexCenter} fixed top-0 z-50 w-full bg-[#06030E]`}
       >
         <div className={`${style.boxWidth}`}>
           <nav className="w-full flex md:py-5 py-4 justify-between items-center">
@@ -52,29 +45,41 @@ const Navbar = () => {
                   key={menuItem.id}
                   onClick={() => handleMenuItemClick(menuItem)}
                   className={`font-poppins font-normal cursor-pointer text-[16px]
-                    ${active === menuItem.title ? "text-white" : "text-dimWhite"}
+                    ${
+                      active === menuItem.title ? "text-white" : "text-dimWhite"
+                    }
                     ${index === menuItems.length - 1 ? "mr-0" : "mr-10"}`}
                 >
-                  <a href="#hero" style={{ color: active === menuItem.title ? "#FFFFFF" : "#9CA3AF" }}>
+                  { menuItem.id === 'blogs' ? <Link to="blogs">Blogs</Link> : <a
+                    href="#hero"
+                    style={{
+                      color: active === menuItem.title ? "#FFFFFF" : "#9CA3AF",
+                    }}
+                  >
                     {menuItem.title}
-                  </a>
+                  </a>}
                 </li>
               ))}
             </ul>
 
-            <div style={{ display:"flex", marginLeft: "1rem" }}>
+            <div style={{ display: "flex", marginLeft: "1rem" }}>
               <button className="md:block hidden text-dimWhite text-[11px] py-1 px-4 ms-8 rounded-[36px] border border-solid border-white border-opacity-60  items-center">
                 Refer & Earn
               </button>
-              <button className="md:hidden flex text-dimWhite text-[11px] py-2 px-7 ms-8 rounded-md border border-none bg-[#ffffff2d] hover:bg-[#000] transition duration-300 items-center" onClick={() => setShowLogin(true)}>
+              <button
+                className="md:hidden flex text-dimWhite text-[11px] py-2 px-7 ms-8 rounded-md border border-none bg-[#ffffff2d] hover:bg-[#000] transition duration-300 items-center"
+                onClick={() => setShowLogin(true)}
+              >
                 Login
               </button>
-              <button className="md:block hidden text-dimWhite text-[11px] py-2 px-6 ms-8 rounded-md border bg-[#ffffff2c] border-none border-opacity-60  items-center" onClick={() => setShowLogin(true)}>
+              <button
+                className="md:block hidden text-dimWhite text-[11px] py-2 px-6 ms-8 rounded-md border bg-[#ffffff2c] border-none border-opacity-60  items-center"
+                onClick={() => setShowLogin(true)}
+              >
                 Login
               </button>
             </div>
 
-            
             <div className="sm:hidden flex flex-1 justify-center items-center">
               <img
                 src={toggle ? undefined : menu}
@@ -84,17 +89,17 @@ const Navbar = () => {
               />
 
               {/* Animated mobile menu */}
-              <motion.div
-                initial="hidden"
-                animate={toggle ? "visible" : "hidden"}
-                variants={menuVariants}
-                transition={{ duration: 0.3 }}
-                className="justify-center items-center fixed top-0 left-0 z-50 w-full bg-[#06030E] h-full p-3 bg-gradient-to-tr"
+              <div
+                className={`justify-center items-center fixed top-0 left-0 z-50 w-full bg-[#06030E] h-full p-3 bg-gradient-to-tr ${
+                  toggle ? "visible" : "hidden"
+                }`}
                 style={{
                   backgroundImage: `url(${hamburgerBg})`,
                   backgroundRepeat: "no-repeat",
                   backgroundPositionY: "bottom",
                   backgroundSize: "30rem",
+                  transition: "opacity 0.3s ease",
+                  opacity: toggle ? 1 : 0,
                 }}
               >
                 {/* Close button */}
@@ -106,7 +111,7 @@ const Navbar = () => {
                 </button>
 
                 {/* Menu items */}
-                <ul className="list-none flex flex-col justify-end items-center gap-4">
+                <ul className="list-none flex flex-col justify-end items-center gap-4 mt-8">
                   {/* Logo */}
                   <li className="font-poppins font-normal cursor-pointer text-[16px] text-white mb-6">
                     <img width={"200rem"} src={logo} alt="" />
@@ -118,14 +123,20 @@ const Navbar = () => {
                       key={menuItem.id}
                       onClick={() => handleMenuItemClick(menuItem)}
                       className={`font-poppins font-normal cursor-pointer text-[16px]
-                        ${
-                          active === menuItem.title
-                            ? "text-white font-medium"
-                            : "text-[#393F48]"
-                        }
-                        ${index === menuItems.length - 1 ? "mb-0" : "mb-4"}`}
+              ${
+                active === menuItem.title
+                  ? "text-white font-medium"
+                  : "text-[#393F48]"
+              }
+              ${index === menuItems.length - 1 ? "mb-0" : "mb-4"}`}
                     >
-                      <a href={`#${menuItem.id}`} style={{ color: active === menuItem.title ? "#FFFFFF" : "#9CA3AF" }}>
+                      <a
+                        href={`#${menuItem.id}`}
+                        style={{
+                          color:
+                            active === menuItem.title ? "#FFFFFF" : "#9CA3AF",
+                        }}
+                      >
                         {menuItem.title}
                       </a>
                     </li>
@@ -138,7 +149,7 @@ const Navbar = () => {
                     </button>
                   </li>
                 </ul>
-              </motion.div>
+              </div>
             </div>
           </nav>
         </div>

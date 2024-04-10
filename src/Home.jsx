@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Import Link from React Router
-import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Partner from "./components/Partners";
 import styles from './style';
@@ -15,15 +13,12 @@ import Expertise from './components/Expertise';
 import ExpertMob from './components/ExpertMob';
 import Product from './components/Product';
 import Stock from './components/Stock';
-import Blog from './components/Blog';
-import Testimonial from './components/Testimonial';
-import Footer from './components/Footer';
-import BlogPage from './components/BlogPage';
+// import BlogPage from './components/BlogPage';
 
 const Home = () => {
   return (
     <div className='text-white bg-[#06030E] px-4'> {/* Added padding-x */}
-      <Navbar />
+      
       <div className={`md:mt-[5rem] mt-[5rem] ${styles.boxWidth}`} id='home'>
         <Hero/>
       </div>
@@ -72,22 +67,10 @@ const Home = () => {
       <div className={`md:mt-[5rem] md:px-[5rem] mt-[1rem]${styles.boxWidth}`}>
         <Stock />
       </div>
-
-      <div className={`md:mt-[5rem] md:px-[2rem] mt-[1rem]${styles.boxWidth}`} id='blogs'>
-        <Blog />
-      </div>
-
-      <div className={`md:mt-[5rem] md:px-[2rem] mt-[1rem]${styles.boxWidth}`}>
-        <Testimonial />
-      </div>
-
+{/* 
       <div className={`md:mt-[5rem] mt-[1rem] ${styles.boxWidth}`}>
         <BlogPage />
-      </div>
-
-      <div className={`md:my-[5rem] mt-[1rem] ${styles.boxWidth}`}>
-        <Footer />
-      </div>
+      </div> */}
     </div>
   )
 }
