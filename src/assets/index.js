@@ -48,6 +48,8 @@ import instagram from './instagram.png';
 import WhyUs1 from './whyus1.png';
 import WhyUs2 from './whyus2.png';
 import WhyUs3 from './whyus3.png';
+import AD1 from './Website Banners-01 (1).jpg';
+import AD2 from './Website banner 2-01 (1).jpg';
 
 export {
     background,
@@ -100,4 +102,6 @@ export {
     WhyUs1,
     WhyUs2,
     WhyUs3,
+    AD1,
+    AD2,
 }

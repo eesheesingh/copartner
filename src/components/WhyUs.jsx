@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Ad, WhyUs1, WhyUs2, WhyUs3 } from '../assets';
+import { AD2, WhyUs1, WhyUs2, WhyUs3 } from '../assets';
 
 const WhyUs = () => {
   return (
@@ -46,7 +46,7 @@ const WhyUs = () => {
 
       {/* Banner Image Section */}
       <section className="max-w-6xl my-12 mx-5">
-        <img src={Ad} alt="Banner" className="w-full rounded-lg shadow-md" />
+        <img src={AD2} alt="Banner" className="w-full rounded-lg shadow-md" />
       </section>
     </motion.div>
   );

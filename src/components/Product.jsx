@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { svg1, svg2, svg3, svg4 } from '../assets';
 import { steps } from './constants/data';
 
 const Product = () => {

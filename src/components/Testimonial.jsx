@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Coin, LeftIcon, profile, rightIcon } from '../assets';
-import './Testimonial.css'
+import './css/Testimonial.css'
 
 const Testimonial = () => {
   const testimonialsData = [

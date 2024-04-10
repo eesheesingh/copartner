@@ -1,5 +1,5 @@
 import React from 'react';
-import { User, AP, Search, Ad } from '../assets';
+import { User, AP, Search, AD1 } from '../assets';
 
 const IconBox = () => {
   return (
@@ -33,7 +33,7 @@ const IconBox = () => {
 
       {/* Banner Image Section */}
       <div className="w-full md:h-96 h-20 p-2 mb-2 flex justify-center items-center">
-        <img src={Ad} alt="" className="md:max-w-full md:h-full object-cover" />
+        <img src={AD1} alt="" className="md:max-w-full md:h-full object-cover" />
       </div>
     </div>
   );

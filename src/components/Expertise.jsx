@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import './Expertise.css';
+import './css/Expertise.css';
 import { background } from '../assets';
 import { IoChevronForwardOutline } from "react-icons/io5";
 import { expertsData } from './constants/data';

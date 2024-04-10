@@ -1,22 +1,24 @@
-import React from 'react'
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Partner from "./components/Partners"
-import styles from './style'
-import PartnersCarousel from './components/PartnersCarousel'
-import AboutUs from './components/AboutUs'
-import Features from './components/Features'
-import IconBox from './components/IconBox'
-import Counter from './components/Counter'
-import CounterMob from './components/CounterMob'
-import WhyUs from './components/WhyUs'
-import Expertise from './components/Expertise'
-import ExpertMob from './components/ExpertMob'
-import Product from './components/Product'
-import Stock from './components/Stock'
-import Blog from './components/Blog'
-import Testimonial from './components/Testimonial'
-import Footer from './components/Footer'
+import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link from React Router
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import Partner from "./components/Partners";
+import styles from './style';
+import PartnersCarousel from './components/PartnersCarousel';
+import AboutUs from './components/AboutUs';
+import Features from './components/Features';
+import IconBox from './components/IconBox';
+import Counter from './components/Counter';
+import CounterMob from './components/CounterMob';
+import WhyUs from './components/WhyUs';
+import Expertise from './components/Expertise';
+import ExpertMob from './components/ExpertMob';
+import Product from './components/Product';
+import Stock from './components/Stock';
+import Blog from './components/Blog';
+import Testimonial from './components/Testimonial';
+import Footer from './components/Footer';
+import BlogPage from './components/BlogPage';
 
 const Home = () => {
   return (
@@ -26,6 +28,8 @@ const Home = () => {
         <div className={`md:mt-[5rem] mt-[5rem] ${styles.boxWidth}`} id='home'>
           <Hero/>
         </div>
+
+
         <div className={`md:mt-[2rem] mt-[1rem] ${styles.boxWidth}`}>
           <Partner />
           <div className='md:hidden'>
@@ -79,8 +83,14 @@ const Home = () => {
         </div>
 
         <div className={`md:mt-[5rem] mt-[1rem] ${styles.boxWidth}`}>
+          <BlogPage />
+        </div>
+
+        <div className={`md:mt-[5rem] mt-[1rem] ${styles.boxWidth}`}>
           <Footer />
         </div>
+
+        
 
         </div>
   )

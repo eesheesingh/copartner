@@ -1,7 +1,7 @@
 // src/components/assets/expertise/expertise.js
 
 import React from 'react';
-import './Expertise.css';
+import './css/Expertise.css';
 import { background } from '../assets';
 import { IoChevronForwardOutline } from "react-icons/io5";
 import { useState } from 'react';
