@@ -42,11 +42,11 @@ const Home = () => {
         <div className={`md:mt-[5rem] mt-[5rem] p-1 ${styles.boxWidth}`} id='features'>
           <Features />
         </div>
-        <div className={`md:mt-[1rem] mt-[1rem] ${styles.boxWidth}`}>
+        <div className={`md:mt-[1rem] md:px-[4rem] mt-[1rem] ${styles.boxWidth}`}>
           <IconBox />
         </div>
 
-        <div className={`md:mt-[5rem] mt-[5rem] md:block hidden ${styles.boxWidth}`}>
+        <div className={`md:mt-[5rem] md:px-[10rem] mt-[5rem] md:block hidden ${styles.boxWidth}`}>
           <Counter />
         </div>
 
@@ -58,7 +58,7 @@ const Home = () => {
           <WhyUs />
         </div>
 
-        <div className={`md:mt-[5rem] mt-[1rem] md:block hidden ${styles.boxWidth}`} id='expertise'>
+        <div className={`md:mt-[5rem] md:px-[5rem] mt-[1rem] md:block hidden ${styles.boxWidth}`} id='expertise'>
           <Expertise />
         </div>
 
@@ -66,19 +66,19 @@ const Home = () => {
           <ExpertMob />
         </div>
 
-        <div className={`md:mt-[5rem] mt-[1rem]${styles.boxWidth}`} >
+        <div className={`md:mt-[5rem] md:px-[5rem] mt-[1rem]${styles.boxWidth}`} >
           <Product />
         </div>
 
-        <div className={`md:mt-[5rem] mt-[1rem]${styles.boxWidth}`}>
+        <div className={`md:mt-[5rem] md:px-[5rem] mt-[1rem]${styles.boxWidth}`}>
           <Stock />
         </div>
 
-        <div className={`md:mt-[5rem] mt-[1rem]${styles.boxWidth}`} id='blogs'>
+        <div className={`md:mt-[5rem] md:px-[2rem] mt-[1rem]${styles.boxWidth}`} id='blogs'>
           <Blog />
         </div>
 
-        <div className={`md:mt-[5rem] mt-[1rem]${styles.boxWidth}`}>
+        <div className={`md:mt-[5rem] md:px-[2rem] mt-[1rem]${styles.boxWidth}`}>
           <Testimonial />
         </div>
 
