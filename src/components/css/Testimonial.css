@@ -137,12 +137,12 @@
 
     .testimonial p{
         font-size: 15px;
-        line-height: 2;
+        line-height: 1.5;
     }
     
     .testimonial {
       font-size: 16px; /* Decrease font size for smaller screens */
-      padding: 1.5rem; /* Adjust padding for smaller screens */
+      padding: 1.1rem; /* Adjust padding for smaller screens */
     }
     
     .author-image {

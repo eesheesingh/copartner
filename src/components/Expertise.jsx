@@ -53,7 +53,7 @@ const Expertise = () => {
     >
       <section>
         <div className='md:text-left text-center'>
-            <h2 className="subheading-color font-bold md:text-5xl text-4xl md:leading-[80px] leading-[40px] md:pl-[50px]">Our Expertise</h2>
+            <h2 className="subheading-color font-bold md:text-6xl text-4xl md:leading-[80px] leading-[40px] md:pl-[50px]">Our Expertise</h2>
             <p className="text-90 md:text-xl text-[#ffffff7d] mb-6 md:px-[3rem] px-4">
             Guiding your investments to Greatness: Our Expertise, Your Financial Advantage!
             </p>
