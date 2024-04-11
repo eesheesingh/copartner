@@ -11,6 +11,7 @@ import Home from "./Home";
 import ContactUs from './components/ContactUs.jsx'
 import BlogPage from "./components/BlogPage.jsx";
 import ReferEarn from "./components/ReferEarn.jsx";
+import AboutUsPage from "./components/AboutUsPage/AboutPage.jsx";
 
 function App() {
   const router = createBrowserRouter(
@@ -29,6 +30,7 @@ function App() {
           }
         />
          <Route path="contact-us" element={<ContactUs />} />
+         <Route path="about-us" element={<AboutUsPage />} />
           <Route path="/blogs/:blogId" element={<BlogPage />} />
           <Route path="refer&earn" element={<ReferEarn />} />
       </Route>

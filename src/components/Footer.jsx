@@ -2,7 +2,7 @@ import React from "react";
 import { logo, facebook, linkedin, twitter, instagram } from "../assets";
 
 const ProductList = [
-  { name: "About Us", link: "/about" },
+  { name: "About Us", link: "/about-us" },
   { name: "FAQ's", link: "/faqs" },
   { name: "Privacy Policy", link: "/privacy" },
   { name: "Terms of Service", link: "/terms_of_service" },
@@ -47,14 +47,14 @@ const Footer = () => {
             Product
           </span>
           {ProductList.map((product) => (
-            <a
-              to={product.link}
-              key={product.link}
-              className="font-normal text-[0.9rem] text-left leading-[14.7px] text-dimWhite hover:text-white"
-            >
-              {product.name}
-            </a>
-          ))}
+  <a
+    href={product.link} // Update href to the link of the AboutUs page ("/about")
+    key={product.link}
+    className="font-normal text-[0.9rem] text-left leading-[14.7px] text-dimWhite hover:text-white"
+  >
+    {product.name}
+  </a>
+))}
         </div>
         <div className="flex flex-col justify-between w-[117px] h-[105px] mt-[5px]">
           <span className="w-[48px] h-[15px] font-medium text-[1.2rem] leading-[14.7px] mb-4 text-white">

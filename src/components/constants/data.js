@@ -1,4 +1,4 @@
-import { ExpertImg, blog1, blog2, blog3, blog4, blog5, svg1, svg2,  svg3, svg4, } from "../../assets";
+import { ExpertImg, blog1, blog2, blog3, blog4, blog5, svg1, svg2,  svg3, svg4, aboutFeature, aboutFeature2, aboutFeature3, vision, vision2 } from "../../assets";
 
 export const expertsData = [
     {
@@ -291,3 +291,74 @@ export  const steps = [
   
   ];
   
+  export const mission_vision = [
+    {
+      id: 1,
+      image: vision,
+      title: 'Mission',
+      des: 'Our mission at Copartner is to empower traders and analysts by providing a trusted platform where they can connect, collaborate and thrive in the world of stock market trading. Through our user-friendly platform and valuable resources, we aim to foster a community-driven environment that promotes transparency, education and success for all participants. Join us as we will revolutionise the way traders and analysts interact, making the stock market accessible and profitable for everyone.'
+    }, 
+    {
+      id: 2,
+      image: vision2,
+      title: 'Vision',
+      des: 'At Copartner, our vision is to become the go-to platform for traders and analysts, revolutionising stock market trading and investing. We aspire to create a vibrant community where knowledge is shared freely, empowering individuals to make informed decisions and achieve financial success. With our user-centric approach and innovative solutions, we aim to simplify access to market insights,encouraging a culture of collaboration and growth for all. '
+    }
+  ]
+
+  export const aboutUs_data = [
+    {
+      id: "1",
+      content:
+        "Gain access to insights and strategies curated by SEBI-registered analysts, ensuring informed decisions in your trading journey.",
+      title: "Expert Guidance",
+      img: aboutFeature,
+    },
+    {
+      id: "2",
+      content:
+        "Join a vibrant community of experts and analysts, where you can interact, exchange ideas and stay updated on market trends. Engage in discussions, attend webinars and network with like-minded individuals.",
+      title: "Active Community",
+      img: aboutFeature2,
+    },
+    {
+      id: "3",
+      content:
+        "Navigate the complexities of the stock market with ease using our intuitive tools and resources. From advanced analytics to real-time market data and educational materials, our platform provides everything you need.",
+      title: "User-Friendly Tools",
+      img: aboutFeature3,
+    },
+  ];
+  
+  export const faq_data = [
+    {
+      id: 1,
+      title: 'What type of research do you provide?',
+      des: 'We provide comprehensive research reports, market analysis and trading strategies across various sectors and assets to help traders make informed investment and trading decisions.'
+    },
+    {
+      id: 2,
+      title: 'How can I access your research reports and analysis?',
+      des: "Our research reports and analysis are available to subscribers through our online platform. Once you subscribe to our services, you'll gain access to our library of research content, which you can view and download at your convenience."
+    },
+    {
+      id: 3,
+      title: 'Do you offer educational resources for beginner traders?',
+      des: "Yes, we offer educational resources, such as webinars, tutorials, and articles, designed to help beginner traders understand the fundamentals of investing and trading. These resources cover topics like technical analysis, fundamental analysis, risk management and many more topics."
+    },
+    {
+      id: 4,
+      title: 'How often do you update your research?',
+      des: "We update our research regularly to reflect the latest market trends and developments. Typically, we publish new research reports and analysis on a weekly basis, ensuring our clients have access to up-to-date information."
+    },
+    {
+      id: 5,
+      title: 'What type of research do you provide?',
+      des: 'We provide comprehensive research reports, market analysis and trading strategies across various sectors and assets to help traders make informed investment and trading decisions.'
+    },
+    {
+      id: 6,
+      title: 'How can I access your research reports and analysis?',
+      des: "Our research reports and analysis are available to subscribers through our online platform. Once you subscribe to our services, you'll gain access to our library of research content, which you can view and download at your convenience."
+    },
+  ]

@@ -59,7 +59,12 @@ import lorem2 from './loremImg2.png'
 import lorem3 from './loremImg3.png'
 import dollor from './dollor.png'
 import referearn from './referearn.png'
-
+import about_us from './about_us.png'
+import vision from './about_vision.png'
+import vision2 from './about_vision2.png'
+import aboutFeature from './aboutfeature.png'
+import aboutFeature2 from './aboutfeature2.png'
+import aboutFeature3 from './aboutfeature3.png'
 
 export {
     background,
@@ -123,4 +128,10 @@ export {
     lorem3,
     dollor,
     referearn,
+    about_us,
+    vision,
+    vision2,
+    aboutFeature,
+    aboutFeature2,
+    aboutFeature3,
 }
