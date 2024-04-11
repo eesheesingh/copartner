@@ -102,7 +102,7 @@ const Testimonial = () => {
                   className="author-image"
                   whileTap={{ scale: 0.9 }}
                 />
-                <div className="author-details">
+                <div className="author-details text-white">
                   <h5 className="author-name">{testimonialsData[currentTestimonial].author}</h5>
                   <h6 className="author-designation">{testimonialsData[currentTestimonial].designation}</h6>
                 </div>

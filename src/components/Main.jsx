@@ -10,9 +10,9 @@ const Main = () => {
     <div>
       <Navbar />
       <Outlet />
-      <div className={`md:mt-[5rem] md:px-[2rem] mt-[1rem]${styles.boxWidth}`}>
+      {/* <div className={`md:mt-[5rem] md:px-[2rem] mt-[1rem]${styles.boxWidth}`}>
         <Testimonial />
-      </div>
+      </div> */}
       <div className={`md:my-[5rem] mt-[1rem] ${styles.boxWidth}`}>
         <Footer />
       </div>

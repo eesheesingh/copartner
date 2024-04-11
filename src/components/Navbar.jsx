@@ -21,6 +21,8 @@ const Navbar = () => {
   const handleMenuItemClick = (menuItem) => {
     setActive(menuItem.title);
     setToggle(false);
+    
+    
 
     const targetElement = document.getElementById(menuItem.id);
     if (targetElement) {
@@ -50,17 +52,26 @@ const Navbar = () => {
                     }
                     ${index === menuItems.length - 1 ? "mr-0" : "mr-10"}`}
                 >
-                  { menuItem.id === 'blogs' ? <Link to="blogs">Blogs</Link> : <a
-                    href="#hero"
-                    style={{
-                      color: active === menuItem.title ? "#FFFFFF" : "#9CA3AF",
-                    }}
-                  >
-                    {menuItem.title}
-                  </a>}
-                </li>
-              ))}
+                  { menuItem.id === 'blogs' ? (
+                      <Link to="/blogs">Blogs</Link>
+                    ) : menuItem.id === 'contact' ? (
+                      <Link to="/contact-us">Contact Us</Link>
+                    ) : (
+                      <a
+                        href={`#${menuItem.id}`}
+                        style={{
+                          color: active === menuItem.title ? "#FFFFFF" : "#9CA3AF",
+                        }}
+                      >
+                        {menuItem.title}
+                      </a>
+                    )}
+                  </li>
+                ))}
             </ul>
+
+            
+            
 
             <div style={{ display: "flex", marginLeft: "1rem" }}>
               <button className="md:block hidden text-dimWhite text-[11px] py-1 px-4 ms-8 rounded-[36px] border border-solid border-white border-opacity-60  items-center">

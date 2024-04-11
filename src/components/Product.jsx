@@ -16,14 +16,14 @@ const Product = () => {
       <div className="flex md:flex-row flex-col mb-8 md:text-left text-center">
         {/* Left Column */}
         <div className="flex-1">
-          <h2 className="subheading-color font-bold md:text-6xl text-4xl md:leading-[80px] leading-[40px] md:pl-[50px]">
+          <h2 className="subheading-color font-bold md:text-6xl text-4xl md:leading-[80px] leading-[40px]">
             How Our Product Works?
           </h2>
         </div>
 
         {/* Right Column */}
         <div className="flex-1">
-          <p className="text-90 md:text-xl text-[#ffffff7d] mb-6 md:px-[3rem] px-4">
+          <p className="text-90 md:text-xl text-[#ffffff7d] mb-6 md:px-[1rem] px-4">
             Our portal seamlessly connects stock market analysts with traders,
             offering real-time insights and empowering informed decisions.
             Traders access advanced tools, while analysts expand their reach.

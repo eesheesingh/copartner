@@ -8,12 +8,14 @@ import Main from "./components/Main";
 import styles from "./style";
 import Blog from "./components/Blog";
 import Home from "./Home";
+import ContactUs from './components/ContactUs.jsx'
+import BlogPage from "./components/BlogPage.jsx";
 
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<Main />}>
-        <Route path="" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route
           path="blogs"
           element={
@@ -25,7 +27,12 @@ function App() {
             </div>
           }
         />
+         <Route path="contact-us" element={<ContactUs />} />
+          <Route path="/blogs/:blogId" element={<BlogPage />} />
       </Route>
+      
+
+      
     )
   );
 

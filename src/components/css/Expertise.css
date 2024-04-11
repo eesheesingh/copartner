@@ -2,7 +2,7 @@
 
 .expert-grid {
   display: grid;
-  padding: 0 5rem;
+  padding: 0 1rem;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }

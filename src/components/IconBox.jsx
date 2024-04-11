@@ -5,7 +5,7 @@ const IconBox = () => {
   return (
     <div>
       {/* Features Section */}
-      <div className="flex md:flex-row flex-col py-4 md:px-[8rem] px-1">
+      <div className="flex md:flex-row flex-col py-4 px-1">
         <div className="icon-box w-full md:w-1/3 p-8 rounded-lg shadow-md hover:bg-[#ffffff44] transition duration-300">
           <img src={User} alt="" />
           <div className="text mt-4">

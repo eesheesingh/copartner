@@ -50,6 +50,10 @@ import WhyUs2 from './whyus2.png';
 import WhyUs3 from './whyus3.png';
 import AD1 from './Website Banners-01 (1).jpg';
 import AD2 from './Website banner 2-01 (1).jpg';
+import contact from './contact.png'
+import message from './message.png'
+import location from './location.png'
+import call from './call.png'
 
 export {
     background,
@@ -104,4 +108,8 @@ export {
     WhyUs3,
     AD1,
     AD2,
+    contact,
+    message,
+    location,
+    call,
 }

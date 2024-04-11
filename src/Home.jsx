@@ -17,9 +17,13 @@ import Stock from './components/Stock';
 
 const Home = () => {
   return (
-    <div className='text-white bg-[#06030E] px-4'> {/* Added padding-x */}
+    <div
+      className={`flex md:flex-col flex-col ${styles.paddingX} md:px-[7rem] px-0 expertise-Bg`}
+    >
+      <div className="flex flex-col md:gap-[2rem] gap-[1rem] text-white">
+    <div className='text-white bg-[#06030E]s'> {/* Added padding-x */}
       
-      <div className={`md:mt-[5rem] mt-[5rem] ${styles.boxWidth}`} id='home'>
+      <div className={`md:mt-[5rem] mt-[5rem] ${styles.boxWidth}`}>
         <Hero/>
       </div>
 
@@ -36,11 +40,11 @@ const Home = () => {
       <div className={`md:mt-[5rem] mt-[5rem] p-1 ${styles.boxWidth}`} id='features'>
         <Features />
       </div>
-      <div className={`md:mt-[1rem] md:px-[4rem] mt-[1rem] ${styles.boxWidth}`}>
+      <div className={`md:mt-[1rem] mt-[1rem] ${styles.boxWidth}`}>
         <IconBox />
       </div>
 
-      <div className={`md:mt-[5rem] md:px-[10rem] mt-[5rem] md:block hidden ${styles.boxWidth}`}>
+      <div className={`md:mt-[5rem] mt-[5rem] md:block hidden ${styles.boxWidth}`}>
         <Counter />
       </div>
 
@@ -52,7 +56,7 @@ const Home = () => {
         <WhyUs />
       </div>
 
-      <div className={`md:mt-[5rem] md:px-[5rem] mt-[1rem] md:block hidden ${styles.boxWidth}`} id='expertise'>
+      <div className={`md:mt-[5rem] mt-[1rem] md:block hidden ${styles.boxWidth}`} id='expertise'>
         <Expertise />
       </div>
 
@@ -60,17 +64,21 @@ const Home = () => {
         <ExpertMob />
       </div>
 
-      <div className={`md:mt-[5rem] md:px-[5rem] mt-[1rem]${styles.boxWidth}`} >
+      <div className={`md:mt-[5rem] mt-[1rem]${styles.boxWidth}`} >
         <Product />
       </div>
 
-      <div className={`md:mt-[5rem] md:px-[5rem] mt-[1rem]${styles.boxWidth}`}>
+      <div className={`md:mt-[5rem] mt-[1rem]${styles.boxWidth}`}>
         <Stock />
       </div>
+
+      
 {/* 
       <div className={`md:mt-[5rem] mt-[1rem] ${styles.boxWidth}`}>
         <BlogPage />
       </div> */}
+    </div>
+    </div>
     </div>
   )
 }

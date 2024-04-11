@@ -1,97 +1,40 @@
-import React from 'react';
-import './css/Blog.css';
-import { blog1, blog2, blog3, blog4, blog5 } from '../assets';
+import React from "react";
+import styles from "../style";
+import BlogGrid from "./BlogExplore";
 
 const Blog = () => {
   return (
-    <section className="section">
-      <div className="blog-container">
-        <div className="blog-content-left">
-          <h2 className="subheading-color font-bold md:text-5xl text-3xl md:leading-[80px] leading-[40px]">
-            Our Blogs
-          </h2>
-        </div>
-        <div className="blog-content-right">
-          <p className="text-90 md:text-xl text-[#ffffff7d]">
-            With Cobalt, managing your business finances is effortless,
-            empowering, and anything but boring. Our intuitive platform brings
-            clarity to your cash flow, simplifies your financial
-            decision-making, and fingertips.{' '}
-            <span style={{ color: '#FFF' }}>
-              Say no to spreadsheets and tools designed in the 80s.
-            </span>
+    <section id="" className={`flex flex-col ${styles.paddingX} `}>
+      <div
+        className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6 z-10 md:bottom-[10rem] text-center`}
+      >
+        <div className="justify-between items-center w-full md:pt-0 pt-[5rem]">
+          <span className="flex-1 font-poppins font-semibold md:text-[62px] text-[36px] text-gradient md:leading-[84px] leading-[48px]">
+            Your team, <br /> reimagined.
+          </span>
+          <p className="mt-4 text-center text-white md:text-xl text-sm md:block hidden">
+            Take your team up a level with easy-to-use tools, effortless
+            <br />
+            towards successful templates and efficient workflows.
+          </p>
+
+          <p className="mt-4 text-center text-white md:text-xl text-sm md:hidden">
+            Take your team up a level with easy-to-use tools, effortless{" "}
+            templates, and efficient workflows.
           </p>
         </div>
       </div>
-      <div className="blog-container">
-        <div className="blog-box-content">
-          <div className="blog-box-three">
-            <img src={blog1} alt="Box 1" />
-            <div className="darken-overlay"></div>
-            <div className="box-contents">
-              <h3 className="box-subheading">Lorem Ipsum dolor simple</h3>
-              <p className="box-para">
-                All your data and finances in one place to provide quick
-                answers and make decisions instantly.
-              </p>
-            </div>
-          </div>
-          <div className="blog-box-three">
-            <img src={blog2} alt="Box 2" />
-            <div className="darken-overlay"></div>
-            <div className="box-contents">
-              <h3 className="box-subheading">Control Finances On the Go</h3>
-              <p className="box-para">
-                Have full control of your business finances on the go using our
-                iOS/Android mobile apps. Because, you know, it’s 2023.
-              </p>
-            </div>
-          </div>
-          <div className="blog-box-three">
-            <img src={blog3} alt="Box 3" />
-            <div className="darken-overlay"></div>
-            <div className="box-contents">
-              <h3 className="box-subheading">Lorem Ipsum dolor simple</h3>
-              <p className="box-para">
-                Choose the alerts you need and receive them via email, mobile
-                or Slack. Review and take action in one click.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <div className="blog-container">
-        <div className="blog-box-content">
-          <div className="blog-box-two left-box">
-            <img src={blog4} className="apps-img" alt="Box 4" />
-            <div className="darken-overlay"></div>
-            <div className="box-contents">
-              <h3 className="box-subheading">Built-in Integrations</h3>
-              <p>
-                Bring your data with our built-in integrations for accounting,
-                revenue tools and banking.
-              </p>
-            </div>
-          </div>
-          <div className="blog-box-two right-box">
-            <img src={blog5} alt="Box5" />
-            <div className="darken-overlay"></div>
-            <div className="box-contents">
-              <h3 className="box-subheading">Lorem Ipsum dolor simple</h3>
-              <p>
-                Lightning fast. Shortcuts for everything. Command+K on Mac,
-                Ctrl+K on Windows. Dark mode.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="button-container">
-        <a href="#home" className="main-button">
-          Explore More +{' '}
-        </a>
-      </div>
+      <section className=" w-full text-center md:mb-12 mt-20">
+        <h2 className="md:text-[50px] text-[30px] md:leading-[50px] font-bold pb-2 text-left leading-[51px] md:mb-6 px-4 subheading-color">
+          Top Blogs
+        </h2>
+        <p className="font-normal text-[#A1A1AACC] md:text-[18px] text-left text-[11px] md:leading-[28px] leading-[17px] mb-8 px-4">
+          Dive into the expertise of our SEBI registered research analysts,
+          guiding you towards trading success with precision and insight.
+        </p>
+        <BlogGrid />
+      </section>
     </section>
   );
 };
