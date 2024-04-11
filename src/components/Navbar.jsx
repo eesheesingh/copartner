@@ -155,9 +155,11 @@ const Navbar = () => {
 
                   {/* Refer & Earn button */}
                   <li className="mt-4">
-                    <button className="text-dimWhite text-[11px] py-1 px-4 rounded-[36px] border border-solid border-white border-opacity-60 flex  items-center">
-                      Refer & Earn
-                    </button>
+                  <Link to="/refer&earn">
+                      <button className="md:block hidden text-dimWhite text-[11px] py-1 px-4 ms-8 rounded-[36px] border border-solid border-white border-opacity-60  items-center">
+                        Refer & Earn
+                      </button>
+                    </Link>
                   </li>
                 </ul>
               </div>

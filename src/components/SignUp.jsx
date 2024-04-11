@@ -25,9 +25,9 @@ const SignUp = ({ onClose }) => {
       <div className="bg-[#18181B] p-6 rounded-lg w-80 relative">
         <IoClose className="text-gray-400 cursor-pointer hover:text-white absolute top-4 right-4" onClick={onClose} />
         <div className="flex justify-between items-center mb-4 text-center">
-          <h2 className="text-2xl font-semibold">Sign Up</h2>
+          <h2 className="text-2xl font-semibold text-white">Sign Up</h2>
         </div>
-        <p className="text-gray-300 text-center mb-4">Full access to any of our products.</p>
+        <p className="text-gray-300 text-left mb-4">Full access to any of our products.</p>
         <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
           <input
             type="text"

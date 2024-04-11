@@ -54,6 +54,12 @@ import contact from './contact.png'
 import message from './message.png'
 import location from './location.png'
 import call from './call.png'
+import lorem from './loremImg.png'
+import lorem2 from './loremImg2.png'
+import lorem3 from './loremImg3.png'
+import dollor from './dollor.png'
+import referearn from './referearn.png'
+
 
 export {
     background,
@@ -112,4 +118,9 @@ export {
     message,
     location,
     call,
+    lorem,
+    lorem2,
+    lorem3,
+    dollor,
+    referearn,
 }
