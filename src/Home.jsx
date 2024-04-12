@@ -23,7 +23,7 @@ const Home = () => {
       <div className="flex flex-col md:gap-[2rem] gap-[1rem] text-white">
     <div className='text-white bg-[#06030E]s'> {/* Added padding-x */}
       
-      <div className={`md:mt-[5rem] mt-[5rem] ${styles.boxWidth}`}>
+      <div className={`md:mt-[5rem] mt-[5rem] ${styles.boxWidth}`} id='home'>
         <Hero/>
       </div>
 
