@@ -57,14 +57,14 @@ const Navbar = () => {
                     ) : menuItem.id === 'contact' ? (
                       <Link to="/contact-us">Contact Us</Link>
                     ) : (
-                      <a
-                        href={`#${menuItem.id}`}
+                      <Link
+                        to={`/`}
                         style={{
                           color: active === menuItem.title ? "#FFFFFF" : "#9CA3AF",
                         }}
                       >
                         {menuItem.title}
-                      </a>
+                      </Link>
                     )}
                   </li>
                 ))}
