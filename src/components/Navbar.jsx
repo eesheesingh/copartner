@@ -6,6 +6,13 @@ import style from "../style";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   const [active, setActive] = useState("Home");
   const [toggle, setToggle] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
@@ -21,8 +28,6 @@ const Navbar = () => {
   const handleMenuItemClick = (menuItem) => {
     setActive(menuItem.title);
     setToggle(false);
-    
-    
 
     const targetElement = document.getElementById(menuItem.id);
     if (targetElement) {
@@ -52,26 +57,28 @@ const Navbar = () => {
                     }
                     ${index === menuItems.length - 1 ? "mr-0" : "mr-10"}`}
                 >
-                  { menuItem.id === 'blogs' ? (
-                      <Link to="/blogs">Blogs</Link>
-                    ) : menuItem.id === 'contact' ? (
-                      <Link to="/contact-us">Contact Us</Link>
-                    ) : (
-                      <Link
-                        to={`/`}
-                        style={{
-                          color: active === menuItem.title ? "#FFFFFF" : "#9CA3AF",
-                        }}
-                      >
-                        {menuItem.title}
-                      </Link>
-                    )}
-                  </li>
-                ))}
+                  {menuItem.id === "blogs" ? (
+                    <Link onClick={scrollToTop} to="/blogs">
+                      Blogs
+                    </Link>
+                  ) : menuItem.id === "contact" ? (
+                    <Link onClick={scrollToTop} to="/contact-us">
+                      Contact Us
+                    </Link>
+                  ) : (
+                    <Link
+                      to={`/`}
+                      style={{
+                        color:
+                          active === menuItem.title ? "#FFFFFF" : "#9CA3AF",
+                      }}
+                    >
+                      {menuItem.title}
+                    </Link>
+                  )}
+                </li>
+              ))}
             </ul>
-
-            
-            
 
             <div style={{ display: "flex", marginLeft: "1rem" }}>
               <button className="md:block hidden text-dimWhite text-[11px] py-1 px-4 ms-8 rounded-[36px] border border-solid border-white border-opacity-60  items-center">
@@ -155,7 +162,7 @@ const Navbar = () => {
 
                   {/* Refer & Earn button */}
                   <li className="mt-4">
-                  <Link to="/refer&earn">
+                    <Link to="/refer&earn">
                       <button className="md:block hidden text-dimWhite text-[11px] py-1 px-4 ms-8 rounded-[36px] border border-solid border-white border-opacity-60  items-center">
                         Refer & Earn
                       </button>
