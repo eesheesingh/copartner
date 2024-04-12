@@ -17,30 +17,32 @@ const formatFollowers = (followers) => {
 
 const ExpertCard = ({ expert }) => {
   return (
-    <div className="profile-card">
+    <div className="bg-transparent hover:bg-[#ffffff16] p-2 rounded-lg">
       <div className="background-wrapper">
         <img src={background} alt="Background" className="background-image" />
         <div className='dark-overlay'>
-          <img src={expert.image} alt={`Profile of ${expert.name}`} className="profile-image" />
+          <img src={expert.image} alt={`Profile of ${expert.name}`} className="max-h-[80px] object-contain" />
         </div>
       </div>
-      <div className="info">
+      <div className="">
         <div className="name-rating">
-          <div className="name-role">
-            <h3>{expert.name}</h3>
-            <p>{expert.role}</p>
+          <div className="">
+            <h3 className='text-sm'>{expert.name}</h3>
+            <p className='text-[10px] text-[#ffffff6c]'>{expert.role}</p>
           </div>
-          <div className="rating">🌟{expert.rating}</div>
+          <div className="flex flex-row text-[10px]">🌟{expert.rating}</div>
         </div>
-        <div className="experience-followers">
-          <div className="experience"> <span>Experience</span> <br/>{expert.experience}</div>
-          <div className="followers"> <span>Followers </span><br/>{formatFollowers(expert.followers)}</div>
+        <div className="flex py-1">
+          <div className="text-[1px] text-center border-[#fff] border-r-[1px] pr-7"> <span className='  text-[10px] text-center'>Experience</span> <br/>
+          <div className='text-[10px]'>{expert.experience}</div></div>
+          <div className="text-[1px] text-center pl-8"> <span className='  text-[10px] text-center'>Followers </span><br/><div className='text-[10px]'>{formatFollowers(expert.followers)}</div></div>
         </div>
-        <div className="description">{expert.description}</div>
-        <div className="prize-subscription">
-          <div className="prize"><span>₹{expert.prize}</span>/-</div>
-          <a href="#home" className='flex justify-center items-center text-md'>Subscription <IoChevronForwardOutline className='ml-2' /></a>
-        </div>
+        <div className="text-[10px] text-[#ffffff6d]">{expert.description}</div>
+        <div className="flex flex-row gap-3 py-2">
+          <div className=""><span className='text-sm font-semibold'>₹{expert.prize}</span><span className='text-lg'>/-</span></div>
+          <a href="#home" className='flex justify-center items-center text-[10px] bg-[#fff] text-black py-1 rounded-md px-1'>Subscription <IoChevronForwardOutline className='' /></a>
+        </div> 
+        
       </div>
     </div>
   );
@@ -62,16 +64,16 @@ const Expertise = () => {
         </p>
       </div>
 
-      <div className="expert-grid">
-        {expertsData.slice(0, showMore ? expertsData.length : 3).map((expert) => (
+      <div className="expert-grid grid-5">
+        {expertsData.slice(0, showMore ? expertsData.length : 4).map((expert) => (
           <ExpertCard key={expert.id} expert={expert} />
         ))}
       </div>
 
       {/* Show More button */}
       {!showMore && (
-        <div className='justify-center items-center text-center'>
-          <button className='main-button' onClick={toggleShowMore}>Show More</button>
+        <div className='justify-center items-center text-center py-2 pb-5'>
+          <button className='main-button text-sm' onClick={toggleShowMore}>Show More</button>
         </div>
       )}
     </section>

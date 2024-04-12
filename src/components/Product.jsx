@@ -11,7 +11,7 @@ const Product = () => {
   };
 
   return (
-    <div className="p-8 mb-4">
+    <div className="p-1 mb-4">
       {/* Container 1 */}
       <div className="flex md:flex-row flex-col mb-8 md:text-left text-center">
         {/* Left Column */}

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, useAnimation } from 'framer-motion'; // Import motion and useAnimation from framer-motion
-import { FeaturesImage, Ad } from '../assets';
+import { FeaturesImage, video } from '../assets';
 
 const Features = () => {
   const [showVideo, setShowVideo] = useState(false);
@@ -20,6 +20,7 @@ const Features = () => {
             y: 0,
             transition: { duration: 0.5 } // Animation duration
           });
+          setShowVideo(true); // Set showVideo to true when the component becomes visible
           observer.unobserve(imageRef.current); // Stop observing once animation triggers
         }
       },
@@ -45,15 +46,16 @@ const Features = () => {
       />
       {showVideo && (
         <div className="absolute inset-0 flex justify-center items-center">
-          <iframe
-            width={imageRef.current.clientWidth}
-            height={imageRef.current.clientHeight}
-            src="https://www.youtube.com/embed/VIDEO_ID"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
+          <video
+            width={imageRef.current?.clientWidth}
+            height={imageRef.current?.clientHeight}
+            controls
+            autoPlay={true}
+            muted
+          >
+            <source src={video} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
       )}
     </div>

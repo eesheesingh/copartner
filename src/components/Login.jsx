@@ -14,10 +14,11 @@ const Login = ({ onClose, openSignUp }) => {
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-      <div className="bg-[#18181B] p-6 rounded-lg w-80 relative">
+      <div className="bg-[#18181B] border-[#ffffff27] border-[1.5px] p-8 rounded-lg w-96 h-96 relative">
         <IoClose className="text-gray-400 cursor-pointer hover:text-white absolute top-4 right-4" onClick={onClose} />
-        <div className="flex justify-between items-center mb-4 text-center">
-          <h2 className="text-2xl font-semibold">Login</h2>
+        <div className="text-center mb-4">
+          <h2 className="text-2xl font-semibold text-white">Login</h2>
+          <p className='py-2 text-[#ffffff96]'>Full access to in any of our products Full access to in any of </p>
         </div>
         <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
           <input
@@ -25,24 +26,30 @@ const Login = ({ onClose, openSignUp }) => {
             placeholder="Your Phone Number"
             value={phoneNumber}
             onChange={(e) => setPhoneNumber(e.target.value)}
-            className="px-4 py-2 border border-gray-500 rounded-lg focus:outline-none focus:border-blue-500 bg-transparent"
+            className="px-4 py-3 border border-[#ffffff34] rounded-xl focus:outline-none focus:border-white-500 bg-transparent"
+          />
+           <input
+            type="text"
+            placeholder="Referral Code (If any)"
+            value={phoneNumber}
+            onChange={(e) => setPhoneNumber(e.target.value)}
+            className="px-4 py-3 border border-[#ffffff34] rounded-xl focus:outline-none focus:border-white-500 bg-transparent"
           />
           <button
             type="submit"
-            className="bg-black hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="bg-white hover:bg-black hover:text-white text-black transition duration-300 py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
-            Login
+            Continue
           </button>
         </form>
         <p className="text-gray-300 mt-4 text-center">
           Didn't have an account?{' '}
-          <a
-            href="#"
+          <button
             className="text-blue-500 hover:underline"
             onClick={() => setShowSignUpPopup(true)}
           >
             Create One
-          </a>
+          </button>
         </p>
       </div>
       {showSignUpPopup && (

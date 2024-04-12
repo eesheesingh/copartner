@@ -13,12 +13,15 @@ import Expertise from './components/Expertise';
 import ExpertMob from './components/ExpertMob';
 import Product from './components/Product';
 import Stock from './components/Stock';
+import ReferEarn from './components/ReferEarn';
+import Testimonial from './components/Testimonial';
+import BlogSection from './components/BlogSection'
 // import BlogPage from './components/BlogPage';
 
 const Home = () => {
   return (
     <div
-      className={`flex md:flex-col flex-col ${styles.paddingX} md:px-[7rem] px-0 expertise-Bg`}
+      className={`flex md:flex-col flex-col ${styles.paddingX} md:px-[7rem] px-2 expertise-Bg`}
     >
       <div className="flex flex-col md:gap-[2rem] gap-[1rem] text-white">
     <div className='text-white bg-[#06030E]s'> {/* Added padding-x */}
@@ -37,7 +40,7 @@ const Home = () => {
       <div className={`md:mt-[5rem] mt-[5rem] ${styles.boxWidth}`}>
         <AboutUs />
       </div>
-      <div className={`md:mt-[5rem] mt-[5rem] p-1 ${styles.boxWidth}`} id='features'>
+      <div className={`md:mt-[5rem] mt-[2rem] p-1 ${styles.boxWidth}`} id='features'>
         <Features />
       </div>
       <div className={`md:mt-[1rem] mt-[1rem] ${styles.boxWidth}`}>
@@ -72,7 +75,13 @@ const Home = () => {
         <Stock />
       </div>
 
-      
+      <div className={`md:mt-[5rem] mt-[1rem]${styles.boxWidth}`}>
+        <BlogSection />
+      </div>
+
+      <div className={`md:mt-[5rem] mt-[1rem]${styles.boxWidth}`}>
+        <Testimonial />
+      </div>
 {/* 
       <div className={`md:mt-[5rem] mt-[1rem] ${styles.boxWidth}`}>
         <BlogPage />

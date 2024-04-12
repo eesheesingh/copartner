@@ -9,6 +9,12 @@ const Navbar = () => {
   const [active, setActive] = useState("Home");
   const [toggle, setToggle] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   const menuItems = [
     { id: "home", title: "Home" },
@@ -53,9 +59,9 @@ const Navbar = () => {
                     ${index === menuItems.length - 1 ? "mr-0" : "mr-10"}`}
                 >
                   { menuItem.id === 'blogs' ? (
-                      <Link to="/blogs">Blogs</Link>
+                      <Link onClick={scrollToTop} to="/blogs">Blogs</Link>
                     ) : menuItem.id === 'contact' ? (
-                      <Link to="/contact-us">Contact Us</Link>
+                      <Link onClick={scrollToTop} to="/contact-us">Contact Us</Link>
                     ) : (
                       <Link
                         to={`/`}
@@ -74,9 +80,11 @@ const Navbar = () => {
             
 
             <div style={{ display: "flex", marginLeft: "1rem" }}>
-              <button className="md:block hidden text-dimWhite text-[11px] py-1 px-4 ms-8 rounded-[36px] border border-solid border-white border-opacity-60  items-center">
+              <Link to="refer&earn"> 
+              <button className="md:block hidden text-dimWhite text-[11px] py-2 px-4 ms-8 rounded-[36px] border border-solid border-white border-opacity-60  items-center">
                 Refer & Earn
-              </button>
+              </button></Link>
+             
               <button
                 className="md:hidden flex text-dimWhite text-[11px] py-2 px-7 ms-8 rounded-md border border-none bg-[#ffffff2d] hover:bg-[#000] transition duration-300 items-center"
                 onClick={() => setShowLogin(true)}
@@ -128,8 +136,8 @@ const Navbar = () => {
                     <img width={"200rem"} src={logo} alt="" />
                   </li>
 
-                  {/* Menu items */}
-                  {menuItems.map((menuItem, index) => (
+                   {/* Menu items */}
+                   {menuItems.map((menuItem, index) => (
                     <li
                       key={menuItem.id}
                       onClick={() => handleMenuItemClick(menuItem)}
@@ -137,25 +145,30 @@ const Navbar = () => {
               ${
                 active === menuItem.title
                   ? "text-white font-medium"
-                  : "text-[#393F48]"
+                  : "text-[#6a7484]"
               }
               ${index === menuItems.length - 1 ? "mb-0" : "mb-4"}`}
                     >
-                      <a
-                        href={`#${menuItem.id}`}
+                       { menuItem.id === 'blogs' ? (
+                      <Link onClick={scrollToTop} to="/blogs">Blogs</Link>
+                    ) : menuItem.id === 'contact' ? (
+                      <Link onClick={scrollToTop} to="/contact-us">Contact Us</Link>
+                    ) : (
+                      <Link
+                        to={`/`}
                         style={{
-                          color:
-                            active === menuItem.title ? "#FFFFFF" : "#9CA3AF",
+                          color: active === menuItem.title ? "text-white font-medium" : "text-[#9ca3af]",
                         }}
                       >
                         {menuItem.title}
-                      </a>
+                      </Link>
+                    )}
                     </li>
                   ))}
 
                   {/* Refer & Earn button */}
                   <li className="mt-4">
-                  <Link to="/refer&earn">
+                  <Link to="refer&earn">
                       <button className="md:block hidden text-dimWhite text-[11px] py-1 px-4 ms-8 rounded-[36px] border border-solid border-white border-opacity-60  items-center">
                         Refer & Earn
                       </button>

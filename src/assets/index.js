@@ -41,10 +41,10 @@ import CounterBg from './CounterBg.png'
 import CounterMobBg from './COunterBgMob.png'
 import LeftIcon from './pagination-default.svg (1).svg'
 import rightIcon from './pagination-default.svg.svg'
-import facebook from './facebook.png';
+import facebook from './fb.png';
 import linkedin from './linkedin.png';
-import twitter from './twitter.png';
-import instagram from './instagram.png';
+import twitter from './tweet.png';
+import instagram from './insta.png';
 import WhyUs1 from './whyus1.png';
 import WhyUs2 from './whyus2.png';
 import WhyUs3 from './whyus3.png';
@@ -65,6 +65,20 @@ import vision2 from './about_vision2.png'
 import aboutFeature from './aboutfeature.png'
 import aboutFeature2 from './aboutfeature2.png'
 import aboutFeature3 from './aboutfeature3.png'
+import testimonialRight from './testimonialRight.png';
+import testimonialLeft from './testimonialLeft.png';
+import testimonialProfile from './testimonialProfile.png';
+import video from './Copartner Website Video.mp4'
+import blog1Post from './blogpost.png'
+import blog2Post from './blogpost2.png'
+import blog3Post from './blogpost3.png'
+import blog4Post from './blogpost4.png'
+import blog5Post from './blogpost5.png'
+import post1 from './post1.png'
+import post2 from './post2.png'
+import post3 from './post3.png'
+import post4 from './post4.png'
+import post5 from './post5.png'
 
 export {
     background,
@@ -134,4 +148,18 @@ export {
     aboutFeature,
     aboutFeature2,
     aboutFeature3,
+    testimonialRight,
+    testimonialLeft,
+    testimonialProfile,
+    video,
+    blog1Post,
+    blog2Post,
+    blog3Post,
+    blog4Post,
+    blog5Post,
+    post1,
+    post2,
+    post3,
+    post4,
+    post5,
 }
