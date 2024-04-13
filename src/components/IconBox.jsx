@@ -25,14 +25,14 @@ const IconBox = () => {
         <div className="icon-box w-full md:w-1/3 p-8 rounded-lg shadow-md hover:bg-[#ffffff44] transition duration-300">
           <img src={AP} alt="" />
           <div className="text mt-4">
-            <h3 className="text-xl font-semibold">A.P</h3>
+            <h3 className="text-xl font-semibold">A.P <span className='text-[#ffffff71]'>(Coming Soon)</span></h3>
             <p className="text-[#ffffff8f]">Set up template bug report forms to give timely and actionable feedback on features and projects in development.</p>
           </div>
         </div>
       </div>
 
       {/* Banner Image Section */}
-      <div className="w-full md:h-96 h-20 p-2 mb-2 flex justify-center items-center">
+      <div className="w-full md:h-full h-20 p-2 mb-2 flex justify-center items-center">
         <img src={AD1} alt="" className="md:max-w-full md:h-full object-cover" />
       </div>
     </div>

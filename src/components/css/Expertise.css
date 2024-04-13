@@ -9,14 +9,31 @@
 
 @media (max-width: 768px) {
   .expert-grid {
-    grid-template-columns: repeat(1, 1fr);
-    padding: 1rem;
+    grid-template-columns: repeat(2, 1fr);
   }
+
+  .prize-subscription{
+    flex-direction: column;
+  }
+
+  .description {
+    font-size: 10px;
+  }
+
+  .expert-grid{
+    gap: 2px;
+  }
+
+  .info {
+    padding: 0;
+  }
+
 }
 
 .profile-card {
   background-color: transparent;
   border-radius: 8px;
+  padding: 10px;
   overflow: hidden;
   position: relative;
   transition: transform 0.3s ease-in-out;
@@ -44,6 +61,11 @@
   z-index: 2; /* Ensure profile image is in front of background */
 }
 
+.dark-overlay{
+  display: flex;
+  justify-content: center;
+}
+
 .dark-overlay img {
   mask-image: linear-gradient(rgba(0, 0, 0, 1) 70%, transparent);
 }
@@ -53,7 +75,7 @@
 }
 
 .info {
-  padding: 1.5rem;
+  padding: 0.5rem;
 }
 
 .name-rating {
@@ -112,6 +134,11 @@
   align-items: center;
 }
 
+.prize{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
 .prize-subscription a {
   font-size: 1rem;
   box-shadow: inset 0 0 0 0 #fff;
@@ -129,13 +156,7 @@
   -o-border-radius: 10px;
 }
 
-.prize {
-  font-size: 1.2rem;
-}
 
-.prize span {
-  font-size: 2rem;
-}
 
 /* Hide additional cards by default */
 .additional-cards {
@@ -147,6 +168,5 @@
   margin-top: 20px;
   text-align: center;
 }
-
 
 

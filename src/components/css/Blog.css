@@ -3,25 +3,29 @@
 .blog-container {
     display: flex;
     margin-bottom: 1rem;
-    padding: 0 5rem;
+    padding: 0 0rem;
   }
   
   .blog-content-left {
     flex: 1;
-    padding: 1rem;
     align-content: center;
     justify-content: center;
   }
   
   .blog-content-left h2 {
     color: #FFFFFF;
+    font-size: 3.8rem;
   }
   
   .blog-content-right {
     flex: 1;
-    padding: 1rem;
+
     align-items: center;
     justify-content: center;
+  }
+
+  .blog-content-right p{
+    font-size: 1rem;
   }
   
   .blog-box-content {
@@ -41,10 +45,12 @@
   }
   
   .blog-box-three img,
-  .blog-box-two img {
-    width: 100%;
-    max-height: 100%;
-    object-fit: cover;
+  .blog-box-two img,
+  .apps-img {
+    width: 100%; /* Ensure the image fills the entire width of the box */
+    height: 100%; /* Ensure the image fills the entire height of the box */
+    object-fit: fill;
+    mask-image: linear-gradient(rgba(0, 0, 0, 1) 70%, transparent);
   }
   
   .apps-img {

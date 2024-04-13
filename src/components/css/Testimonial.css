@@ -159,3 +159,10 @@
     }
   }
   
+  .bg_three-dots_active {
+    background: linear-gradient(135deg, #665DCD 0%, #5FA4E6 44.76%, #D2AB67 100%);
+  }
+  
+  .bg_three-dots {
+    background: rgba(232, 228, 228, 0.916);
+  }

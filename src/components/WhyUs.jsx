@@ -11,16 +11,17 @@ const WhyUs = () => {
       className="flex flex-col items-center"
     >
       {/* Columns Section */}
-      <section className="max-w-6xl mx-auto">
+      <section className="p-2 mx-auto">
         <div className='text-center'>
           <h2 className="subheading-color font-bold md:text-5xl text-3xl md:leading-[80px] leading-[40px]">Why Choose Us?</h2>
+          <div className='md:px-[5rem]'>
           <p className="text-90 md:text-xl text-[#ffffff7d] mb-6 md:px-[3rem] px-4">
             Copartner unlocks the gateway to financial success - where expertise meets innovation,
-            <br />
             empowering you to thrive in every market opportunity.
           </p>
+          </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 md:gap-8">
           {/* Column 1 */}
           <div className="column rounded-lg shadow-md p-6 hover:bg-[#ffffff12] transition duration-300">
             <img src={WhyUs1} alt="img1" style={{ maskImage: 'linear-gradient(rgba(0, 0, 0, 1) 70%, transparent)' }} className="w-full mb-4 rounded-lg" />
@@ -45,7 +46,7 @@ const WhyUs = () => {
       </section>
 
       {/* Banner Image Section */}
-      <section className="max-w-6xl my-12 mx-5">
+      <section className="w-[100%] p-2 my-12 mx-5">
         <img src={AD2} alt="Banner" className="w-full rounded-lg shadow-md" />
       </section>
     </motion.div>

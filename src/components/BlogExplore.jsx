@@ -15,8 +15,8 @@ const BlogGrid = () => {
     <div className="flex flex-wrap justify-center">
       {blogs.slice(0, displayedBlogs).map((blog, index) => (
         <div key={index} className="w-full md:w-1/3 p-5 rounded-md mb-8 md:mb-0 text-white">
-           <Link to={`/blogs/${blog.id}`} className="w-full overflow-hidden relative rounded-lg md:bg-transparent bg-[#18181ba6] hover:border border-solid border-[#f4f4f51d] transition duration-300 ease-in-out transform hover:bg-[#18181ba6] hover:border-solid hover:border-[#f4f4f51d] hover:shadow-lg">
-          <div className="w-full overflow-hidden relative rounded-lg md:bg-transparent bg-[#18181ba6] hover:border border-solid border-[#f4f4f51d] transition duration-300 ease-in-out transform hover:bg-[#18181ba6] hover:border-solid hover:border-[#f4f4f51d] hover:shadow-lg">
+           <Link to={`/blogs/${blog.id}`} className="w-full overflow-hidden relative rounded-lg md:bg-transparent bg-[#18181ba6]  border-solid transition duration-300 ease-in-out transform hover:bg-[#18181ba6] hover:shadow-lg">
+          <div className="w-full overflow-hidden relative rounded-lg md:bg-transparent bg-[#18181ba6] border-solid border-[#f4f4f51d] transition duration-300 ease-in-out transform hover:bg-[#18181ba6] hover:shadow-lg">
             <img
               src={blog.imageUrl}
               alt="Blog_Image"

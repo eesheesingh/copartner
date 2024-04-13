@@ -33,11 +33,10 @@ const AboutUs = () => {
   }, [controlsLeftColumn, controlsRightColumn]);
 
   return (
-    <div id="about-us" className="py-4 px-4" ref={aboutUsRef}> {/* Add ref to AboutUs section */}
+    <div id="about-us" className="py-4 px-2" ref={aboutUsRef}> {/* Add ref to AboutUs section */}
       <div className="section3-heading text-center">
         <h2 className='subheading-color font-bold md:text-5xl text-3xl md:leading-[80px] leading-[40px]'>About Our Portal & Features.</h2>
-        <p className="text-90 md:text-xl text-[#ffffff7d] mb-6 md:px-[3rem] px-4">Our platform blends expert analysis, real-time insights, and seamless trader{" "} <br/>  collaboration,
-        
+        <p className="text-90 md:text-xl text-[#ffffff7d] mb-6 md:px-[3rem] px-4">Our platform blends expert analysis, real-time insights, and seamless trader collaboration,
          ensuring every move is a step toward financial success in the stock market.</p>
       </div>
 

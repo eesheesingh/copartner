@@ -4,17 +4,17 @@ import { logo, facebook, linkedin, twitter, instagram } from "../assets";
 const ProductList = [
   { name: "About Us", link: "/about-us" },
   { name: "FAQ's", link: "/faqs" },
+  { name: "Features", link: "/features" },
+  { name: "Blog", link: "/blogs" },
   { name: "Privacy Policy", link: "/privacy" },
   { name: "Terms of Service", link: "/terms_of_service" },
-  { name: "Disclaimer", link: "/disclaimer" },
-  { name: "Submit Grievance", link: "/grievance" },
-  { name: "Features", link: "/features" },
 ];
 
 const CommunityList = [
-  { name: "Subscription", link: "/subscription" },
-  { name: "Courses", link: "/courses" },
-  { name: "Webinar", link: "/webinar" },
+  { name: "Subscription", link: "/" },
+  // { name: "Courses", link: "/courses" },
+  { name: "Experts", link: "/" },
+  // { name: "Webinar", link: "/webinar" },
 ];
 
 const Footer = () => {
@@ -58,7 +58,7 @@ const Footer = () => {
         </div>
         <div className="flex flex-col justify-between w-[117px] h-[105px] mt-[5px]">
           <span className="w-[48px] h-[15px] font-medium text-[1.2rem] leading-[14.7px] mb-4 text-white">
-            Community
+            Perks
           </span>
           {CommunityList.map((community) => (
             <a

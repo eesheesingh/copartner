@@ -1,8 +1,13 @@
-import React from 'react';
+
 import { motion } from 'framer-motion'; // Import motion from framer-motion
 import { CenterBg1 } from '../assets';
+import { useState } from 'react';
+import Login from './Login';
+import SignUp from './SignUp';
 
 const Hero = () => {
+  const [showLogin, setShowLogin] = useState(false);
+
   return (
     <motion.div // Wrap the entire Hero component with motion.div
       initial={{ opacity: 0, y: 50 }} // Initial animation state
@@ -14,10 +19,13 @@ const Hero = () => {
         <h1 className="text-[2.5rem] md:text-[5rem] font-bold mb-4 text-gradient md:leading-[80px] leading-[40px] md:px-20 px-4">Invest, Learn and Earn</h1>
         <p className="text-90 md:text-xl text-[#ffffff7d] mb-6 md:px-20 px-4">Get partnered with our SEBI Registered Research Analysts to start your profitable trading journey. </p>
         <div>
-          <button className='main-button md:text-lg text-sm'>Get Started Today</button>
+          <button className='main-button md:text-lg text-sm' onClick={() => setShowLogin(true)}>Get Started Today</button>
         </div>
       </div>
+      {showLogin && <SignUp onClose={() => setShowLogin(false)} />}
+
     </motion.div> // Close the motion.div wrapper
+    
   );
 };
 
