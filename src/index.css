@@ -111,3 +111,8 @@ body {
   transform: scale(1.1);
   z-index: 1;
 }
+
+.glassyBackground {
+  backdrop-filter: blur(10px); /* Apply backdrop blur effect */
+  background-color: rgba(6, 3, 14, 0.8); /* Adjust the background color and opacity */
+}

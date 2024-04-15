@@ -117,9 +117,9 @@ const JoinTeam = ({ closeModal }) => {
                 <option value="" disabled selected>
                   Select Expertise
                 </option>
-                <option value="finance">Finance</option>
-                <option value="marketing">Marketing</option>
-                <option value="technology">Technology</option>
+                <option value="finance" className="bg-[#18181B]">Finance</option>
+                <option value="marketing" className="bg-[#18181B]">Marketing</option>
+                <option value="technology" className="bg-[#18181B]">Technology</option>
                 {/* Add more options as needed */}
               </select>
               <label
@@ -137,11 +137,11 @@ const JoinTeam = ({ closeModal }) => {
                 className="block px-2.5 pb-2.5 pt-4 w-full text-sm text-white bg-transparent rounded-lg border-2 border-[#fff] appearance-none dark:text-white dark:border-[#fff4] dark:focus:border-[#fff] focus:outline-none focus:ring-0 focus:[#fff] peer"
               >
                 <option value="" disabled selected>
-                  How Much Expertise
+                  How Many Years?
                 </option>
-                <option value="finance">Finance</option>
-                <option value="marketing">Marketing</option>
-                <option value="technology">Technology</option>
+                <option value="finance" className="bg-[#18181B]">Finance</option>
+                <option value="marketing" className="bg-[#18181B]">Marketing</option>
+                <option value="technology" className="bg-[#18181B]">Technology</option>
                 {/* Add more options as needed */}
               </select>
               <label
@@ -162,9 +162,15 @@ const JoinTeam = ({ closeModal }) => {
               />
               <label
                 htmlFor="telegramLink"
-                className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-0 bg-[#18181B] px-2 peer-focus:px-2 peer-focus:text-[#fff] peer-focus:dark:text-[#fff] peer-focus:border-2 rounded-md peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1"
+                className="absolute md:flex hidden text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-0 bg-[#18181B] px-2 peer-focus:px-2 peer-focus:text-[#fff] peer-focus:dark:text-[#fff] peer-focus:border-2 rounded-md peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1"
               >
                 Free Telegram Channel Link
+              </label>
+              <label
+                htmlFor="telegramLink"
+                className="absolute md:hidden text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-0 bg-[#18181B] px-2 peer-focus:px-2 peer-focus:text-[#fff] peer-focus:dark:text-[#fff] peer-focus:border-2 rounded-md peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1"
+              >
+                Telegram Channel Link
               </label>
             </div>
 
@@ -178,9 +184,15 @@ const JoinTeam = ({ closeModal }) => {
               />
               <label
                 htmlFor="telegramMembers"
-                className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-0 bg-[#18181B] px-2 peer-focus:px-2 peer-focus:text-[#fff] peer-focus:dark:text-[#fff] peer-focus:border-2 rounded-md peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1"
+                className="absolute md:flex hidden text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-0 bg-[#18181B] px-2 peer-focus:px-2 peer-focus:text-[#fff] peer-focus:dark:text-[#fff] peer-focus:border-2 rounded-md peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1"
               >
                 Members in Telegram Channel
+              </label>
+              <label
+                htmlFor="telegramMembers"
+                className="absolute md:hidden text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-0 bg-[#18181B] px-2 peer-focus:px-2 peer-focus:text-[#fff] peer-focus:dark:text-[#fff] peer-focus:border-2 rounded-md peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1"
+              >
+                Number Of Members
               </label>
             </div>
 
@@ -203,12 +215,12 @@ const JoinTeam = ({ closeModal }) => {
                 />
                 <label
                   htmlFor="sebiCertificate"
-                  className="block w-full bg-transparent text-white p-20 rounded-md text-center cursor-pointer"
+                  className="block w-full bg-transparent text-white p-20  rounded-md text-center cursor-pointer"
                 >
                   Select
                 </label>
                 {uploadedFile && (
-                  <p className="text-gray-500 text-sm text-center">
+                  <p className="text-gray-500 text-sm text-center p-2">
                     Uploaded: {uploadedFile.name}
                   </p>
                 )}
@@ -237,14 +249,16 @@ const JoinTeam = ({ closeModal }) => {
               id="copartnerCheckbox"
               checked={copartnerChecked}
               onChange={handleCopartnerChange}
-              className="w-3 h-3 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+              className="md:w-3 w-10 md:h-3 h-10 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
             />
             <label
               htmlFor="copartnerCheckbox"
               className="ml-3 text-sm text-gray-500 dark:text-gray-400"
             >
-              Become Copartner <br /> Take your team up a level with easy-to-use
+              Become Copartner 
+              <div>Take your team up a level with easy-to-use
               tools, effortless templates and Terms & Conditions.
+              </div> 
             </label>
           </div>
           {/* Submit Button */}

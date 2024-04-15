@@ -63,7 +63,7 @@ const Testimonials = () => {
   return (
     <>
     <div className="flex flex-col items-center justify-center sm:pt-[4rem] pt-6">
-      <div className="flex flex-col justify-between items-center md:w-[557px] md:h-[103px] w-[330px] h-[110px] gap-[4px] md:mb-16 mb-2">
+      <div className="flex flex-col justify-between items-center md:w-[557px] md:h-[103px] w-[330px] h-[110px] gap-[4px] md:mb-16 mb-10">
         <span
           className="font-[700] md:text-[50px] text-[30px] md:w-[385px] md:h-[103px] w-[224px] h-[70px]
           text-gradient-2 md:leading-[51px] leading-[35px] text-center"
@@ -71,7 +71,7 @@ const Testimonials = () => {
           What Our Users Say About Us
         </span>
 
-        <span className="text-dimWhite md:w-[596px] w-[328px] text-center md:h-[56px] h-[34px] font-[400] md:text-[18px] text-[11px] md:leading-[28px] leading-[17px]">
+        <span className="text-dimWhite md:w-[596px] w-[328px] text-center md:h-[56px] h-[34px] font-[400] md:text-[18px] text-md md:leading-[28px] leading-[20px]">
         Our users love our platform for its easy-to-use features, helpful insights, and friendly community.
         </span>
       </div>

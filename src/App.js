@@ -12,6 +12,8 @@ import ContactUs from './components/ContactUs.jsx'
 import BlogPage from "./components/BlogPage.jsx";
 import ReferEarn from "./components/ReferEarn.jsx";
 import AboutUsPage from "./components/AboutUsPage/AboutPage.jsx";
+import ExpertisePage from "./components/ExpertisePage.jsx";
+import SubscriptionRA from "./components/SubscriptionRA.jsx";
 
 function App() {
   const router = createBrowserRouter(
@@ -33,6 +35,8 @@ function App() {
          <Route path="about-us" element={<AboutUsPage />} />
           <Route path="/blogs/:blogId" element={<BlogPage />} />
           <Route path="refer&earn" element={<ReferEarn />} />
+          <Route path="experts-explore" element={<ExpertisePage />} />
+          {/* <Route path="subscriptionRA" element={<SubscriptionRA />} /> */}
       </Route>
       
 

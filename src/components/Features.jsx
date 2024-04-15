@@ -45,13 +45,14 @@ const Features = () => {
         animate={controls} // Animation controlled by controls
       />
       {showVideo && (
-        <div className="absolute inset-0 flex justify-center items-center">
+        <div className="absolute inset-0 flex justify-center items-center rounded-lg overflow-hidden">
           <video
             width={imageRef.current?.clientWidth}
             height={imageRef.current?.clientHeight}
             controls
             autoPlay={true}
             muted
+            className="rounded-lg"
           >
             <source src={video} type="video/mp4" />
             Your browser does not support the video tag.

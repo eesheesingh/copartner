@@ -1,4 +1,4 @@
-import { ExpertImg, blog1, blog2, blog3, blog4, blog5, svg1, svg2,  svg3, svg4, aboutFeature, aboutFeature2, aboutFeature3, vision, vision2, blog1Post, blog2Post, blog3Post, blog4Post, blog5Post } from "../../assets";
+import { ExpertImg, stars, arrow, background, telegram, blog1, blog2, blog3, blog4, blog5, svg1, svg2,  svg3, svg4, aboutFeature, aboutFeature2, aboutFeature3, vision, vision2, blog1Post, blog2Post, blog3Post, blog4Post, blog5Post } from "../../assets";
 
 export const expertsData = [
     {
@@ -370,3 +370,115 @@ export  const steps = [
       des: "Our research reports and analysis are available to subscribers through our online platform. Once you subscribe to our services, you'll gain access to our library of research content, which you can view and download at your convenience."
     },
   ]
+
+
+  export const expertise_data = [
+    {
+      id: "1",
+      icon: background,
+      userImg: ExpertImg,
+      name: "Arun Kumar",
+      title: "Stock Market",
+      ratingIcon: stars,
+      rating: "4.4",
+      experience: "Experience",
+      totalExp: "7+",
+      followers: "Followers",
+      totalFollowers: "3.1k",
+      content:
+        "Have full control of your business finances on the go using our iOS/Android mobile apps. Because, you know, it’s 2023.",
+      telegram: telegram,
+      greet: "Get Free Calls",
+      arrowIcon: arrow,
+    },
+    {
+      id: "2",
+      icon: background,
+      userImg: ExpertImg,
+      name: "Arun Kumar",
+      title: "Stock Market",
+      ratingIcon: stars,
+      rating: "4.4",
+      experience: "Experience",
+      totalExp: "7+",
+      followers: "Followers",
+      totalFollowers: "3.1k",
+      content:
+        "Have full control of your business finances on the go using our iOS/Android mobile apps. Because, you know, it’s 2023.",
+      telegram: telegram,
+      greet: "Get Free Calls",
+      arrowIcon: arrow,
+    },
+    {
+      id: "3",
+      icon: background,
+      userImg: ExpertImg,
+      name: "Arun Kumar",
+      title: "Stock Market",
+      ratingIcon: stars,
+      rating: "4.4",
+      experience: "Experience",
+      totalExp: "7+",
+      followers: "Followers",
+      totalFollowers: "3.1k",
+      content:
+        "Have full control of your business finances on the go using our iOS/Android mobile apps. Because, you know, it’s 2023.",
+      telegram: telegram,
+      greet: "Get Free Calls",
+      arrowIcon: arrow,
+    },
+    {
+      id: "4",
+      icon: background,
+      userImg: ExpertImg,
+      name: "Arun Kumar",
+      title: "Stock Market",
+      ratingIcon: stars,
+      rating: "4.4",
+      experience: "Experience",
+      totalExp: "7+",
+      followers: "Followers",
+      totalFollowers: "3.1k",
+      content:
+        "Have full control of your business finances on the go using our iOS/Android mobile apps. Because, you know, it’s 2023.",
+      telegram: telegram,
+      greet: "Get Free Calls",
+      arrowIcon: arrow,
+    },
+    {
+      id: "5",
+      icon: background,
+      userImg: ExpertImg,
+      name: "Arun Kumar",
+      title: "Stock Market",
+      ratingIcon: stars,
+      rating: "4.4",
+      experience: "Experience",
+      totalExp: "7+",
+      followers: "Followers",
+      totalFollowers: "3.1k",
+      content:
+        "Have full control of your business finances on the go using our iOS/Android mobile apps. Because, you know, it’s 2023.",
+      telegram: telegram,
+      greet: "Get Free Calls",
+      arrowIcon: arrow,
+    },
+    {
+      id: "6",
+      icon: background,
+      userImg: ExpertImg,
+      name: "Arun Kumar",
+      title: "Stock Market",
+      ratingIcon: stars,
+      rating: "4.4",
+      experience: "Experience",
+      totalExp: "7+",
+      followers: "Followers",
+      totalFollowers: "3.1k",
+      content:
+        "Have full control of your business finances on the go using our iOS/Android mobile apps. Because, you know, it’s 2023.",
+      telegram: telegram,
+      greet: "Get Free Calls",
+      arrowIcon: arrow,
+    },
+  ];

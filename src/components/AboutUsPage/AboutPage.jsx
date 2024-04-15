@@ -55,8 +55,8 @@ const About = () => {
             alt="About_Us"
             className="md:w-[596px] md:h-[320px] w-[425px] h-[215px]"
           />
-          <div className="md:w-[570px] md:h-[196px] flex flex-col justify-center items-center md:text-start text-center">
-            <span className="md:w-[570px] md:h-[72px] w-[380px] h-[50px] font-inter font-[600] md:text-[30px] text-[16px] text-lightWhite md:leading-[36px] leading-[20px] md:px-0 px-[8px]">
+          <div className="md:w-[570px] md:h-[196px] flex flex-col justify-center items-center md:text-start">
+            <span className="md:w-[570px] md:h-[72px] w-[380px] h-[50px] font-inter font-[600] md:text-[30px] text-[20px] text-lightWhite md:leading-[36px] leading-[20px] md:px-0 px-[8px] text-center">
               WELCOME TO COPARTNER
             </span>
             <span className="md:w-[570px] md:h-[144px] w-[380px] h-[180px] font-inter font-[500] md:text-[16px] text-[12px] text-dimWhite leading-[24px] md:px-0 px-[8px]">
@@ -108,7 +108,7 @@ const About = () => {
                       <span className="md:w-[615px] md:h-[48px] w-[390px] font-inter font-[500] md:text-[32px] text-[24px] text-lightWhite md:leading-[48px] leading-[24px]">
                         {mission.title}
                       </span>
-                      <span className="md:w-[615px] md:h-[140px] w-[390px] font-inter font-[400] md:text-[15px] text-[12px] text-dimWhite md:leading-[28px] leading-[16px] md:px-0 px-[10px]">
+                      <span className="md:w-[615px] md:h-[140px] w-[390px] font-inter font-[400] md:text-[15px] text-[12px] text-dimWhite md:leading-[28px] leading-[16px] md:px-0 px-[40px] text-left">
                         {mission.des}
                       </span>
                     </div>

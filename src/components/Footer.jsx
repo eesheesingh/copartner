@@ -1,5 +1,6 @@
 import React from "react";
 import { logo, facebook, linkedin, twitter, instagram } from "../assets";
+import { Link } from "react-router-dom";
 
 const ProductList = [
   { name: "About Us", link: "/about-us" },
@@ -13,11 +14,17 @@ const ProductList = [
 const CommunityList = [
   { name: "Subscription", link: "/" },
   // { name: "Courses", link: "/courses" },
-  { name: "Experts", link: "/" },
+  { name: "Experts", link: "experts-explore" },
   // { name: "Webinar", link: "/webinar" },
 ];
 
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
   return (
     <div className="footer-section w-full md:h-[198px] h-[506px] md:pt-[6rem] pt-[1rem] mt-[1rem] justify-around border-t border-solid border-white border-opacity-10 flex md:flex-row flex-col items-center">
       <div className="flex flex-col gap-[1rem]">
@@ -26,15 +33,9 @@ const Footer = () => {
           Our partnerships have delivered great value to our projects and we're
           happy to share some of their feedback below
         </span>
-        <div className="flex gap-7 rounded-full">
-          <a href="/">
-            <img src={facebook} alt="Facebook" className="w-8" />
-          </a>
+        <div className="flex gap-4 rounded-full">
           <a href="/">
             <img src={linkedin} alt="LinkeDin" className="w-8" />
-          </a>
-          <a href="/">
-            <img src={twitter} alt="Twitter" className="w-8" />
           </a>
           <a href="/">
             <img src={instagram} alt="Instagram" className="w-8" />
@@ -61,13 +62,14 @@ const Footer = () => {
             Perks
           </span>
           {CommunityList.map((community) => (
-            <a
+            <Link
               to={community.link}
+              onClick={scrollToTop}
               key={community.link}
               className="font-normal text-[0.9rem] leading-[14.7px] text-dimWhite text-left hover:text-white"
             >
               {community.name}
-            </a>
+            </Link>
           ))}
         </div>
       </div>

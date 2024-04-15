@@ -79,7 +79,11 @@ import post2 from './post2.png'
 import post3 from './post3.png'
 import post4 from './post4.png'
 import post5 from './post5.png'
-
+import AdMob from './Website banner 2-02.jpg'
+import AdMob2 from "./Website Banners-02.jpg"
+import telegram from './telegram.png'
+import arrow from './arrow.png'
+import stars from './stars.png'
 export {
     background,
     blog1,
@@ -162,4 +166,9 @@ export {
     post3,
     post4,
     post5,
+    AdMob,
+    AdMob2,
+    telegram,
+    arrow,
+    stars,
 }

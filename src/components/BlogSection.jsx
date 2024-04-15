@@ -18,7 +18,7 @@ const Blog = () => {
           <h2 className='subheading-color font-bold md:text-5xl text-3xl md:leading-[80px] leading-[40px]'>Our Blogs</h2>
         </div>
         <div className="blog-content-right">
-          <p className="text-90 md:text-xl text-[#ffffff7d] mb-6 md:px-[1rem] px-4">
+          <p className="text-90 md:text-xl text-[#ffffffbb] mb-6 md:px-[1rem]">
             Our portal seamlessly connects stock market analysts with traders,
             offering real-time insights and empowering informed decisions.
             Traders access advanced tools, while analysts expand their reach.
