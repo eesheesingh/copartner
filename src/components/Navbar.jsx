@@ -1,4 +1,3 @@
-// Navbar.jsx
 import React, { useState } from "react";
 import Login from "./SignUp";
 import { logo, menu, hamburgerBg, close } from "../assets";
@@ -34,10 +33,14 @@ const Navbar = () => {
     }
   };
 
+  const handleReferEarnClick = () => {
+    setToggle(false); // Close the navbar
+  };
+
   return (
     <>
       <div
-        className={`${style.paddingX} ${style.flexCenter} fixed top-0 z-50 w-full bg-[#06030E]`}
+        className={`${style.paddingX} ${style.flexCenter} fixed top-0 z-50 w-full bg-[#06030ec4]`}
       >
         <div className={`${style.boxWidth}`}>
           <nav className="w-full flex md:py-5 py-4 justify-between items-center">
@@ -68,33 +71,38 @@ const Navbar = () => {
                         }}
                       >
                         {menuItem.title}
+                        
                       </Link>
+                      
                     )}
+                    
                   </li>
+                  
                 ))}
+                
             </ul>
 
-            <div style={{ display: "flex", marginLeft: "1rem" }}>
+            <div style={{ display: "flex", marginLeft: "4rem" }}>
               <Link to="refer&earn"> 
-              <button className="md:block hidden text-dimWhite text-[11px] py-2 px-4 ms-8 rounded-[36px] border border-solid border-white border-opacity-60  items-center">
+              <button onClick={handleReferEarnClick} className="md:block hidden text-dimWhite text-[11px] py-2 px-4 ms-8 rounded-[36px] border border-solid border-white border-opacity-60  items-center">
                 Refer & Earn
               </button></Link>
              
               <button
-                className="md:hidden flex text-dimWhite text-[11px] py-2 px-7 ms-8 rounded-md border border-none bg-[#ffffff2d] hover:bg-[#000] transition duration-300 items-center"
+                className="md:hidden flex text-black text-[11px] py-2 px-4 ms-8 rounded-md border border-none bg-[#fff] hover:bg-[#000] transition duration-300 items-center"
                 onClick={() => setShowLogin(true)}
               >
-                Login
+                Sign Up
               </button>
               <button
-                className="md:block hidden text-dimWhite text-[11px] py-2 px-6 ms-8 rounded-md border bg-[#ffffff2c] border-none border-opacity-60  items-center"
+                className="md:block hidden text-black text-[15px] py-1 px-6 ms-8 rounded-md border bg-[#fff] border-none border-opacity-60  items-center"
                 onClick={() => setShowLogin(true)}
               >
-                Login
+                Sign Up
               </button>
             </div>
 
-            <div className="sm:hidden flex flex-1 justify-center items-center">
+            <div className="sm:hidden flex flex-1 justify-end items-center">
               <img
                 src={toggle ? undefined : menu}
                 alt="Menu"
@@ -104,7 +112,7 @@ const Navbar = () => {
 
               {/* Animated mobile menu */}
               <div
-                className={`justify-center items-center fixed top-0 left-0 z-50 w-full bg-[#06030E] h-full p-3 bg-gradient-to-tr ${
+                className={`justify-center items-center fixed top-0 left-0 z-50 w-full bg-[#06030ed8] h-full p-3 bg-gradient-to-tr ${
                   toggle ? "visible" : "hidden"
                 }`}
                 style={{
@@ -159,12 +167,13 @@ const Navbar = () => {
                       </Link>
                     )}
                     </li>
+                    
                   ))}
 
-                  {/* Refer & Earn button */}
+                  {/* Refer & Earn button mobile*/}
                   <li className="mt-4">
                   <Link to="refer&earn">
-                      <button className="md:block hidden text-dimWhite text-[11px] py-1 px-4 ms-8 rounded-[36px] border border-solid border-white border-opacity-60  items-center">
+                      <button onClick={handleReferEarnClick} className="md:hidden text-dimWhite text-[11px] py-2 px-4 rounded-[36px] border border-solid border-white border-opacity-60  items-center">
                         Refer & Earn
                       </button>
                     </Link>

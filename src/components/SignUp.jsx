@@ -55,7 +55,7 @@ const SignUp = ({ onClose }) => {
           />
           <button
             type="submit"
-            className={`bg-black hover:bg-white hover:text-black transition duration-300 font-bold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 ${isFormEmpty() ? 'opacity-50 cursor-not-allowed' : ''}`}
+            className={`bg-white hover:bg-black hover:text-white text-black transition duration-300 font-semibold text-[20px] py-4 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 ${isFormEmpty() ? 'opacity-50 cursor-not-allowed' : ''}`}
             disabled={isFormEmpty()}
           >
             Continue

@@ -18,14 +18,13 @@ const Blog = () => {
           <h2 className='subheading-color font-bold md:text-5xl md:pb-0 pb-6 text-3xl md:leading-[80px] leading-[40px]'>Our Blogs</h2>
         </div>
         <div className="blog-content-right">
-          <p className="text-90 md:text-xl text-[#ffffff7d] mb-6 md:px-[1rem] px-4">
-            Our portal seamlessly connects stock market analysts with traders,
-            offering real-time insights and empowering informed decisions.
-            Traders access advanced tools, while analysts expand their reach.
-            Our affiliate partners earn by promoting this dynamic ecosystem.
+          <p className="text-90 md:text-xl text-[#c9c9c9] mb-6 md:px-[1rem]">
+          With Cobalt, managing your business finances is effortless, 
+empowering, and anything but boring. Our intuitive platform brings
+clarity to your cash flow, simplifies your financial decision-making, and  
+fingertips.{" "}
             <span className="text-white">
-              It's a collaborative hub where knowledge thrives, strategies align
-              and financial success unfolds.
+            Say no to spreadsheets and tools designed in the 80s.
             </span>
           </p>
         </div>

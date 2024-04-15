@@ -25,9 +25,11 @@ body {
 }
 
 .subheading-color {
-  background: linear-gradient(#FFFFFF, #71717A);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-image: -webkit-linear-gradient(45deg, #fff 1%, #71717A 77%);
+background-clip: text;
+-webkit-background-clip: text;
+text-fill-color: transparent;
+-webkit-text-fill-color: transparent;
 }
 
 .text-gradient {
@@ -112,6 +114,7 @@ body {
   z-index: 1;
 }
 
+
 .expertise-Bg {
   background-image: url('./assets/middle-left.png');
   background-repeat: no-repeat;
@@ -123,4 +126,9 @@ body {
   .expertise-Bg {
     background-position: -27rem 320rem;
   }
+}
+
+.glassyBackground {
+  backdrop-filter: blur(10px); /* Apply backdrop blur effect */
+  background-color: rgba(6, 3, 14, 0.8); /* Adjust the background color and opacity */
 }

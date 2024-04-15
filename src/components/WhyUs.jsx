@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { AD2, WhyUs1, WhyUs2, WhyUs3 } from '../assets';
+import { AD2, AdMob, WhyUs1, WhyUs2, WhyUs3 } from '../assets';
 
 const WhyUs = () => {
   return (
@@ -15,7 +15,7 @@ const WhyUs = () => {
         <div className='text-center'>
           <h2 className="subheading-color font-bold md:text-5xl text-3xl md:leading-[80px] leading-[40px]">Why Choose Us?</h2>
           <div className='md:px-[5rem]'>
-          <p className="text-90 md:text-xl text-[#ffffff7d] mb-6 md:px-[3rem] px-4">
+          <p className="text-90 md:text-xl text-[#ffffffbb] mb-6 md:px-[3rem] px-4">
             Copartner unlocks the gateway to financial success - where expertise meets innovation,
             empowering you to thrive in every market opportunity.
           </p>
@@ -26,28 +26,29 @@ const WhyUs = () => {
           <div className="column rounded-lg shadow-md p-6 hover:bg-[#ffffff12] transition duration-300">
             <img src={WhyUs1} alt="img1" style={{ maskImage: 'linear-gradient(rgba(0, 0, 0, 1) 70%, transparent)' }} className="w-full mb-4 rounded-lg" />
             <h3 className="text-xl font-semibold mb-2">For Traders</h3>
-            <p className="text-base text-[#ffffff4d]">Our platform offers easy-to-use tools and customised services to traders, authorised by SEBI registered Research Analysts, making it simple to execute trades and manage the portfolio.</p>
+            <p className="text-base text-[#ffffffbb]">Our platform offers easy-to-use tools and customised services to traders, authorised by SEBI registered Research Analysts, making it simple to execute trades and manage the portfolio.</p>
           </div>
 
           {/* Column 2 */}
           <div className="column rounded-lg shadow-md p-6 hover:bg-[#ffffff12] transition duration-300">
             <img src={WhyUs2} alt="img2" style={{ maskImage: 'linear-gradient(rgba(0, 0, 0, 1) 70%, transparent)' }} className="w-full mb-4 rounded-lg" />
             <h3 className="text-xl font-semibold mb-2">For RAs</h3>
-            <p className="text-base text-[#ffffff4d]">Connect with traders actively seeking valuable information, ensuring your analysis reaches an interested audience that enhances your visibility and credibility.</p>
+            <p className="text-base text-[#ffffffbb]">Connect with traders actively seeking valuable information, ensuring your analysis reaches an interested audience that enhances your visibility and credibility.</p>
           </div>
 
           {/* Column 3 */}
           <div className="column rounded-lg shadow-md p-6 hover:bg-[#ffffff12] transition duration-300">
             <img src={WhyUs3} alt="img3" style={{ maskImage: 'linear-gradient(rgba(0, 0, 0, 1) 70%, transparent)' }} className="w-full mb-4 rounded-lg" />
             <h3 className="text-xl font-semibold mb-2">For Customers</h3>
-            <p className="text-base text-[#ffffff4d]">A one stop solution platform that provides a transparent access to comprehensive analysis and a vibrant network of traders and experts and resources needed for informed decision-making and profitable trading journeys.</p>
+            <p className="text-base text-[#ffffffbb]">A one stop solution platform that provides a transparent access to comprehensive analysis and a vibrant network of traders and experts and resources needed for informed decision-making and profitable trading journeys.</p>
           </div>
         </div>
       </section>
 
       {/* Banner Image Section */}
-      <section className="w-[100%] p-2 my-12 mx-5">
-        <img src={AD2} alt="Banner" className="w-full rounded-lg shadow-md" />
+      <section className="w-[100%] p-2 my-8 mx-5">
+        <img src={AD2} alt="Banner" className="w-full md:block hidden rounded-lg shadow-md" />
+        <img src={AdMob} alt="AdMob" className="md:hidden rounded-lg" /> {/* Apply rounded corners to AdMob image */}
       </section>
     </motion.div>
   );

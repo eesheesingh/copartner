@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { steps } from './constants/data';
 
 const Product = () => {
-  const [expandedStep, setExpandedStep] = useState(null);
+  const [expandedStep, setExpandedStep] = useState(0); // Set initial expandedStep to 0
 
   const toggleExpand = (index) => {
     setExpandedStep((prevExpandedStep) =>
@@ -11,7 +11,7 @@ const Product = () => {
   };
 
   return (
-    <div className="p-1 mb-4">
+    <div className="p-1 mb-4 mt-[1.9rem]">
       {/* Container 1 */}
       <div className="flex md:flex-row flex-col mb-8 md:text-left text-center">
         {/* Left Column */}
@@ -23,7 +23,7 @@ const Product = () => {
 
         {/* Right Column */}
         <div className="flex-1">
-          <p className="text-90 md:text-xl text-[#ffffff7d] mb-6 md:px-[1rem] px-4">
+          <p className="text-90 md:text-xl text-[#ffffffbb] md:px-[1rem] px-4 py-2">
             Our portal seamlessly connects stock market analysts with traders,
             offering real-time insights and empowering informed decisions.
             Traders access advanced tools, while analysts expand their reach.

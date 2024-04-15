@@ -20,7 +20,7 @@ const BlogGrid = () => {
             <img
               src={blog.imageUrl}
               alt="Blog_Image"
-              className="w-full h-60 object-cover rounded-md"
+              className="w-full h-40 md:h-60 object-cover rounded-md"
               style={{
                 maskImage: 'linear-gradient(rgba(0, 0, 0, 1) 70%, transparent)'
               }}

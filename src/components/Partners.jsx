@@ -27,9 +27,9 @@ const Partners = () => {
       id="partners"
       initial={{ opacity: 0, y: 50 }} // Initial animation state
       animate={controls} // Animation controlled by controls
-      className="section2 flex flex-col items-center justify-center p-4 md:p-0"
+      className="section2 flex flex-col items-center justify-center p-2 md:p-0"
     >
-      <p className="text-90 md:text-xl text-[#ffffff7d] mb-6 md:px-20 px-4">Trusted by teams at</p>
+     
       <motion.div // Wrap the div containing trusted logos with motion.div
         className="trusted-logos md:flex flex-wrap justify-center items-center md:gap-8 hidden"
         initial={{ opacity: 0, y: 50 }} // Initial animation state
@@ -66,6 +66,7 @@ const Partners = () => {
           animate={controls} // Animation controlled by controls
         />
       </motion.div>
+      <p className="text-90 md:text-xl text-[#ffffff7d] mb-6 md:px-20 px-4 md:block hidden">Featured In</p>
     </motion.div>
   );
 };

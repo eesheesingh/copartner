@@ -51,6 +51,9 @@ const PartnersCarousel = () => {
           </div>
         ))}
       </Carousel>
+      <div className='items-center justify-center p-2 md:p-0 text-center md:hidden'>
+      <p className="text-[1.2rem] text-[#ffffffbb] mb-6 md:px-20 px-4">Featured In</p>
+      </div>
     </div>
   );
 };

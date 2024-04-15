@@ -66,7 +66,7 @@ const CounterSection = () => {
   }, [isVisible, apEarnings]);
 
   return (
-    <div ref={counterContainerRef} className="counter-container max-w-7xl mx-auto flex justify-center py-20" style={{ backgroundImage: `url(${CounterBg})`, backgroundSize: '90%', backgroundPosition:'center', backgroundRepeat:'no-repeat' }}>
+    <div ref={counterContainerRef} className="counter-container max-w-7xl mx-auto flex justify-center pt-20 pb-20" style={{ backgroundImage: `url(${CounterBg})`, backgroundSize: '90%', backgroundPosition:'center', backgroundRepeat:'no-repeat' }}>
       <div className={`counter-section flex flex-col items-center md:max-w-[1000px] md:w-[100%] ${isVisible ? 'animate__fadeInUp' : ''}`}>
         <div className="grid grid-cols-1 md:grid-cols-3 md:gap-[20rem] gap-[5rem] " >
           <div className="counter">

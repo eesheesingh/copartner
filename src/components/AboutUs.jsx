@@ -36,7 +36,7 @@ const AboutUs = () => {
     <div id="about-us" className="py-4 px-2" ref={aboutUsRef}> {/* Add ref to AboutUs section */}
       <div className="section3-heading text-center">
         <h2 className='subheading-color font-bold md:text-5xl text-3xl md:leading-[80px] leading-[40px]'>About Our Portal & Features.</h2>
-        <p className="text-90 md:text-xl text-[#ffffff7d] mb-6 md:px-[3rem] px-4">Our platform blends expert analysis, real-time insights, and seamless trader collaboration,
+        <p className="text-90 md:text-xl text-[#ffffffbb] mb-6 md:px-[3rem] px-4">Our platform blends expert analysis, real-time insights, and seamless trader collaboration,
          ensuring every move is a step toward financial success in the stock market.</p>
       </div>
 
@@ -58,7 +58,7 @@ const AboutUs = () => {
             <img src={MicroChip} alt="MicroChip" className="head-icon mr-2" /> In Depth Analysis
           </h3>
           <h4 className='md:text-[30px] font-semibold text-white mt-2'>Unlocking Your Trading Potential: A Guide to Our Platform:-</h4>
-          <p className="text-[#ffffff80]">
+          <p className="text-[#ffffffbb]">
             In this fast-paced world of stock trading, having the right tools and insights can make all the difference between success and missed opportunities. That is where our platform comes in, especially designed to empower traders of all levels with the resources they need to thrive in the market. One of the standout features of our platform is the access to real-time market insights with SEBI registered expert analysis.
           </p>
           <div className='explore-more-btn mt-4'>
