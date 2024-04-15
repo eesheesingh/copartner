@@ -111,3 +111,16 @@ body {
   transform: scale(1.1);
   z-index: 1;
 }
+
+.expertise-Bg {
+  background-image: url('./assets/middle-left.png');
+  background-repeat: no-repeat;
+  background-position: -20rem 355rem;
+  background-size: 50rem;
+}
+
+@media (max-width: 1060px) {
+  .expertise-Bg {
+    background-position: -27rem 320rem;
+  }
+}
