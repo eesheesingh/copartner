@@ -36,7 +36,7 @@ function App() {
           <Route path="/blogs/:blogId" element={<BlogPage />} />
           <Route path="refer&earn" element={<ReferEarn />} />
           <Route path="experts-explore" element={<ExpertisePage />} />
-          {/* <Route path="subscriptionRA" element={<SubscriptionRA />} /> */}
+          <Route path="/subscriptionRA/:id" element={<SubscriptionRA />} />
       </Route>
       
 

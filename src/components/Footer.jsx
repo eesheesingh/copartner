@@ -12,7 +12,7 @@ const ProductList = [
 ];
 
 const CommunityList = [
-  { name: "Subscription", link: "/" },
+  { name: "Subscription", link: "experts-explore" },
   // { name: "Courses", link: "/courses" },
   { name: "Experts", link: "experts-explore" },
   // { name: "Webinar", link: "/webinar" },

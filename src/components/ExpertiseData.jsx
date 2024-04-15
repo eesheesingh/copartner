@@ -43,7 +43,7 @@ const ExpertiseData = () => {
         <div className=" p-[1rem] gap-[1rem] grid sm:grid-cols-3 grid-cols-2 sm:px-2 px-2">
           {expertise_data.map((expert, id) => {
             return (
-              <Link to="expertise" key={expert.id}>
+              <Link to={`/subscriptionRA/${expert.id}`}>
                 <div
                   className="sm:w-[384px] sm:h-[460px] w-[172px] h-[229px] rounded-[11px] p-2 relative flex flex-col items-center hover:bg-[#18181B] hover:opacity[50%] transition duration-150 ease-in-out"
                 >
@@ -65,14 +65,14 @@ const ExpertiseData = () => {
                   </div>
 
                   <div className="w-[154px] h-[22px] sm:w-[319px] sm:h-[40px] flex justify-between px-[5px] sm:px-[1rem]">
-                    <div className="flex flex-col w-[68px] h-[22px] sm:w-[101px] sm:h-[40px] gap-2">
-                      <span className="sm:text-[18px] text-[12px] sm:leading-[18px] leading-[8px] font-[500] text-lightWhite">
-                        {expert.name}
-                      </span>
-                      <span className="sm:text-[13px] text-[10px] sm:leading-[16px] leading-[9.6px] font-[400] text-dimWhite">
-                        {expert.title}
-                      </span>
-                    </div>
+  <div className="flex flex-col w-[154px] sm:w-[319px] gap-2">
+    <span className="sm:text-[18px] text-[12px] sm:leading-[18px] leading-[8px] font-[500] text-lightWhite overflow-hidden whitespace-nowrap">
+      {expert.name}
+    </span>
+    <span className="sm:text-[13px] text-[10px] sm:leading-[16px] leading-[9.6px] font-[400] text-dimWhite overflow-hidden whitespace-nowrap">
+      {expert.title}
+    </span>
+  </div>
                     <div className="sm:w-[48px] sm:h-[22px] w-[21px] h-[10px] flex">
                       <img
                         src={expert.ratingIcon}
@@ -132,22 +132,16 @@ const ExpertiseData = () => {
                     </div>
                     
                   </div>
-                  <Link to="experts-explore" onClick={scrollToTop} className="flex items-center text-white md:text-[12px] text-[10px] button-animation">
-            View More
-            <FiChevronRight className="md:ml-2" />
-          </Link>
+                  <Link to={`/subscriptionRA/${expert.id}`} onClick={scrollToTop} className="flex text-white md:text-[15px] text-[10px] button-animation justify-center ">
+                  View More
+                  <div className="flex items-center">
+                    <FiChevronRight className="text-[15px]" />
+                  </div>
+                </Link>
                 </div>
               </Link>
             );
           })}
-        </div>
-
-        {/* "View More" link */}
-        <div className="flex justify-center mt-6">
-          <Link to="experts-explore" onClick={scrollToTop} className="flex items-center text-white font-bold text-lg button-animation">
-            View More
-            <FiChevronRight className="ml-2" />
-          </Link>
         </div>
       </div>
     </>

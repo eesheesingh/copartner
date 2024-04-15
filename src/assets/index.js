@@ -81,10 +81,16 @@ import post4 from './post4.png'
 import post5 from './post5.png'
 import AdMob from './Website banner 2-02.jpg'
 import AdMob2 from "./Website Banners-02.jpg"
+import bookmark from './Bookmark.png'
+import layer from './layer.png'
 import telegram from './telegram.png'
 import arrow from './arrow.png'
 import stars from './stars.png'
+import tick from './tick.png'
 export {
+    tick,
+    layer,
+    bookmark,
     background,
     blog1,
     blog2,

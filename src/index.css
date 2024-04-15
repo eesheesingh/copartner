@@ -25,9 +25,11 @@ body {
 }
 
 .subheading-color {
-  background: linear-gradient(#FFFFFF, #71717A);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-image: -webkit-linear-gradient(45deg, #fff 1%, #71717A 77%);
+background-clip: text;
+-webkit-background-clip: text;
+text-fill-color: transparent;
+-webkit-text-fill-color: transparent;
 }
 
 .text-gradient {

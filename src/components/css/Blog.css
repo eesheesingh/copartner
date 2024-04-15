@@ -25,10 +25,7 @@
     justify-content: center;
   }
 
-  .blog-content-right p{
-    font-size: 1rem;
-  }
-  
+
   .blog-box-content {
     display: flex;
     flex: 1;
@@ -72,7 +69,7 @@
   .blog-box-three p,
   .blog-box-two p {
     color: #c9c9c9;
-    font-size: 1rem;
+    font-size: 0.8rem;
     margin-top: 0.5rem;
     font-weight: normal;
   }
@@ -94,7 +91,7 @@
   }
   
   .box-contents h3 {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: semi-bold;
   }
   
@@ -170,6 +167,7 @@
     }
 
     .box-para{
+      font-size: 0.8rem;
       line-height: 1.3;
       color: #c9c9c9;
     }

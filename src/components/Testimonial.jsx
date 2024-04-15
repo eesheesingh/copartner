@@ -66,7 +66,7 @@ const Testimonials = () => {
       <div className="flex flex-col justify-between items-center md:w-[557px] md:h-[103px] w-[330px] h-[110px] gap-[4px] md:mb-16 mb-10">
         <span
           className="font-[700] md:text-[50px] text-[30px] md:w-[385px] md:h-[103px] w-[224px] h-[70px]
-          text-gradient-2 md:leading-[51px] leading-[35px] text-center"
+          subheading-color md:leading-[51px] leading-[35px] text-center"
         >
           What Our Users Say About Us
         </span>
