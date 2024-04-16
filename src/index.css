@@ -114,6 +114,20 @@ text-fill-color: transparent;
   z-index: 1;
 }
 
+
+.expertise-Bg {
+  background-image: url('./assets/middle-left.png');
+  background-repeat: no-repeat;
+  background-position: -20rem 355rem;
+  background-size: 50rem;
+}
+
+@media (max-width: 1060px) {
+  .expertise-Bg {
+    background-position: -27rem 320rem;
+  }
+}
+
 .glassyBackground {
   backdrop-filter: blur(10px); /* Apply backdrop blur effect */
   background-color: rgba(6, 3, 14, 0.8); /* Adjust the background color and opacity */

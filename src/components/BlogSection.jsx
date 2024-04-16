@@ -15,7 +15,7 @@ const Blog = () => {
     <section className="section">
       <div className="blog-container">
         <div className="blog-content-left">
-          <h2 className='subheading-color font-bold md:text-5xl text-3xl md:leading-[80px] leading-[40px]'>Our Blogs</h2>
+          <h2 className='subheading-color font-bold md:text-5xl md:pb-0 pb-6 text-3xl md:leading-[80px] leading-[40px]'>Our Blogs</h2>
         </div>
         <div className="blog-content-right">
           <p className="text-90 md:text-xl text-[#c9c9c9] mb-6 md:px-[1rem]">
