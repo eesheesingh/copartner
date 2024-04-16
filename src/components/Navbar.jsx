@@ -67,7 +67,7 @@ const Navbar = () => {
                       <Link
                         to={`/`}
                         style={{
-                          color: active === menuItem.title ? "#FFFFFF" : "#9CA3AF",
+                          color: active === menuItem.title ? "#FFFFFF" : "#c9c9c9",
                         }}
                       >
                         {menuItem.title}

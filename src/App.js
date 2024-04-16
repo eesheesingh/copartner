@@ -14,6 +14,8 @@ import ReferEarn from "./components/ReferEarn.jsx";
 import AboutUsPage from "./components/AboutUsPage/AboutPage.jsx";
 import ExpertisePage from "./components/ExpertisePage.jsx";
 import SubscriptionRA from "./components/SubscriptionRA.jsx";
+import PrivacyPolicy from "./components/PrivacyPolicy.jsx";
+import Terms from "./components/Terms.jsx";
 
 function App() {
   const router = createBrowserRouter(
@@ -37,6 +39,8 @@ function App() {
           <Route path="refer&earn" element={<ReferEarn />} />
           <Route path="experts-explore" element={<ExpertisePage />} />
           <Route path="/subscriptionRA/:id" element={<SubscriptionRA />} />
+          <Route path="privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="terms-of-services" element={<Terms />} />
       </Route>
       
 

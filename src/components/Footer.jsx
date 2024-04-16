@@ -7,8 +7,8 @@ const ProductList = [
   { name: "FAQ's", link: "/faqs" },
   { name: "Features", link: "/features" },
   { name: "Blog", link: "/blogs" },
-  { name: "Privacy Policy", link: "/privacy" },
-  { name: "Terms of Service", link: "/terms_of_service" },
+  { name: "Privacy Policy", link: "/privacy-policy" },
+  { name: "Terms of Service", link: "/terms-of-services" },
 ];
 
 const CommunityList = [

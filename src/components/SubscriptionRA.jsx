@@ -159,6 +159,21 @@ const SubscriptionRA = () => {
             </div>
           </div>
         </section>
+
+        {/* <div className="md:flex md:flex-row md:justify-between text-center w-full md:mt-16 mt-10 md:mb-8 mb-3">
+            <div className="flex-col-6 font-inter font-bold md:text-[50px] text-[30px] subheading-color md:leading-[50px] leading-[51px] text-white md:mb-6">
+            Subscriptions Plans
+            </div>
+            <div className="flex-col-6 font-normal md:text-left text-[#A1A1AACC] md:text-[18px] text-[11px] md:leading-[28px] leading-[17px]">
+              Dive into the expertise of our{" "}
+              <span className="text-white">
+                SEBI registered research analysts, <br /> guiding you towards
+                trading success with precision and insight.
+              </span>
+            </div>
+          </div> */}
+
+
           <section className="w-full flex md:flex-row flex-col md:my-14 my-10">
             <div className="text-white my-auto md:text-left text-center md:w-1/2 w-full" id="subscriptionPlans">
               <div className="subheading-color md:text-5xl text-3xl font-bold pb-4">
