@@ -25,7 +25,7 @@ const Blog = () => {
         </div>
       </div>
 
-      <section className=" w-full text-center md:mb-12 mt-20">
+      <section className=" w-full text-center md:mb-12 mt-12">
         <h2 className="md:text-[50px] text-[30px] md:leading-[50px] font-bold pb-2 text-left leading-[51px] md:mb-6 px-4 subheading-color">
           Our Blog
         </h2>

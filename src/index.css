@@ -106,7 +106,25 @@ text-fill-color: transparent;
   z-index: 0;
 }
 
+.basic-div:hover button {
+  background-color: white;
+  color: black;
+}
 
+.standard-div:hover button {
+  background-color: white;
+  color: black;
+}
+
+.basic-div:not(:hover) button {
+  background-color: transparent;
+  color: white;
+}
+
+.standard-div:not(:hover) button {
+  background-color: transparent;
+  color: white;
+}
 
 
 .main-button:hover {

@@ -4,9 +4,7 @@ import { Link } from "react-router-dom";
 import { FiChevronRight } from "react-icons/fi";
 
 const ExpertiseData = () => {
-  const [isSmallScreen, setIsSmallScreen] = useState(
-    window.innerWidth <= 640
-  );
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 640);
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -27,13 +25,13 @@ const ExpertiseData = () => {
 
   return (
     <>
-      <div className={`flex flex-col sm:py-[4rem] py-6`}>
+      <div className={`flex flex-col sm:py-[1rem] py-6`}>
         <div className={`{styles.flexStart} flex-col gap-2 xl:px-0`}>
           <div className="md:text-left text-center">
             <h2 className="subheading-color font-bold md:text-6xl text-4xl md:leading-[80px] leading-[40px] md:pl-[10px]">
               Our Expertise
             </h2>
-            <p className="text-90 md:text-xl text-[#ffffffbb] mb-6 md:px-[10px] px-4 py-2">
+            <p className="text-90 md:text-xl text-[#ffffffbb] md:px-[10px] px-4 py-2">
               Guiding your investments to Greatness: Our Expertise, Your
               Financial Advantage!
             </p>
@@ -44,9 +42,7 @@ const ExpertiseData = () => {
           {expertise_data.map((expert, id) => {
             return (
               <Link to={`/subscriptionRA/${expert.id}`}>
-                <div
-                  className="sm:w-[384px] sm:h-[460px] w-[172px] h-[229px] rounded-[11px] p-2 relative flex flex-col items-center hover:bg-[#18181B] hover:opacity[50%] transition duration-150 ease-in-out"
-                >
+                <div className="sm:w-[384px] sm:h-[460px] w-[172px] h-[229px] rounded-[11px] p-2 relative flex flex-col items-center hover:bg-[#18181B] hover:opacity[50%] transition duration-150 ease-in-out">
                   <div className="w-[72px] h-[98px] sm:w-[384px] sm:h-[219px]  relative profile-image mb-4">
                     <img
                       src={expert.icon}
@@ -65,14 +61,14 @@ const ExpertiseData = () => {
                   </div>
 
                   <div className="w-[154px] h-[22px] sm:w-[319px] sm:h-[40px] flex justify-between px-[5px] sm:px-[1rem]">
-  <div className="flex flex-col w-[154px] sm:w-[319px] gap-2">
-    <span className="sm:text-[18px] text-[12px] sm:leading-[18px] leading-[8px] font-[500] text-lightWhite overflow-hidden whitespace-nowrap">
-      {expert.name}
-    </span>
-    <span className="sm:text-[13px] text-[10px] sm:leading-[16px] leading-[9.6px] font-[400] text-dimWhite overflow-hidden whitespace-nowrap">
-      {expert.title}
-    </span>
-  </div>
+                    <div className="flex flex-col w-[154px] sm:w-[319px] gap-2">
+                      <span className="sm:text-[18px] text-[12px] sm:leading-[18px] leading-[8px] font-[500] text-lightWhite whitespace-nowrap">
+                        {expert.name}
+                      </span>
+                      <span className="sm:text-[13px] text-[10px] sm:leading-[16px] leading-[9.6px] font-[400] text-dimWhite whitespace-nowrap">
+                        {expert.title}
+                      </span>
+                    </div>
                     <div className="sm:w-[48px] sm:h-[22px] w-[21px] h-[10px] flex">
                       <img
                         src={expert.ratingIcon}
@@ -128,16 +124,18 @@ const ExpertiseData = () => {
                         alt="arrow"
                         className="md:w-[16px] md:h-[16px] w-[11px] h-[11px]"
                       />
-                      
                     </div>
-                    
                   </div>
-                  <Link to={`/subscriptionRA/${expert.id}`} onClick={scrollToTop} className="flex text-white md:text-[15px] text-[10px] button-animation justify-center ">
-                  View More
-                  <div className="flex items-center">
-                    <FiChevronRight className="text-[15px]" />
-                  </div>
-                </Link>
+                  <Link
+                    to={`/subscriptionRA/${expert.id}`}
+                    onClick={scrollToTop}
+                    className="flex text-white md:text-[15px] text-[10px] button-animation justify-center "
+                  >
+                    View More
+                    <div className="flex items-center">
+                      <FiChevronRight className="text-[15px]" />
+                    </div>
+                  </Link>
                 </div>
               </Link>
             );

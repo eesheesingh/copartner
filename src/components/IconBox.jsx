@@ -32,7 +32,7 @@ const IconBox = () => {
       </div>
 
       {/* Banner Image Section */}
-      <div className="w-full md:h-full h-20 p-2 mb-2 flex justify-center items-center md:pt-0 pt-[7rem] pb-[3rem] rounded-lg">
+      <div className="w-full md:h-full h-20 p-2 mb-2 flex justify-center items-center md:pt-20 pt-[7rem] rounded-lg">
         <img src={AD1} alt="" className="md:max-w-full md:block hidden md:h-full object-cover rounded-lg" />
         <img src={AdMob2} alt="AdMob" className="md:hidden rounded-lg" /> {/* Apply rounded corners to AdMob image */}
       </div>

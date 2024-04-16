@@ -46,7 +46,7 @@ const WhyUs = () => {
       </section>
 
       {/* Banner Image Section */}
-      <section className="w-[100%] p-2 my-8 mx-5">
+      <section className="w-[100%] py-10 mx-5">
         <img src={AD2} alt="Banner" className="w-full md:block hidden rounded-lg shadow-md" />
         <img src={AdMob} alt="AdMob" className="md:hidden rounded-lg" /> {/* Apply rounded corners to AdMob image */}
       </section>

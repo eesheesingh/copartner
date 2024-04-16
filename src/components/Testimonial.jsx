@@ -4,6 +4,7 @@ import {
   rightIcon,
   testimonialProfile,
 } from "../assets";
+import './css/Testimonial.css'
 
 const Testimonials = () => {
   const [count, setCount] = useState(0);

@@ -27,7 +27,7 @@ const Product = () => {
             Our portal seamlessly connects stock market analysts with traders,
             offering real-time insights and empowering informed decisions.
             Traders access advanced tools, while analysts expand their reach.
-            Our affiliate partners earn by promoting this dynamic ecosystem.
+            Our affiliate partners earn by promoting this dynamic ecosystem.{" "}
             <span className="text-white">
               It's a collaborative hub where knowledge thrives, strategies align
               and financial success unfolds.
@@ -42,13 +42,13 @@ const Product = () => {
         {steps.map((step, index) => (
           <div
             key={index}
-            className="border border-gray-700 flex-1 p-8 flex flex-col justify-between"
+            className="border border-gray-700 flex-1 p-3 flex flex-col justify-between"
           >
             <div>
-              <h3 className="mb-4 text-3xl font-bold text-[#ffffff92]">
+              <h3 className="mb-4 text-3xl font-bold text-[#fff7f792]">
                 Step {index + 1}
               </h3>
-              <h4 className="text-xl font-semibold py-2">{step.title}</h4>
+              <h4 className="md:text-lg font-semibold py-2">{step.title}</h4>
               <p className="mb-4 text-lg">{step.content}</p>
               
               {/* Image */}
@@ -73,7 +73,7 @@ const Product = () => {
           >
             {/* Left Column */}
             <div className="w-1/3 p-2 flex flex-col justify-between">
-              <h4 className="text-2xl font-semibold text-white mb-4">
+              <h4 className="text-md font-semibold text-white mb-4">
                 {step.title}
               </h4>
               {/* Image */}

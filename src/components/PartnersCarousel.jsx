@@ -2,10 +2,10 @@ import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-import { Trusted1, Trusted2, Trusted3, Trusted4, Trusted5, Trusted6 } from '../assets';
+import { Trusted1, Trusted2, Trusted3 } from '../assets';
 
 const PartnersCarousel = () => {
-  const images = [Trusted1, Trusted2, Trusted3, Trusted4, Trusted5, Trusted6];
+  const images = [Trusted1, Trusted2, Trusted3];
   const pairedImages = [];
   
   // Pair images

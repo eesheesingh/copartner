@@ -50,21 +50,7 @@ const Partners = () => {
           initial={{ opacity: 0, y: 50 }} // Initial animation state
           animate={controls} // Animation controlled by controls
         />
-        <motion.img
-          src={Trusted4} alt="Trusted 4" className="trusted-logo w-20 md:w-28"
-          initial={{ opacity: 0, y: 50 }} // Initial animation state
-          animate={controls} // Animation controlled by controls
-        />
-        <motion.img
-          src={Trusted5} alt="Trusted 5" className="trusted-logo w-20 md:w-28"
-          initial={{ opacity: 0, y: 50 }} // Initial animation state
-          animate={controls} // Animation controlled by controls
-        />
-        <motion.img
-          src={Trusted6} alt="Trusted 6" className="trusted-logo w-20 md:w-28"
-          initial={{ opacity: 0, y: 50 }} // Initial animation state
-          animate={controls} // Animation controlled by controls
-        />
+        
       </motion.div>
       <p className="text-90 md:text-xl text-[#ffffff7d] mb-6 md:px-20 px-4 md:block hidden">Featured In</p>
     </motion.div>

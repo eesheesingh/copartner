@@ -37,7 +37,7 @@ const ExpertisePage = () => {
           <h2 className="subheading-color font-bold md:text-6xl text-4xl md:leading-[80px] leading-[40px] md:pl-[10px]">
             Our Expertise
           </h2>
-          <p className="text-90 md:text-xl text-[##ffffffbb] mb-6 md:px-[10px] px-4 py-2">
+          <p className="text-90 md:text-xl text-[##ffffffbb] md:px-[10px] px-4 ">
             Guiding your investments to Greatness: Our Expertise, Your Financial Advantage!
           </p>
         </div>

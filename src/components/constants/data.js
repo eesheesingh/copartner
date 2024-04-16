@@ -79,28 +79,28 @@ export const expertsData = [
 
 export  const steps = [
     {
-      title: 'Step 1',
+      title: 'INSIGHTFUL ACCESS',
       content:
         'Traders step into our portal, gaining immediate access to real-time market insights, comprehensive analyses, and the latest financial news, providing a solid foundation for decision-making.',
       image: svg1,
       color: '#4ab4ed',
     },
     {
-      title: 'Step 2',
+      title: 'TAILORED TOOLS',
       content:
         'Explore advanced trading tools and personalised features designed to enhance your trading experience, empowering you with the resources needed to execute informed strategies.',
       image: svg2,
       color: '#df42d2',
     },
     {
-      title: 'Step 3',
+      title: 'COLLABORATE AND LEARN',
       content:
         'Engage in a collaborative community where traders can share experiences, strategies, and insights, fostering a continuous learning environment to stay ahead in the ever-evolving stock market.',
       image: svg3,
       color: '#43e548',
     },
     {
-      title: 'Step 4',
+      title: 'PROFITABLE EXECUTION',
       content:
         'Armed with knowledge and equipped with sophisticated tools, execute trades confidently, optimising your portfolio and maximising profits in the dynamic world of stock trading.',
       image: svg4,

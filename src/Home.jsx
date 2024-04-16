@@ -38,7 +38,7 @@ const Home = () => {
           <PartnersCarousel />
         </div>
       </div>
-      <div className={`md:mt-[3rem] mt-[1rem] ${styles.boxWidth}`}>
+      <div className={`md:mt-[0] mt-[1rem] ${styles.boxWidth}`}>
         <AboutUs />
       </div>
       <div className={`md:mt-[5rem] mt-[2rem] p-1 ${styles.boxWidth}`} id='features'>
