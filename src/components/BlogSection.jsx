@@ -57,7 +57,7 @@ fingertips.{" "}
           ))}
         </div>
       </div>
-      <div className="button-container">
+      <div className="button-container pb-10">
         <Link to='blogs' onClick={scrollToTop} className="main-button">Explore More + </Link>
       </div>
     </section>

@@ -25,6 +25,29 @@
     justify-content: center;
   }
 
+  .box-contents {
+    padding: 1rem 1.5rem;
+    margin-top: auto; /* Push content to the top */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start (left) */
+  }
+  
+  .box-contents h3 {
+    font-size: 1rem;
+    font-weight: 600; /* Change 'semi-bold' to '600' */
+    margin-top: 0; /* Remove default margin */
+    margin-bottom: 0.5rem; /* Add some space below the heading */
+  }
+  
+  .box-para {
+    color: #c9c9c9;
+    font-size: 0.8rem;
+    line-height: 1.3;
+    margin-top: 0; /* Remove default margin */
+    margin-bottom: 0; /* Remove default margin */
+  }
+
 
   .blog-box-content {
     display: flex;
