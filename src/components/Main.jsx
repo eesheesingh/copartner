@@ -8,12 +8,15 @@ import Testimonial from "./Testimonial";
 const Main = () => {
   return (
     <div>
+      {/* <div className={`${styles.marginX}`}> */}
       <Navbar />
+      {/* </div> */}
       <Outlet />
+      
       {/* <div className={`md:mt-[5rem] md:px-[2rem] mt-[1rem]${styles.boxWidth}`}>
         <Testimonial />
       </div> */}
-      <div className={`md:my-[5rem] mt-[1rem] ${styles.boxWidth}`}>
+      <div className={`md:my-[5rem] mt-[1rem] ${styles.paddingX}`}>
         <Footer />
       </div>
     </div>

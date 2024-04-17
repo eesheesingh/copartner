@@ -21,7 +21,7 @@ import ExpertiseData from './components/ExpertiseData';
 
 const Home = () => {
   return (
-    <div className={`flex md:flex-col flex-col ${styles.paddingX} md:px-[7rem] px-2 expertise-Bg`}>
+    <div className={`flex md:flex-col flex-col ${styles.boxWidth} md:px-[7rem] px-2 expertise-Bg`}>
       <div className="flex flex-col md:gap-[2rem] gap-[1rem] text-white">
         <div className='text-white bg-[#06030E]s'> {/* Added padding-x */}
           <div className={`md:mt-[5rem] mt-[2rem] ${styles.boxWidth}`} id='home'>

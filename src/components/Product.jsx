@@ -73,7 +73,7 @@ const Product = () => {
           >
             {/* Left Column */}
             <div className="w-1/3 p-2 flex flex-col justify-between">
-              <h4 className="text-md font-semibold text-white mb-4">
+              <h4 className="text-sm font-semibold text-white mb-4">
                 {step.title}
               </h4>
               {/* Image */}

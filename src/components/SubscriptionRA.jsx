@@ -49,7 +49,10 @@ const SubscriptionRA = () => {
 
   return (
     <section className={`flex md:flex-col flex-col md:px-0 px-3 ${styles.paddingY} expertise-Bg`}>
+          
+
     <div key={expertData.id} className={`flex-1 ${styles.flexStart} flex-col xl:px-0 md:px-28 z-10 md:bottom-[10rem] font-inter`}>
+      
       <section className="subscription-RA-bg flex flex-row justify-between bg-[#18181B80] relative w-full md:p-[30px] p-[16px] border-2 border-[#f4f4f50e] rounded-xl mb-8">
             <div className="text-white">
               <div className="flex flex-col md:mb-6 mb-1">
