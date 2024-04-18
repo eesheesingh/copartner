@@ -28,11 +28,11 @@ const styles = {
     paddingY: "sm:pt-32 sm:pb-16 pt-24 pb-12",
     padding: "sm:px-16 px-6 sm:py-12 py-4",
   
-    marginX: "sm:mx-16 mx-6",
+    marginX: "sm:mx-5 mx-6",
     marginY: "sm:my-16 my-6",
-
+    
     scrolledNavbar: "bg-transparent",
-    transparentNavbar: "bg-[#06030eea]"
+    transparentNavbar: "backdrop-blur-lg"
   };
   
   export const layout = {

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Login from "./SignUp";
 import { logo, menu, hamburgerBg, close } from "../assets";
 import style from "../style";
@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   const [active, setActive] = useState("Home");
   const [toggle, setToggle] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
   const scrollToTop = () => {
     window.scrollTo({
@@ -14,6 +15,34 @@ const Navbar = () => {
       behavior: "smooth",
     });
   };
+
+  useEffect(() => {
+    if (toggle) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [toggle]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+      if (scrollTop > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const menuItems = [
     { id: "home", title: "Home" },
@@ -40,7 +69,9 @@ const Navbar = () => {
   return (
     <>
       <div
-        className={`${style.paddingX} ${style.flexCenter} fixed top-0 z-50 w-full bg-[#06030ec4]`}
+        className={`${style.paddingX} ${style.flexCenter} ${
+          isScrolled ? style.transparentNavbar : style.scrolledNavbar
+        } fixed top-0 z-50 w-full`}
       >
         <div className={`${style.boxWidth}`}>
           <nav className="w-full flex md:py-5 py-4 justify-between items-center">
@@ -83,10 +114,10 @@ const Navbar = () => {
             </ul>
 
             <div style={{ display: "flex", marginLeft: "4rem" }}>
-              <Link to="refer&earn"> 
+              {/* <Link to="refer&earn"> 
               <button onClick={handleReferEarnClick} className="md:block hidden text-dimWhite text-[11px] py-2 px-4 ms-8 rounded-[36px] border border-solid border-white border-opacity-60  items-center">
                 Refer & Earn
-              </button></Link>
+              </button></Link> */}
              
               <button
                 className="md:hidden flex text-black text-[11px] py-2 px-4 ms-8 rounded-md border border-none bg-[#fff] hover:bg-[#000] transition duration-300 items-center"

@@ -87,8 +87,10 @@ import telegram from './telegram.png'
 import arrow from './arrow.png'
 import stars from './stars.png'
 import tick from './tick.png'
+import trustTeam from './trustteam.png'
 export {
     tick,
+    trustTeam,
     layer,
     bookmark,
     background,

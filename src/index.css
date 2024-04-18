@@ -141,15 +141,16 @@ text-fill-color: transparent;
 
 
 .expertise-Bg {
-  background-image: url('./assets/middle-left.png');
-  background-repeat: no-repeat;
-  background-position: -20rem 355rem;
-  background-size: 50rem;
+  background-image: url('./assets/Div.png'), url('./assets/middle-left.png');
+  background-repeat: no-repeat, no-repeat;
+  background-position: 400% -7%, -20rem 75rem;
+  background-size: 90%, 45rem;
 }
 
 @media (max-width: 1060px) {
   .expertise-Bg {
-    background-position: -27rem 320rem;
+    background-position: 25% -3%, -25rem 40rem;
+    background-size: 45rem, 45rem;
   }
 }
 

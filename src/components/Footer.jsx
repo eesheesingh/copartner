@@ -44,7 +44,7 @@ const Footer = () => {
       </div>
       <div className="flex flex-row gap-[4rem]">
         <div className="flex flex-col justify-around w-full h-[220px]">
-          <span className="w-[48px] h-[15px] font-medium text-[1.2rem] leading-[14.7px] mb-4 text-white">
+          <span className="w-[48px] h-[15px] font-medium text-[12.6px] leading-[14.7px] mb-4 text-white">
             Product
           </span>
           {ProductList.map((product) => (
@@ -58,20 +58,20 @@ const Footer = () => {
 ))}
         </div>
         <div className="flex flex-col justify-between w-[117px] h-[105px] mt-[5px]">
-          <span className="w-[48px] h-[15px] font-medium text-[1.2rem] leading-[14.7px] mb-4 text-white">
-            Perks
-          </span>
-          {CommunityList.map((community) => (
-            <Link
-              to={community.link}
-              onClick={scrollToTop}
-              key={community.link}
-              className="font-normal text-[0.9rem] leading-[14.7px] text-dimWhite text-left hover:text-white"
-            >
-              {community.name}
-            </Link>
-          ))}
-        </div>
+            <span className="w-[89px] h-[15px] font-medium text-[12.6px] leading-[14.7px] mb-4 text-white">
+              What We Offer
+            </span>
+            {CommunityList.map((community) => (
+              <Link
+                onClick={scrollToTop}
+                to={community.link}
+                key={community.link}
+                className="font-normal text-[0.9rem] leading-[14.7px] text-dimWhite text-left hover:text-white"
+              >
+                {community.name}
+              </Link>
+            ))}
+          </div>
       </div>
     </div>
   );

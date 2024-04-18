@@ -2,24 +2,24 @@ import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-import { Trusted1, Trusted2, Trusted3 } from '../assets';
+import { Trusted1, Trusted2, Trusted3, trustTeam  } from '../assets';
 
 const PartnersCarousel = () => {
-  const images = [Trusted1, Trusted2, Trusted3];
-  const pairedImages = [];
+  // const images = [Trusted1, Trusted2, Trusted3];
+  // const pairedImages = [];
   
-  // Pair images
-  for (let i = 0; i < images.length; i += 2) {
-    if (i + 1 < images.length) {
-      pairedImages.push([images[i], images[i + 1]]);
-    } else {
-      pairedImages.push([images[i], null]);
-    }
-  }
+  // // Pair images
+  // for (let i = 0; i < images.length; i += 2) {
+  //   if (i + 1 < images.length) {
+  //     pairedImages.push([images[i], images[i + 1]]);
+  //   } else {
+  //     pairedImages.push([images[i], null]);
+  //   }
+  // }
 
   return (
     <div className="md:hidden">
-      <Carousel 
+      {/* <Carousel 
         showArrows={false} 
         showStatus={false} 
         showThumbs={false} 
@@ -50,8 +50,9 @@ const PartnersCarousel = () => {
             </div>
           </div>
         ))}
-      </Carousel>
+      </Carousel> */}
       <div className='items-center justify-center p-2 md:p-0 text-center md:hidden'>
+        <img src={trustTeam} alt="" />
       <p className="text-[1.2rem] text-[#ffffffbb] mb-6 md:px-20 px-4">Featured In</p>
       </div>
     </div>
