@@ -1,11 +1,12 @@
 // Otp.jsx
-import React, { useState, useRef } from 'react';
-import { IoClose } from 'react-icons/io5';
+import React, { useState, useRef } from "react";
+import { IoClose } from "react-icons/io5";
 
-const Otp = ({ onClose }) => {
-  const [otp, setOtp] = useState(['', '', '', '', '', '']);
+const Otp = ({ onClose, mobileNumber }) => {
+  const [otp, setOtp] = useState(["", "", "", "", "", ""]);
   const otpInputs = Array.from({ length: 6 }); // Array to generate 6 OTP input boxes
   const otpInputRefs = useRef([]);
+  const [error, setError] = useState(""); // State to manage the error message
 
   // Function to handle input change for each OTP box
   const handleInputChange = (index, value) => {
@@ -20,35 +21,73 @@ const Otp = ({ onClose }) => {
   };
 
   // Function to handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const enteredOtp = otp.join('');
-    // Perform form submission logic here
+    const enteredOtp = otp.join("");
+    const postData = {
+      countryCode: "IN",
+      mobileNumber: mobileNumber,
+      otp: enteredOtp,
+    };
+
+    try {
+      const response = await fetch(
+        "http://13.60.50.119:5181/api/SignIn/ValidateOTP",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(postData),
+        }
+      );
+
+      const data = await response.json();
+      if (!data.isSuccess) {
+        console.log(data.errorMessages);
+        throw new Error(setError(data.errorMessages));
+      } else {
+        window.location.href = "https://zestify.ai/";
+      }
+    } catch (error) {
+      console.error("There was a problem with your fetch operation:", error);
+    }
   };
 
   // Function to check if the form fields are empty
   const isFormEmpty = () => {
-    return otp.some(value => value === '');
+    return otp.some((value) => value === "");
   };
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
       <div className="bg-[#18181B] border-[1px] border-[#ffffff2a] m-4 p-8 rounded-lg w-96 relative text-center">
-        <div className='absolute top-3 right-0 text-right '>
-          <div onClick={onClose} className="text-gray-400 w-8 text-[20px] cursor-pointer hover:text-white">
+        <div className="absolute top-3 right-0 text-right ">
+          <div
+            onClick={onClose}
+            className="text-gray-400 w-8 text-[20px] cursor-pointer hover:text-white"
+          >
             <IoClose />
           </div>
         </div>
         <div className="mb-1">
-          <h2 className="text-2xl font-semibold text-white">OTP Verification</h2>
+          <h2 className="text-2xl font-semibold text-white">
+            OTP Verification
+          </h2>
         </div>
-        <p className="text-gray-300 text-center mb-4">Enter the verification code we just sent to your mobile number</p>
-        <form className="flex flex-col gap-4 text-white" onSubmit={handleSubmit}>
+        <p className="text-gray-300 text-center mb-4">
+          Enter the verification code we just sent to your mobile number
+        </p>
+        {error && <p className="text-red-500 mb-4">{error}</p>}{" "}
+        <form
+          className="flex flex-col gap-4 text-white"
+          onSubmit={handleSubmit}
+        >
           <div className="flex justify-center gap-3 p-2">
             {otpInputs.map((_, index) => (
               <input
                 key={index}
-                ref={el => otpInputRefs.current[index] = el}
+                ref={(el) => (otpInputRefs.current[index] = el)}
                 type="text"
                 maxLength={1}
                 value={otp[index]}
@@ -59,7 +98,9 @@ const Otp = ({ onClose }) => {
           </div>
           <button
             type="submit"
-            className={`bg-white hover:bg-black hover:text-white text-black transition duration-300 font-semibold text-[20px] py-3 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 ${isFormEmpty() ? 'opacity-50 cursor-not-allowed' : ''}`}
+            className={`bg-white hover:bg-black hover:text-white text-black transition duration-300 font-semibold text-[20px] py-3 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+              isFormEmpty() ? "opacity-50 cursor-not-allowed" : ""
+            }`}
             disabled={isFormEmpty()}
           >
             Verify
