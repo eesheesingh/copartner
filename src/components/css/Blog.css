@@ -42,7 +42,7 @@
   
   .box-para {
     color: #c9c9c9;
-    font-size: 0.8rem;
+    font-size: 1rem;
     line-height: 1.3;
     margin-top: 0; /* Remove default margin */
     margin-bottom: 0; /* Remove default margin */
@@ -92,7 +92,7 @@
   .blog-box-three p,
   .blog-box-two p {
     color: #c9c9c9;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     margin-top: 0.5rem;
     font-weight: normal;
   }
@@ -163,9 +163,7 @@
     opacity: 1;
   }
   
-  .box-para{
-    color: #c9c9c9;
-  }
+
 
   @media screen and (max-width: 768px) {
 
@@ -182,7 +180,7 @@
     .blog-content-left h2 {
       color: #FFFFFF;
       font-size: 3.8rem;
-      padding: 2rem 0;
+      
     }
 
     .box-contents{

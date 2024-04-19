@@ -27,7 +27,7 @@ function App() {
           path="blogs"
           element={
             <div
-              className={`md:mt-[5rem] md:px-[2rem] mt-[1rem]${styles.boxWidth}`}
+              className={`md:mt-[5rem] mt-[1rem]${styles.boxWidth}`}
               id="blogs"
             >
               <Blog />

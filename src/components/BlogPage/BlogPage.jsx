@@ -12,9 +12,9 @@ const BlogPage = () => {
   }
 
   return (
-    <section id="" className={`${styles.paddingY} `}>
+    <section className={`${styles.paddingY}`}>
       <div className={`md:px-[2rem] px-2 expertise-Bg`}>
-        <div className="w-full text-left md:px-20 md:mb-12 mt-5">
+        <div className="w-full text-left md:px-20 mt-5">
           <div className="justify-center items-center w-full">
             <img src={blog.imageUrl} alt="Blog_Image" className="w-full md:w-[100%] max-h-90 h-auto object-cover rounded-md" />
             <div className="p-1 py-5 md:w-full text-white">
