@@ -57,7 +57,7 @@ const Footer = () => {
   </a>
 ))}
         </div>
-        <div className="flex flex-col justify-between w-[117px] h-[105px] mt-[5px]">
+        <div className="flex flex-col justify-between w-[117px] h-[90px] mt-[5px]">
             <span className="w-[89px] h-[15px] font-medium text-[12.6px] leading-[14.7px] mb-4 text-white">
               What We Offer
             </span>

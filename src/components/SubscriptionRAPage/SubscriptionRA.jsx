@@ -392,7 +392,8 @@ const SubscriptionRA = () => {
             </div>
           </div>
         {showMonthlyPopup && <SubscriptionPaymentPopup onClose={handleClosePopup}  selectedMonthlyPlan={selectedMonthlyPlan}
-          planMonthlyPrice={planMonthlyPrice} />}
+          planMonthlyPrice={planMonthlyPrice}   expertName={expertData.name}
+          />}
         </div>
 
 
@@ -534,7 +535,7 @@ const SubscriptionRA = () => {
             >
               Buy Now
             </button>
-            {showPopup && <CoursePaymentPopup onClose={handleClose} selectedPlan={selectedPlan} planPrice={planPrice} />}
+            {showPopup && <CoursePaymentPopup onClose={handleClose} selectedPlan={selectedPlan} planPrice={planPrice} expertName={expertData.name} />}
           </div>
         </div>
           </div>
