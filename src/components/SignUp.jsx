@@ -3,9 +3,9 @@ import { IoClose } from 'react-icons/io5';
 // import Login from './Login';
 
 const SignUp = ({ onClose }) => {
-  const [name, setName] = useState('');
+  // const [name, setName] = useState('');
   const [mobile, setMobile] = useState('');
-  const [email, setEmail] = useState('');
+  // const [email, setEmail] = useState('');
   // const [showLoginPopup, setShowLoginPopup] = useState(false);
 
   // Function to handle form submission

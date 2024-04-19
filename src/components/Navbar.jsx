@@ -143,7 +143,7 @@ const Navbar = () => {
 
               {/* Animated mobile menu */}
               <div
-                className={`justify-center items-center fixed top-0 left-0 z-50 w-full bg-[#06030ed8] h-full p-3 bg-gradient-to-tr ${
+                className={`justify-center items-center fixed top-0 left-0 z-50 w-full bg-[#06030ed8] h-screen p-3 bg-gradient-to-tr ${
                   toggle ? "visible" : "hidden"
                 }`}
                 style={{

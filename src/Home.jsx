@@ -1,27 +1,27 @@
 import React from 'react';
-import Hero from './components/Hero';
-import Partner from "./components/Partners";
+import Hero from './components/HomePage/HeroSection/Hero';
+import Partner from "./components/HomePage/PartnerSection/Partners";
 import styles from './style';
-import PartnersCarousel from './components/PartnersCarousel';
-import AboutUs from './components/AboutUs';
-import Features from './components/Features';
-import IconBox from './components/IconBox';
-import Counter from './components/Counter';
-import CounterMob from './components/CounterMob';
-import WhyUs from './components/WhyUs';
-import Expertise from './components/Expertise';
-import ExpertMob from './components/ExpertMob';
-import Product from './components/Product';
-import Stock from './components/Stock';
-import ReferEarn from './components/ReferEarn';
-import Testimonial from './components/Testimonial';
-import BlogSection from './components/BlogSection';
-import ExpertiseData from './components/ExpertiseData';
+import PartnersCarousel from './components/HomePage/PartnerSection/PartnersCarousel';
+import AboutUs from './components/HomePage/AboutUsSection/AboutUs';
+import Features from './components/HomePage/FeaturesSection/Features';
+import IconBox from './components/HomePage/IconBoxSection/IconBox';
+import Counter from './components/HomePage/CounterSection/Counter';
+import CounterMob from './components/HomePage/CounterSection/CounterMob';
+import WhyUs from './components/HomePage/WhyUsSection/WhyUs';
+// import Expertise from './components/Expertise';
+// import ExpertMob from './components/ExpertMob';
+import Product from './components/HomePage/ProductSection/Product';
+import Stock from './components/HomePage/StockSection/Stock';
+// import ReferEarn from './components/ReferEarn';
+import Testimonial from './components/Testimoials/Testimonial';
+import BlogSection from './components/HomePage/BlogSection/BlogSection';
+import ExpertiseData from './components/HomePage/ExpertSection/ExpertiseData';
 // import BlogPage from './components/BlogPage';
 
 const Home = () => {
   return (
-    <div className={`flex md:flex-col flex-col ${styles.boxWidth} md:px-[7rem] px-2 expertise-Bg`}>
+    <div className={`flex md:flex-col flex-col ${styles.boxWidth} md:px-[7rem] px-2`}>
       <div className="flex flex-col md:gap-[2rem] gap-[1rem] text-white">
         <div className='text-white bg-[#06030E]s'> {/* Added padding-x */}
           <div className={`md:mt-[5rem] mt-[2rem] ${styles.boxWidth}`} id='home'>

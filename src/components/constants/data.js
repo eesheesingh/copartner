@@ -1,4 +1,4 @@
-import { ExpertImg, stars, arrow, background, telegram, blog1, blog2, blog3, blog4, blog5, svg1, svg2,  svg3, svg4, aboutFeature, aboutFeature2, aboutFeature3, vision, vision2, blog1Post, blog2Post, blog3Post, blog4Post, blog5Post, WhyUs1, WhyUs2, WhyUs3 } from "../../assets";
+import { ExpertImg, stars, arrow, background, telegram, blog1, blog2, blog3, blog5, svg1, svg2,  svg3, svg4, aboutFeature, aboutFeature2, aboutFeature3, vision, vision2, blog1Post, blog2Post, blog3Post, blog4Post, blog5Post, WhyUs1, WhyUs2, WhyUs3 } from "../../assets";
 
 export const expertsData = [
     {

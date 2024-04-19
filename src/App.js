@@ -6,16 +6,17 @@ import {
 } from "react-router-dom";
 import Main from "./components/Main";
 import styles from "./style";
-import Blog from "./components/Blog";
+import Blog from "./components/BlogPage/Blog.jsx";
 import Home from "./Home";
-import ContactUs from './components/ContactUs.jsx'
-import BlogPage from "./components/BlogPage.jsx";
+import ContactUs from './components/ContactUsPage/ContactUs.jsx'
+import BlogPage from "./components/BlogPage/BlogPage.jsx";
 // import ReferEarn from "./components/ReferEarn.jsx";
 import AboutUsPage from "./components/AboutUsPage/AboutPage.jsx";
-import ExpertisePage from "./components/ExpertisePage.jsx";
-import SubscriptionRA from "./components/SubscriptionRA.jsx";
-import PrivacyPolicy from "./components/PrivacyPolicy.jsx";
-import Terms from "./components/Terms.jsx";
+import ExpertisePage from "./components/ExpertisePage/ExpertisePage.jsx";
+import SubscriptionRA from "./components/SubscriptionRAPage/SubscriptionRA.jsx";
+import PrivacyPolicy from "./components/PrivacyAndTermsPage/PrivacyPolicy.jsx";
+import Terms from "./components/PrivacyAndTermsPage/Terms.jsx";
+import FAQ from './components/FaqPage/Faq.jsx'
 
 function App() {
   const router = createBrowserRouter(
@@ -41,6 +42,7 @@ function App() {
           <Route path="/subscriptionRA/:id" element={<SubscriptionRA />} />
           <Route path="privacy-policy" element={<PrivacyPolicy />} />
           <Route path="terms-of-services" element={<Terms />} />
+          <Route path="faq" element={<FAQ />} />
       </Route>
       
 
