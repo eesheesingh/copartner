@@ -45,7 +45,7 @@ const Home = () => {
           <div className={`md:mt-[5rem] mt-[5rem] md:block hidden ${styles.boxWidth}`}>
             <Counter />
           </div>
-          <div className={`md:mt-[5rem] mt-[5rem] md:hidden ${styles.boxWidth}`}>
+          <div className={`md:mt-[5rem] mt-[8rem] md:hidden ${styles.boxWidth}`}>
             <CounterMob />
           </div>
           <div className={`md:mt-[5rem] mt-[1rem] ${styles.boxWidth}`}>

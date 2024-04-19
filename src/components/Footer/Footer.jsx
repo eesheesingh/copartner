@@ -34,10 +34,10 @@ const Footer = () => {
           happy to share some of their feedback below
         </span>
         <div className="flex gap-4 rounded-full">
-          <a href="/">
-            <img src={linkedin} alt="LinkeDin" className="w-8" />
+          <a href="https://www.linkedin.com/company/copartnerindia/" target="_blank">
+            <img src={linkedin}  alt="LinkeDin" className="w-8" />
           </a>
-          <a href="/">
+          <a href="https://www.instagram.com/copartner.in/">
             <img src={instagram} alt="Instagram" className="w-8" />
           </a>
         </div>

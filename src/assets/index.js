@@ -26,7 +26,7 @@ import MobileTrusted from './trustedTeams.png'
 import Trusted1 from "./logos-01.png"
 import Trusted2 from "./logos-02.png"
 import Trusted3 from "./logos-03.png"
-import Trusted4 from "./trusted4.png"
+import Trusted4 from "./logo 02-01.png"
 import Trusted5 from "./trusted5.png"
 import Trusted6 from "./trusted6.png"
 import flowImage from './Image (5).png'
