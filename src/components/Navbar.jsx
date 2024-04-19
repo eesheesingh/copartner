@@ -76,7 +76,7 @@ const Navbar = () => {
         <div className={`${style.boxWidth}`}>
           <nav className="w-full flex md:py-5 py-4 justify-between items-center">
             <a href="/">
-              <img src={logo} alt="LOGO" className="w-[143px] h-[39px]" />
+              <img src={logo} alt="LOGO" className="w-[160px] h-[39px]" />
             </a>
 
             <ul className="list-none sm:flex hidden justify-center items-center flex-1">
@@ -202,13 +202,13 @@ const Navbar = () => {
                   ))}
 
                   {/* Refer & Earn button mobile*/}
-                  <li className="mt-4">
+                  {/* <li className="mt-4">
                   <Link to="refer&earn">
                       <button onClick={handleReferEarnClick} className="md:hidden text-dimWhite text-[11px] py-2 px-4 rounded-[36px] border border-solid border-white border-opacity-60  items-center">
                         Refer & Earn
                       </button>
                     </Link>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             </div>

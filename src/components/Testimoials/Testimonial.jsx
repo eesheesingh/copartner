@@ -72,7 +72,7 @@ const Testimonials = () => {
           What Our Users Say About Us
         </span>
 
-        <span className="text-dimWhite md:w-[596px] w-[328px] text-center md:h-[56px] h-[34px] font-[400] md:text-[18px] text-md md:leading-[28px] leading-[20px]">
+        <span className="text-dimWhite md:w-[596px] w-[328px] text-center md:h-[56px] h-[34px] font-[400] md:text-xl text-md md:leading-[28px] leading-[20px]">
         Our users love our platform for its easy-to-use features, helpful insights, and friendly community.
         </span>
       </div>
