@@ -26,10 +26,13 @@ const Footer = () => {
     });
   };
   return (
-    <div className="footer-section w-full md:h-[198px] h-[506px] md:pt-[6rem] pt-[1rem] mt-[1rem] justify-around border-t border-solid border-white border-opacity-10 flex md:flex-row flex-col items-center">
+    <div className="footer-section w-full md:h-[260px] h-[506px] md:pt-[6rem] pt-[1rem] mt-[1rem] justify-around border-t border-solid border-white border-opacity-10 flex md:flex-row flex-col items-center">
       <div className="flex flex-col gap-[1rem]">
         <img src={logo} alt="" className="md:w-56 w-40" />
-        <span className="md:w-[296px] w-[296px] md:h-[84px] h-[66px] font-normal md:text-[16px] text-[14px] md:leading-[28px] leading-[22px] text-dimWhite">
+        <span className=" font-normal md:text-[16px] text-[14px] text-dimWhite">
+        HAILGRO TECH SOLUTIONS PRIVATE LIMITED
+        </span>
+        <span className="md:w-[296px] w-[296px] md:h-[80px] h-[66px] font-normal md:text-[16px] text-[14px] md:leading-[28px] leading-[22px] text-dimWhite">
           Our partnerships have delivered great value to our projects and we're
           happy to share some of their feedback below
         </span>

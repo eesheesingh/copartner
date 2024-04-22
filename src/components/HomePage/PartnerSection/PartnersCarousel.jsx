@@ -2,7 +2,7 @@ import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-import { Trusted1, Trusted2, Trusted3, Trusted4, trustTeam } from '../../../assets';
+import { Trusted1, Trusted2, Trusted3, Trusted4 } from '../../../assets';
 
 const PartnersCarousel = () => {
   const images = [Trusted1, Trusted2, Trusted3, Trusted4];
@@ -28,21 +28,19 @@ const PartnersCarousel = () => {
         renderThumbs={() => {}} // Hide thumbs
       >
         {pairedImages.map((pair, index) => (
-          <div key={index}>
-            <div className="flex justify-center items-center">
-              {pair.map((image, subIndex) => (
-                <div key={subIndex} className="flex justify-center items-center w-1/2 px-2">
-                  {image && (
-                    <img
-                      src={image}
-                      alt={`Trusted ${index * 2 + subIndex + 1}`}
-                      className={`max-w-[${subIndex === 1 ? "300px" : "150px"}] md:max-w-full h-auto`}
-                      // Increased max-width for Trusted2 image
-                    />
-                  )}
-                </div>
-              ))}
-            </div>
+          <div key={index} className="flex justify-center items-center">
+            {pair.map((image, subIndex) => (
+              <div key={subIndex} className="flex justify-center items-center w-1/2 px-2">
+                {image && (
+                  <img
+                    src={image}
+                    alt={`Trusted ${index * 2 + subIndex + 1}`}
+                    className={`max-w-[${subIndex === 1 ? "300px" : "100px"}] h-auto`}
+                    style={{ verticalAlign: 'middle' }} // Vertically center the image
+                  />
+                )}
+              </div>
+            ))}
           </div>
         ))}
       </Carousel>

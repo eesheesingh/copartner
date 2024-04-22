@@ -60,11 +60,12 @@ const ExpertiseData = () => {
                     />
                   </div>
 
-                  <div className="w-[154px] h-[22px] sm:w-[319px] sm:h-[40px] flex justify-between px-[5px] sm:px-[1rem]">
+                  <div className="w-[154px] h-[35px] sm:w-[319px] sm:h-[40px] flex justify-between px-[5px] sm:px-[1rem]">
                     <div className="flex flex-col w-[154px] sm:w-[319px] gap-2">
-                      <span className="sm:text-[18px] text-[12px] sm:leading-[18px] leading-[8px] font-[500] text-lightWhite whitespace-nowrap">
-                        {expert.name}
+                      <span className="sm:text-[16px] text-[12px] sm:leading-[18px] md:py-0 py-[1px] leading-[10px] font-[500] text-lightWhite whitespace-normal sm:whitespace-nowrap sm:max-w-[154px] max-w-[100%]"> 
+                      {expert.name} 
                       </span>
+
                       <span className="sm:text-[13px] text-[10px] sm:leading-[16px] leading-[9.6px] font-[400] text-dimWhite whitespace-nowrap">
                         {expert.title}
                       </span>
@@ -103,21 +104,25 @@ const ExpertiseData = () => {
                     </div>
                   </div>
 
-                  <div className="sm:w-[300px] sm:h-[72px] w-[144px] h-[32px] mb-4 sm:block hidden contents">
+                  <div className="sm:w-[300px] sm:h-[25px] w-[144px] h-[32px] mb-4 sm:block hidden contents text-center">
                     <span className="text-dimWhite sm:text-[14px] text-[7px] sm:w-[278px] sm:h-[24px] sm:leading-[24px] leading-[11px] mb-[5px]">
                       {expert.content}
                     </span>
                   </div>
 
-                  <div className="md:w-[211px] md:h-[40px] w-[146px] h-[40px] mb-1 flex items-center justify-center rounded-[21.5px] border-[1.5px] border-[#4e4e4ecc] mt-2 md:mt-0">
+                  <div className="md:w-[211px] md:h-[40px] w-[146px] h-[40px] mb-1 flex items-center justify-center rounded-[21.5px] border-[1.5px] border-[#4e4e4ecc] mt-2 md:mt-0"
+                  onClick={() => window.open(expert.telegramLink, "_blank")}
+                  >
                     <div className="flex justify-center items-center gap-2">
                       <img
                         src={expert.telegram}
                         alt="Telegram"
                         className="md:w-[24px] md:h-[24px] w-[16px] h-[16px]"
                       />
-                      <button className="text-white font-[400] md:text-[15px] text-[12px] leading-[19px]">
-                        {expert.greet}
+                      <button
+                        className="text-white font-[400] md:text-[15px] text-[12px] leading-[19px]"
+                      >
+                          {expert.greet}
                       </button>
                       <img
                         src={expert.arrowIcon}

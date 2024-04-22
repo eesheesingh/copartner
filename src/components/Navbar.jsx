@@ -62,9 +62,9 @@ const Navbar = () => {
     }
   };
 
-  const handleReferEarnClick = () => {
-    setToggle(false); // Close the navbar
-  };
+  // const handleReferEarnClick = () => {
+  //   setToggle(false); // Close the navbar
+  // };
 
   return (
     <>
@@ -119,7 +119,7 @@ const Navbar = () => {
                 Refer & Earn
               </button></Link> */}
              
-              <button
+              {/* <button
                 className="md:hidden flex text-black text-[11px] py-2 px-4 ms-8 rounded-md border border-none bg-[#fff] hover:bg-[#000] transition duration-300 items-center"
                 onClick={() => setShowLogin(true)}
               >
@@ -130,7 +130,7 @@ const Navbar = () => {
                 onClick={() => setShowLogin(true)}
               >
                 Sign Up
-              </button>
+              </button> */}
             </div>
 
             <div className="sm:hidden flex flex-1 justify-end items-center">

@@ -64,22 +64,27 @@ const ExpertisePage = () => {
                   />
                 </div>
 
-                <div className="w-[154px] h-[22px] sm:w-[319px] sm:h-[40px] flex justify-between px-[5px] sm:px-[1rem]">
-                    <div className="flex flex-col w-[154px]  sm:w-[319px] gap-2">
-                      <span className="sm:text-[18px] text-[12px] sm:leading-[18px] leading-[8px] font-[500] text-lightWhite whitespace-nowrap">
-                        {expert.name}
+                <div className="w-[154px] h-[35px] sm:w-[319px] sm:h-[40px] flex justify-between px-[5px] sm:px-[1rem]">
+                    <div className="flex flex-col w-[154px] sm:w-[319px] gap-2">
+                      <span className="sm:text-[16px] text-[12px] sm:leading-[18px] md:py-0 py-[1px] leading-[10px] font-[500] text-lightWhite whitespace-normal sm:whitespace-nowrap sm:max-w-[154px] max-w-[100%]"> 
+                      {expert.name} 
                       </span>
+
                       <span className="sm:text-[13px] text-[10px] sm:leading-[16px] leading-[9.6px] font-[400] text-dimWhite whitespace-nowrap">
                         {expert.title}
                       </span>
                     </div>
-                  <div className="sm:w-[48px] sm:h-[22px] w-[21px] h-[10px] flex">
-                    <img src={expert.ratingIcon} className="sm:w-[12.3px] sm:h-[12.3px] w-[8px] h-[8px]" alt="rating" />
-                    <span className="text-lightWhite font-[600] sm:text-[11.5px] sm:leading-[14px] text-[8px] leading-[10px]">
-                      {expert.rating}
-                    </span>
+                    <div className="sm:w-[48px] sm:h-[22px] w-[21px] h-[10px] flex">
+                      <img
+                        src={expert.ratingIcon}
+                        className="sm:w-[12.3px] sm:h-[12.3px] w-[8px] h-[8px]"
+                        alt="rating"
+                      />
+                      <span className="text-lightWhite font-[600] sm:text-[11.5px] sm:leading-[14px] text-[8px] leading-[10px]">
+                        {expert.rating}
+                      </span>
+                    </div>
                   </div>
-                </div>
 
                 <div className="sm:w-[256px] sm:h-[50px] w-[138px] h-[22px] flex items-start mt-2 justify-between">
                   <div className="flex flex-col sm:w-[78px] sm:h-[50px] w-[40px] h-[22px] items-center">
@@ -103,8 +108,8 @@ const ExpertisePage = () => {
                   </div>
                 </div>
 
-                <div className="sm:w-[300px] sm:h-[72px] w-[144px] h-[32px] mb-4 sm:block hidden contents">
-                  <span className="text-dimWhite sm:text-[14px] text-[7px] sm:w-[278px] sm:h-[24px] sm:leading-[24px] leading-[11px] mb-[5px]">
+                <div className="sm:w-[300px] sm:h-[25px] w-[144px] h-[32px] mb-4 sm:block text-center hidden contents">
+                  <span className="text-dimWhite sm:text-[14px] text-[7px] sm:w-[278px] sm:h-[15px] sm:leading-[24px] leading-[11px] mb-[5px]">
                     {expert.content}
                   </span>
                 </div>

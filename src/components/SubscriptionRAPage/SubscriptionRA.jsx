@@ -7,8 +7,8 @@ import {
   arrow,
   stars,
   tick,
-  ExpertImg,
   layer,
+  RA1,
 } from "../../assets";
 import Testimonials from "../Testimoials/Testimonial";
 import CoursePaymentPopup from "./CoursePaymentPopup";
@@ -19,7 +19,6 @@ const SubscriptionRA = () => {
   const [expertData, setExpertData] = useState(null);
   const [activeHoverIndex, setActiveHoverIndex] = useState(0);
   const [backgroundColor, setBackgroundColor] = useState("#18181B80");
-  const [backgroundColor2, setBackgroundColor2] = useState("#18181B80");
   const [showMonthlyPopup, setShowMonthlyPopup] = useState(false);
   const [selectedMonthlyPlan, setSelectedMonthlyPlan] = useState(null);
   const [planMonthlyPrice, setPlanMonthlyPrice] = useState(0);
@@ -79,7 +78,7 @@ const SubscriptionRA = () => {
   return (
     <section className={`flex md:flex-col flex-col md:px-0 px-3 ${styles.paddingY} expertise-Bg`}>
     <div key={expertData.id} className={`flex-1 ${styles.flexStart} flex-col xl:px-0 md:px-28 z-10 md:bottom-[10rem] font-inter`}>
-      <section className="subscription-RA-bg flex flex-row justify-between bg-[#18181B80] relative w-full md:p-[30px] p-[16px] border-2 border-[#f4f4f50e] rounded-xl mb-8">
+      <div className="subscription-RA-bg flex flex-row justify-between bg-[#18181B80] relative w-full md:p-[30px] p-[16px] border-2 border-[#f4f4f50e] rounded-xl mb-8  ">
             <div className="text-white">
               <div className="flex flex-col md:mb-6 mb-1">
                 <div className="flex justify-between items-center w-full">
@@ -117,7 +116,9 @@ const SubscriptionRA = () => {
               {expertData.content}
             </div>
 
-            <div className="border-[1px] border-[#f4f4f535] border-opacity-30 md:rounded-3xl rounded-2xl md:w-44 w-33 md:mb-6">
+            <div className="border-[1px] border-[#f4f4f535] border-opacity-30 md:rounded-3xl rounded-2xl md:w-44 w-33 md:mb-6"
+            onClick={() => window.open(expertData.telegramLink, "_blank")}
+            >
               <button className="flex mx-auto md:py-2 py-2  items-center">
                 <img
                   className="md:w-6 w-4 me-3"
@@ -138,12 +139,13 @@ const SubscriptionRA = () => {
           <div className="flex mx-auto">
             <img
               className="subscription-RA-img md:w-[400px] w-[470px] my-auto"
-              src={ExpertImg}
+              src={RA1}
               style={{
                 maskImage: "linear-gradient(rgba(0, 0, 0, 1) 70%, transparent)",
               }}
               alt=""
             />
+
           </div>
           <div className="flex text-white items-end absolute top-6 right-6">
             <img
@@ -161,7 +163,7 @@ const SubscriptionRA = () => {
               Explore More <img className="w-4 ms-3" src={arrow} alt="arrow" />
             </button>
           </div>
-        </section>
+        </div>
         <section className="w-full">
           <div className="w-full flex flex-row bg-[#18181B80] rounded-2xl md:p-3 p-2">
             <div className="md:flex-col-6 md:text-[16px] text-[12px] flex flex-row my-3 md:mx-px mx-auto">
@@ -193,7 +195,7 @@ const SubscriptionRA = () => {
         </section>
 
         <section
-          className="md:flex md:flex-row md:justify-between text-center w-full md:mt-16 mt-10 md:mb-8 mb-3"
+          className="md:flex md:flex-row md:justify-between text-center w-full md:mt-16 mt-10 md:mb-8 mb-3 gap-3"
           id="subscribePlan"
         >
           <div className="flex-col-6 font-inter font-bold md:text-[50px] text-[30px] subheading-color md:leading-[50px] leading-[51px] text-white md:mb-6">
@@ -210,97 +212,98 @@ const SubscriptionRA = () => {
           </div>
         </section>
 
-        <div className="text-white flex flex-wrap justify-center md:gap-8 w-full subscription-cards">
-          <div
-            style={{ backgroundColor }}
-            className={`flex-1 rounded-2xl p-5 basic-div max-w-[400px] ${
-              activeHoverIndex === 1 ? "hover:bg-[#18181B80]" : ""
-            }`}
-            onMouseEnter={() => handleMouseEnter(1)}
-            onMouseLeave={handleMouseLeave}
-          >
-            <div className="text-right opacity-60 hidden">21 Days Left</div>
-            <div className="md:text-3xl text-lg font-bold subheading-gradient md:mb-4 mb-1">
-              Monthly
-            </div>
-            <div className="md:text-5xl text-2xl font-bold md:mb-3 mb-1 flex">
-              ₹2,999/<span className="md:flex hidden">-</span>
-              <span className="md:hidden flex font-normal">mo</span>
-            </div>
-            <div className="md:text-lg text-xs mt-auto opacity-60 mb-6">
-              1 Month Access
-            </div>
-            <div className="md:mb-8 mb-4">
-              <div className="flex md:mb-4 mb-2 font-medium items-center">
-                <img className="w-4 h-4 me-2" src={tick} alt="tick 1" />
-                <span className="md:text-base text-xs">
-                  Voice messages anywhere
-                </span>
-              </div>
-              <div className="flex md:mb-4 mb-2 font-medium items-center">
-                <img className="w-4 h-4 me-2" src={tick} alt="tick 2" />
-                <span className="md:text-base text-xs">
-                  Voice messages anywhere
-                </span>
-              </div>
-              <div className="flex md:mb-4 mb-2 font-medium items-center">
-                <img className="w-4 h-4 me-2" src={tick} alt="tick 3" />
-                <span className="md:text-base text-xs">
-                  Voice messages anywhere
-                </span>
-              </div>
-            </div>
-            <div className="text-center">
-              <button className="bg-white text-black md:px-12 px-6 md:text-base text-xs py-2 md:rounded-lg rounded border-2" onClick={() => handleBuyNowClick("Monthly", 2999)}>
-                Get it
-              </button>
-            </div>
-          </div>
+        <div className="text-white flex flex-wrap justify-center md:gap-8 gap-2 w-full subscription-cards">
+  <div
+    style={{ backgroundColor }}
+    className={`flex-1 rounded-2xl p-5 basic-div max-w-[400px] ${
+      activeHoverIndex === 1 ? "hover:bg-[#18181B80]" : ""
+    }`}
+    onMouseEnter={() => handleMouseEnter(1)}
+    onMouseLeave={handleMouseLeave}
+  >
+    <div className="text-center opacity-60 hidden">21 Days Left</div>
+    <div className="text-center md:text-3xl text-lg font-bold subheading-gradient md:mb-4 mb-1">
+      Monthly
+    </div>
+    <div className="text-center md:text-5xl text-2xl font-bold md:mb-3 mb-1 flex justify-center">
+      ₹2,999/<span className="md:flex hidden">-</span>
+      <span className="md:hidden flex font-normal">mo</span>
+    </div>
+    <div className="text-center md:text-lg text-xs mt-auto opacity-60 mb-6">
+      1 Month Access
+    </div>
+    <div className="text-center md:mb-8 mb-4">
+      <div className="flex md:mb-4 mb-2 font-medium items-center md:justify-center text-left">
+        <img className="w-4 h-4 me-2" src={tick} alt="tick 1" />
+        <span className="md:text-base text-xs">
+          Voice messages anywhere
+        </span>
+      </div>
+      <div className="flex md:mb-4 mb-2 font-medium items-center md:justify-center text-left">
+        <img className="w-4 h-4 me-2" src={tick} alt="tick 2" />
+        <span className="md:text-base text-xs">
+          Voice messages anywhere
+        </span>
+      </div>
+      <div className="flex md:mb-4 mb-2 font-medium items-center md:justify-center text-left">
+        <img className="w-4 h-4 me-2" src={tick} alt="tick 3" />
+        <span className="md:text-base text-xs">
+          Voice messages anywhere
+        </span>
+      </div>
+    </div>
+    <div className="text-center">
+      <button className="bg-white text-black md:px-12 px-6 md:text-base text-xs py-2 md:rounded-lg rounded border-2" onClick={() => handleBuyNowClick("Monthly", 2999)}>
+        Buy Now
+      </button>
+    </div>
+  </div>
 
-          <div
-            className="flex-1 rounded-2xl p-5 basic-div hover:bg-[#18181B80]"
-            onMouseOver={handleMouseOver}
-            onMouseOut={handleMouseOut}
-          >
-            <div className="text-right opacity-60 hidden">21 Days Left</div>
-            <div className="md:text-3xl text-lg font-bold subheading-gradient md:mb-4 mb-1">
-              Quarterly
-            </div>
-            <div className="md:text-5xl text-2xl font-bold md:mb-3 mb-1 flex">
-              ₹2,999/<span className="md:flex hidden">-</span>
-              <span className="md:hidden flex font-normal">mo</span>
-            </div>
-            <div className="md:text-lg text-xs mt-auto opacity-60 mb-6">
-              3 Month Access
-            </div>
-            <div className="md:mb-8 mb-4">
-              <div className="flex md:mb-4 mb-2 font-medium items-center">
-                <img className="w-4 h-4 me-2" src={tick} alt="tick 1" />
-                <span className="md:text-base text-xs">
-                  Voice messages anywhere
-                </span>
-              </div>
-              <div className="flex md:mb-4 mb-2 font-medium items-center">
-                <img className="w-4 h-4 me-2" src={tick} alt="tick 2" />
-                <span className="md:text-base text-xs">
-                  Voice messages anywhere
-                </span>
-              </div>
-              <div className="flex md:mb-4 mb-2 font-medium items-center">
-                <img className="w-4 h-4 me-2" src={tick} alt="tick 3" />
-                <span className="md:text-base text-xs">
-                  Voice messages anywhere
-                </span>
-              </div>
-            </div>
-            <div className="text-center">
-              <button className="text-white md:px-12 px-6 md:text-base text-xs py-2 md:rounded-lg rounded border-white border-2" onClick={() => handleBuyNowClick("Quarterly", 2999)}>
-                Get It
-              </button>
-            </div>
-          </div>
+  <div
+    className="flex-1 rounded-2xl p-5 basic-div hover:bg-[#18181B80]"
+    onMouseOver={handleMouseOver}
+    onMouseOut={handleMouseOut}
+  >
+    <div className="text-center opacity-60 hidden">21 Days Left</div>
+    <div className="text-center md:text-3xl text-lg font-bold subheading-gradient md:mb-4 mb-1">
+      Quarterly
+    </div>
+    <div className="text-center md:text-5xl text-2xl font-bold md:mb-3 mb-1 flex justify-center">
+      ₹2,999/<span className="md:flex hidden">-</span>
+      <span className="md:hidden flex font-normal">mo</span>
+    </div>
+    <div className="text-center md:text-lg text-xs mt-auto opacity-60 mb-6">
+      3 Month Access
+    </div>
+    <div className="text-center md:mb-8 mb-4">
+      <div className="flex md:justify-center md:mb-4 mb-2 font-medium items-center text-left">
+        <img className="w-4 h-4 me-2" src={tick} alt="tick 1" />
+        <span className="md:text-base text-xs">
+          Voice messages anywhere
+        </span>
+      </div>
+      <div className="flex md:justify-center md:mb-4 mb-2 font-medium items-center text-left">
+        <img className="w-4 h-4 me-2" src={tick} alt="tick 2" />
+        <span className="md:text-base text-xs">
+        Voice messages anywhere
+        </span>
+      </div>
+      <div className="flex justify-center md:mb-4 mb-2 font-medium items-center text-left">
+        <img className="w-4 h-4 me-2" src={tick} alt="tick 3" />
+        <span className="md:text-base text-xs">
+          Voice messages anywhere
+        </span>
+      </div>
+    </div>
+    <div className="text-center">
+      <button className="text-white md:px-12 px-6 md:text-base text-xs py-2 md:rounded-lg rounded border-white border-2" onClick={() => handleBuyNowClick("Quarterly", 2999)}>
+        Buy Now
+      </button>
+    </div>
+  </div>
 
-          <div
+
+          {/* <div
             onMouseOver={handleMouseOver}
             onMouseOut={handleMouseOut}
             className={`flex-1 bg-opacity-5 p-5 hover:bg-[#18181B80] rounded-2xl standard-div ${
@@ -341,24 +344,24 @@ const SubscriptionRA = () => {
             </div>
             <div className="text-center">
               <button className="text-white md:px-12 px-6 md:text-base text-xs py-2 md:rounded-lg rounded border-white border-2" onClick={() => handleBuyNowClick("Half-Yearly", 5999)}>
-               Get it
+               Buy Now
               </button>
             </div>
-          </div>
+          </div> */}
 
           <div
             onMouseOver={handleMouseOver}
             onMouseOut={handleMouseOut}
             className={`flex-1 bg-opacity-5 p-5 hover:bg-[#18181B80] rounded-2xl standard-div ${
               activeHoverIndex === 4 ? "hover:bg-[#18181B80]" : ""
-            }`}
+            } text-center`}
             onMouseEnter={() => handleMouseEnter(4)}
             onMouseLeave={handleMouseLeave}
           >
             <div className="md:text-3xl text-lg font-bold subheading-gradient md:mb-4 mb-1 md:mt-1 mt-0">
               Yearly
             </div>
-            <div className="md:text-5xl text-2xl font-bold md:mb-3 mb-1 flex">
+            <div className="md:text-5xl text-2xl font-bold md:mb-3 mb-1 flex justify-center">
               ₹5,999/<span className="md:flex hidden">-</span>
               <span className="md:hidden flex font-normal">mo</span>
             </div>
@@ -366,19 +369,19 @@ const SubscriptionRA = () => {
               12 Month Access
             </div>
             <div className="md:mb-8 mb-4">
-              <div className="flex md:mb-4 mb-2 font-medium items-center">
+              <div className="flex md:mb-4 mb-2 font-medium items-center justify-center">
                 <img className="w-4 h-4 me-2" src={tick} alt="tick 1" />
                 <span className="md:text-base text-xs">
                   Voice messages anywhere
                 </span>
               </div>
-              <div className="flex md:mb-4 mb-2 font-medium items-center">
+              <div className="flex md:mb-4 mb-2 font-medium items-center justify-center">
                 <img className="w-4 h-4 me-2" src={tick} alt="tick 2" />
                 <span className="md:text-base text-xs">
                   Voice messages anywhere
                 </span>
               </div>
-              <div className="flex md:mb-4 mb-2 font-medium items-center">
+              <div className="flex md:mb-4 mb-2 font-medium items-center justify-center">
                 <img className="w-4 h-4 me-2" src={tick} alt="tick 3" />
                 <span className="md:text-base text-xs">
                   Voice messages anywhere
@@ -387,7 +390,7 @@ const SubscriptionRA = () => {
             </div>
             <div className="text-center">
               <button className="text-white md:px-12 px-6 md:text-base text-xs py-2 md:rounded-lg rounded border-white border-2" onClick={() => handleBuyNowClick("Yearly", 5999)}>
-                Get it
+                Buy Now
               </button>
             </div>
           </div>
@@ -504,7 +507,7 @@ const SubscriptionRA = () => {
             </div>
             <p className="flex-1 text-3xl font-bold">₹5,999</p>
           </div>
-          <div
+          {/* <div
             onClick={() => handleSelectPlan('Half-Yearly', 5999)}
             className={`flex rounded-2xl p-4 hover:bg-[#18181B80] ${
               selectedPlan === 'Half-Yearly' ? 'border-2 border-[#F4F4F51A]' : ''
@@ -515,7 +518,7 @@ const SubscriptionRA = () => {
               <p className="text-[#C6CDD5] text-sm">6 Month Access</p>
             </div>
             <p className="flex-1 text-3xl font-bold">₹5,999</p>
-          </div>
+          </div> */}
           <div
             onClick={() => handleSelectPlan('Yearly', 5999)}
             className={`flex rounded-2xl p-4 hover:bg-[#18181B80] ${
@@ -567,9 +570,6 @@ const SubscriptionRA = () => {
               inspiration and collaboration.
             </p>
           </div>
-          <button className="text-white md:text-base text-xs flex items-center gap-4 md:py-6 pt-6">
-            Explore More <img className="w-4 h-4" src={arrow} alt="" />
-          </button>
         </section>
       </div>
 

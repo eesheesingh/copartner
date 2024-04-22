@@ -160,7 +160,7 @@ text-fill-color: transparent;
     background-size: 45rem, 45rem;
   }
 }
-
+  
 
 .glassyBackground {
   backdrop-filter: blur(10px); /* Apply backdrop blur effect */
