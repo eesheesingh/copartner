@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { close } from '../../assets';
 
 const CoursePaymentPopup = ({ onClose, selectedPlan, planPrice, expertName }) => {

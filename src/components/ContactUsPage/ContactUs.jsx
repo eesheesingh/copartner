@@ -8,7 +8,7 @@ const ContactUs = () => {
       <div
         className={`flex-1 ${styles.flexCenter} flex-col xl:px-0 sm:px-4 px-2 z-10 md:bottom-[10rem] text-center`}
       >
-        <div className="flex md:flex-row flex-col gap-4 text-white rounded-xl relative">
+        <div className="flex md:flex-row flex-col gap-4 text-white rounded-xl relative md:w-[1200px]">
           {/* Left Column */}
           <h2 className="text-4xl md:text-5xl font-bold subheading-color md:hidden text-left px-3 pt-3">Contact Us</h2>
           <p className="text-base text-left px-3 md:text-lg mb-4 text-[#c9c9c9] md:hidden z-20">
@@ -20,17 +20,17 @@ const ContactUs = () => {
             {/* Call */}
             <div className="flex items-center mb-4">
               <img src={call} alt="Call" className="w-3 h-3 mr-2" />
-              <p>+91-9876543211</p>
+              <p className="text-left">+91-9876543211</p>
             </div>
             {/* Mail */}
             <div className="flex items-center mb-4">
-              <img src={message} alt="Mail" className="w-3 h-3 mr-2" />
-              <p>Copartner@gmail.in</p>
+              <img src={message} alt="Mail" className="w-4 h-4 mr-2" />
+              <p className="text-left">info@copartner.in</p>
             </div>
             {/* Location */}
-            <div className="flex items-center">
-              <img src={location} alt="Location" className="w-3 h-3 mr-2" />
-              <p>JMD, Sector 48</p>
+            <div className="flex">
+              <img src={location} alt="Location" className="w-5 h-5 mr-2 mt-1" />
+              <p className="text-left">Copartner, Hailgro Tech, 546, 5th floor, JMD MEGAPOLIS, Sector 48, Gurugram, Haryana 122018</p>
             </div>
           </div>
           {/* Right Column */}

@@ -42,9 +42,9 @@ import CounterMobBg from './COunterBgMob.png'
 import LeftIcon from './pagination-default.svg (1).svg'
 import rightIcon from './pagination-default.svg.svg'
 import facebook from './fb.png';
-import linkedin from './linkedin.png';
+import linkedin from './linkedin (2).png';
 import twitter from './tweet.png';
-import instagram from './insta.png';
+import instagram from './insta (2).png';
 import WhyUs1 from './whyus1.png';
 import WhyUs2 from './whyus2.png';
 import WhyUs3 from './whyus3.png';
@@ -88,6 +88,7 @@ import arrow from './arrow.png'
 import stars from './stars.png'
 import tick from './tick.png'
 import trustTeam from './trustteam.png'
+import RA1 from './RA1.png'
 export {
     tick,
     trustTeam,
@@ -179,4 +180,5 @@ export {
     telegram,
     arrow,
     stars,
+    RA1,
 }

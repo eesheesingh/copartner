@@ -1386,19 +1386,49 @@ const Terms = () => {
                   </span>
                 </div>
               </div>
-              <div className="flex flex-col md:py-[2rem]">
+              <div className="flex flex-col py-[2rem]">
                 <span
                   className="font-inter font-[700] md:text-[50px] text-[25px]
                     subheading-color md:leading-[51px] md:w-[935px] md:h-[70px] w-[305px] h-[35px] text-start"
                 >
-                  28. Contact:
+                  28. Refund Policy:
                 </span>
                 <div className="flex flex-col text-start px-[0.5rem]">
                   <span
                     className="font-inter font-[400] text-dimWhite md:text-[18px] text-[13px] md:leading-[28px]
                    leading-[16px] text-start mt-2"
                   >
-                    28.1. If You have any questions regarding the Services or
+                    28.1. We are not party to the agreement between creators and users. If a user requests a refund from us we will not refund in any case, except:
+28.3. Refund for multiple payment, if any, even after the above precaution against the same order shall be refunded in full without deduction of the transaction charges as mentioned above. The Website shall only retain the cost of one single order as intended to be placed by the User.
+                  </span>
+                  <span
+                    className="font-inter font-[400] text-dimWhite md:text-[18px] text-[13px] md:leading-[28px]
+                   leading-[16px] text-start mt-2"
+                  >
+28.2. if the User intends to cancel a successfully placed order before execution, the User is required to contact the customer care team within 1 (one) hour of making the payment, whereafter it is totally at the discretion of the Website whether to issue refund. No refund shall be processed once the Order has been placed and executed. 
+                  </span>
+                  <span
+                    className="font-inter font-[400] text-dimWhite md:text-[18px] text-[13px] md:leading-[28px]
+                   leading-[16px] text-start mt-2"
+                  >
+28.3. Refund for multiple payment, if any, even after the above precaution against the same order shall be refunded in full without deduction of the transaction charges as mentioned above. The Website shall only retain the cost of one single order as intended to be placed by the User.
+                  </span>
+                </div>
+              </div>
+
+              <div className="flex flex-col md:py-[2rem]">
+                <span
+                  className="font-inter font-[700] md:text-[50px] text-[25px]
+                    subheading-color md:leading-[51px] md:w-[935px] md:h-[70px] w-[305px] h-[35px] text-start"
+                >
+                  29. Contact:
+                </span>
+                <div className="flex flex-col text-start px-[0.5rem]">
+                  <span
+                    className="font-inter font-[400] text-dimWhite md:text-[18px] text-[13px] md:leading-[28px]
+                   leading-[16px] text-start mt-2"
+                  >
+                    29.1. If You have any questions regarding the Services or
                     usage of the Platform, please contact the Company at
                     support@info@copartner.in. Please note that for the purpose
                     of validation, You shall be required to provide information

@@ -17,7 +17,6 @@ import SubscriptionRA from "./components/SubscriptionRAPage/SubscriptionRA.jsx";
 import PrivacyPolicy from "./components/PrivacyAndTermsPage/PrivacyPolicy.jsx";
 import Terms from "./components/PrivacyAndTermsPage/Terms.jsx";
 import FAQ from './components/FaqPage/Faq.jsx'
-import Otp from "./components/Otp.jsx";
 
 function App() {
   const router = createBrowserRouter(

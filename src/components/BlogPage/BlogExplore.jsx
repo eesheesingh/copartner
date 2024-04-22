@@ -12,7 +12,7 @@ const BlogGrid = () => {
   };
 
   return (
-    <div className="flex flex-wrap justify-center">
+    <div className="flex flex-wrap justify-start">
       {blogs.slice(0, displayedBlogs).map((blog, index) => (
         <div key={index} className="w-full md:w-1/3 md:p-3 p-2 rounded-md md:mb-0 text-white">
            <Link to={`/blogs/${blog.id}`} className="w-full overflow-hidden relative rounded-lg md:bg-transparent bg-[#18181ba6]  border-solid transition duration-300 ease-in-out transform hover:bg-[#18181ba6] hover:shadow-lg">
@@ -26,8 +26,8 @@ const BlogGrid = () => {
               }}
             />
              <div className="p-4 relative z-10">
-              <h3 className="text-2xl text-left">{blog.title}</h3>
-              <p className="mt-4 text-gray-300 text-left">
+              <h3 className="md:text-xl text-[1rem] text-left leading-5">{blog.title}</h3>
+              <p className=" text-[#c9c9c9] md:text-[0.9rem] text-[0.8rem] text-left mt-2 leading-5">
                 {blog.bio}
               </p>
             </div>
