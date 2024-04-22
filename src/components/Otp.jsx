@@ -32,7 +32,7 @@ const Otp = ({ onClose, mobileNumber }) => {
 
     try {
       const response = await fetch(
-        "http://13.60.50.119:5181/api/SignIn/ValidateOTP",
+        "https://copartners.in:5181/api/SignIn/ValidateOTP",
         {
           method: "POST",
           headers: {
@@ -47,7 +47,9 @@ const Otp = ({ onClose, mobileNumber }) => {
         console.log(data.errorMessages);
         throw new Error(setError(data.errorMessages));
       } else {
-        window.location.href = "https://zestify.ai/";
+        console.log(data)
+        localStorage.setItem("token", data.token);
+        window.location.replace = "https://zestify.ai/";
       }
     } catch (error) {
       console.error("There was a problem with your fetch operation:", error);

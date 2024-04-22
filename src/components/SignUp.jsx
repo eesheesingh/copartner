@@ -24,7 +24,7 @@ const SignUp = () => {
 
       try {
         const response = await fetch(
-          "http://13.60.50.119:5181/api/SignIn/GenerateOTP",
+          "https://copartners.in:5181/api/SignIn/GenerateOTP",
           {
             method: "POST",
             headers: {
