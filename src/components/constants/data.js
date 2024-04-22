@@ -378,7 +378,7 @@ export  const steps = [
       icon: background,
       userImg: RA1,
       name: "Shubham Rupchand Gedam",
-      title: "Stock Market",
+      title: "Option",
       ratingIcon: stars,
       rating: "4.1",
       experience: "Experience",

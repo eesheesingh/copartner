@@ -23,10 +23,10 @@ import svg2 from './svg (2).png'
 import svg3 from './svg (3).png'
 import svg4 from "./svg.png"
 import MobileTrusted from './trustedTeams.png'
-import Trusted1 from "./logos-01.png"
-import Trusted2 from "./logos-02.png"
-import Trusted3 from "./logos-03.png"
-import Trusted4 from "./logo 02-01.png"
+import Trusted1 from "./feature1.png"
+import Trusted2 from "./feature2.png"
+import Trusted3 from "./feature3.png"
+import Trusted4 from "./feature4.png"
 import Trusted5 from "./trusted5.png"
 import Trusted6 from "./trusted6.png"
 import flowImage from './Image (5).png'
@@ -42,7 +42,7 @@ import CounterMobBg from './COunterBgMob.png'
 import LeftIcon from './pagination-default.svg (1).svg'
 import rightIcon from './pagination-default.svg.svg'
 import facebook from './fb.png';
-import linkedin from './linkedin (2).png';
+import linkedin from './linkedin.png';
 import twitter from './tweet.png';
 import instagram from './insta (2).png';
 import WhyUs1 from './whyus1.png';

@@ -18,7 +18,7 @@ const Blog = () => {
           <h2 className='subheading-color font-bold md:text-5xl md:pb-0 pb-6 text-3xl md:leading-[80px] leading-[40px]'>Our Blogs</h2>
         </div>
         <div className="blog-content-right">
-          <p className="text-90 md:text-xl text-[#c9c9c9] mb-6 md:px-[1rem]">
+          {/* <p className="text-90 md:text-xl text-[#c9c9c9] mb-6 md:px-[1rem]">
           With Cobalt, managing your business finances is effortless, 
 empowering, and anything but boring. Our intuitive platform brings
 clarity to your cash flow, simplifies your financial decision-making, and  
@@ -26,7 +26,7 @@ fingertips.{" "}
             <span className="text-white">
             Say no to spreadsheets and tools designed in the 80s.
             </span>
-          </p>
+          </p> */}
         </div>
       </div>
       <div className="blog-container">
