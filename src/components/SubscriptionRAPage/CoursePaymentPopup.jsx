@@ -43,7 +43,7 @@ const CoursePaymentPopup = ({ onClose, selectedPlan, planPrice, expertName }) =>
           </div>
           <div className="flex justify-between py-2 mb-4 border-b-[1px] border-t-[1px] border-[#c9c9c962]">
             <label className="block text-lg text-[#c9c9c9] font-semibold">Total</label>
-            <span className="text-lg font-semibold">₹{total.toFixed(2)}</span>
+            <span className="text-lg font-semibold">₹{planPrice}</span>
           </div>
           <button className="main-button">
             Pay
