@@ -147,16 +147,24 @@ text-fill-color: transparent;
   background-size: 90%, 45rem;
 }
 
+
 .header-bg{
   background-image: url('./assets/Div.png');
   background-repeat: no-repeat;
-  background-position: 300% -30%;
+  background-position: 300% 200%;
   background-size: 80%;
 }
 
 @media (max-width: 1060px) {
   .expertise-Bg {
     background-position: 25% -3%, -25rem 40rem;
+    background-size: 45rem, 45rem;
+  }
+
+  .header-bg{
+    background-image: url('./assets/Div.png');
+    background-repeat: no-repeat;
+    background-position: 25% -10%, -25rem 40rem;
     background-size: 45rem, 45rem;
   }
 }

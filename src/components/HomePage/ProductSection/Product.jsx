@@ -1,5 +1,7 @@
 import { useState } from 'react';
-import { steps } from '../../constants/data';
+import { steps } from '../../constants/data'
+import { FaAngleDown } from "react-icons/fa";
+
 
 const Product = () => {
   const [expandedStep, setExpandedStep] = useState(0); // Set initial expandedStep to 0
@@ -48,7 +50,7 @@ const Product = () => {
               <h3 className="mb-4 text-3xl font-bold text-[#fff7f792]">
                 Step {index + 1}
               </h3>
-              <h4 className="md:text-lg font-semibold py-2">{step.title}</h4>
+              <h4 className="md:text-lg font-bold py-2">{step.title}</h4>
               <p className="mb-4 text-lg">{step.content}</p>
               
               {/* Image */}
@@ -93,7 +95,10 @@ const Product = () => {
                 <p className="text-sm">
                   {expandedStep === index
                     ? step.content
-                    : `${step.content.slice(0, 50)}...`}
+                    : `${step.content.slice(0, 30)}...`}
+                     {expandedStep !== index && (
+                    <FaAngleDown className="inline-block w-4 h-4 text-white" /> // Rendering the arrow icon
+                  )}
                 </p>
                 
               </div>

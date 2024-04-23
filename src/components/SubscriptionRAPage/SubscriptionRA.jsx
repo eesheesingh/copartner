@@ -201,7 +201,7 @@ const SubscriptionRA = () => {
           <div className="flex-col-6 font-inter font-bold md:text-[50px] text-[30px] subheading-color md:leading-[50px] leading-[51px] text-white md:mb-6">
             Subscriptions Plans
           </div>
-          <div className="flex-col-6 md:w-1/2 font-normal md:text-left text-[#A1A1AACC] md:text-[18px] text-[15px] md:leading-[28px] leading-[17px]">
+          <div className="flex-col-6 md:w-1/2 font-normal md:text-left text-[#A1A1AACC] md:text-[18px] text-[15px] md:leading-[28px] leading-[17px] mb-3">
             Discover our subscription plans tailored for traders like you. Gain
             access to exclusive features, expert insights and community support
             to elevate your trading journey.{" "}

@@ -50,7 +50,7 @@ import WhyUs2 from './whyus2.png';
 import WhyUs3 from './whyus3.png';
 import AD1 from './Website Banners-01 (1).jpg';
 import AD2 from './Website banner 2-01 (1).jpg';
-import contact from './contact.png'
+import contact from './contact(1).png'
 import message from './message.png'
 import location from './location.png'
 import call from './call.png'
@@ -69,11 +69,12 @@ import testimonialRight from './testimonialRight.png';
 import testimonialLeft from './testimonialLeft.png';
 import testimonialProfile from './testimonialProfile.png';
 import video from './Copartner Website Video.mp4'
-import blog1Post from './blogpost.png'
+import blog1Post from './best_forex_traders.jpeg'
 import blog2Post from './blogpost2.png'
 import blog3Post from './blogpost3.png'
 import blog4Post from './blogpost4.png'
 import blog5Post from './blogpost5.png'
+import blog6Post from './blog6.png'
 import post1 from './post1.png'
 import post2 from './post2.png'
 import post3 from './post3.png'
@@ -170,6 +171,7 @@ export {
     blog3Post,
     blog4Post,
     blog5Post,
+    blog6Post,
     post1,
     post2,
     post3,

@@ -16,7 +16,7 @@ const BlogPage = () => {
       <div className={`md:px-[2rem] px-2 expertise-Bg`}>
         <div className="w-full text-left md:px-20 mt-5">
           <div className="justify-center items-center w-full">
-            <img src={blog.imageUrl} alt="Blog_Image" className="w-full md:w-[100%] max-h-90 h-auto object-cover rounded-md" />
+            <img src={blog.imageUrl} alt="Blog_Image" className="w-full md:w-[100%] max-h-[500px] h-auto object-cover rounded-md" />
             <div className="p-1 py-5 md:w-full text-white">
               <h3 className="text-3xl font-semibold">{blog.heading1}</h3>
               <p className="mt-2 text-gray-300">{blog.content1}</p>

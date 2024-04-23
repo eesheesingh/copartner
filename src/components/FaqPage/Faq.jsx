@@ -28,13 +28,21 @@ const FAQs = () => {
   };
 
   return (
-    <div className={`flex md:flex-col flex-col ${styles.paddingY} md:px-[7rem] px-0 expertise-Bg`}>
-      <span className="md:w-[124px] h-[52px] font-inter font-[700] md:text-[50px] text-[30px] subheading-color leading-[51px] md:text-start text-center">
-        FAQs
-      </span>
-      <span className="md:w-[615px] md:h-[28px] w-[398px] h-[34px] font-[400] md:text-[18px] text-[12px] md:leading-[28px] leading-[17px] text-dimWhite md:text-start text-center">
-        Empower your teams to build better processes, for a better workplace.
-      </span>
+    <div className={`flex md:flex-col flex-col ${styles.paddingX} md:px-[7rem] px-0 expertise-Bg`}>
+       <div
+        className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6 z-10 md:mt-[6rem] mt-0 md:bottom-[10rem] text-center `}
+      >
+        <div className="justify-between items-center w-full md:pt-0 pt-[5rem]">
+          <h1 className="flex-1 font-bold md:text-[60px] text-[40px] text-gradient md:leading-[78px] leading-[48px]">
+          FAQs
+          </h1>
+          
+
+          <p className="mt-4 text-center text-white md:text-xl text-sm">
+          Empower your teams to build better processes, for a better workplace.
+          </p>
+        </div>
+      </div>
 
       {smallScreen ? (
         <div className="grid grid-cols-1 mt-8 gap-4 px-[8px]">

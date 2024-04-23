@@ -4,18 +4,18 @@ import BlogGrid from "./BlogExplore";
 
 const Blog = () => {
   return (
-    <section className={`flex flex-col ${styles.paddingX} header-bg`}>
+    <section className={`flex flex-col ${styles.paddingX} expertise-Bg`}>
       <div
         className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6 z-10 md:bottom-[10rem] text-center `}
       >
         <div className="justify-between items-center w-full md:pt-0 pt-[5rem]">
-          <span className="flex-1 font-poppins font-semibold md:text-[62px] text-[36px] text-gradient md:leading-[84px] leading-[48px]">
-            Your team, <br /> reimagined.
-          </span>
+          <h1 className="flex-1 font-bold md:text-[60px] text-[36px] text-gradient md:leading-[78px] leading-[48px]">
+          Explore Our Insightful  <br />  Market Blogs
+          </h1>
           <p className="mt-4 text-center text-white md:text-xl text-sm md:block hidden">
-            Take your team up a level with easy-to-use tools, effortless
+          Discover expert insights and tips through
             <br />
-            towards successful templates and efficient workflows.
+            our stock market blogs
           </p>
 
           <p className="mt-4 text-center text-white md:text-xl text-sm md:hidden">
