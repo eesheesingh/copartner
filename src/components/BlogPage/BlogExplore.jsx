@@ -5,17 +5,24 @@ import { Link } from 'react-router-dom';
 const BlogGrid = () => {
   const [displayedBlogs, setDisplayedBlogs] = useState(6); // Initial number of displayed blogs
   const totalBlogs = blogs.length;
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   const handleExploreMore = () => {
     // Increase the number of displayed blogs by 6 or less if there are fewer remaining blogs
     setDisplayedBlogs(prevCount => Math.min(prevCount + 6, totalBlogs));
   };
+  
 
   return (
     <div className="flex flex-wrap justify-start">
       {blogs.slice(0, displayedBlogs).map((blog, index) => (
         <div key={index} className="w-full md:w-1/3 md:p-3 p-2 rounded-md md:mb-0 text-white">
-           <Link to={`/blogs/${blog.id}`} className="w-full overflow-hidden relative rounded-lg md:bg-transparent bg-[#18181ba6]  border-solid transition duration-300 ease-in-out transform hover:bg-[#18181ba6] hover:shadow-lg">
+           <Link to={`/blogs/${blog.id}`} onClick={scrollToTop}  className="w-full overflow-hidden relative rounded-lg md:bg-transparent bg-[#18181ba6]  border-solid transition duration-300 ease-in-out transform hover:bg-[#18181ba6] hover:shadow-lg">
           <div className="w-full overflow-hidden relative rounded-lg md:bg-transparent bg-[#18181ba6] border-solid border-[#f4f4f51d] transition duration-300 ease-in-out transform hover:bg-[#18181ba6] hover:shadow-lg">
             <img
               src={blog.imageUrl}

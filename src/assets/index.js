@@ -69,7 +69,7 @@ import testimonialRight from './testimonialRight.png';
 import testimonialLeft from './testimonialLeft.png';
 import testimonialProfile from './testimonialProfile.png';
 import video from './Copartner Website Video.mp4'
-import blog1Post from './blogpost.png'
+import blog1Post from './best_forex_traders.jpeg'
 import blog2Post from './blogpost2.png'
 import blog3Post from './blogpost3.png'
 import blog4Post from './blogpost4.png'
