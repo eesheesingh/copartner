@@ -4,7 +4,7 @@ import BlogGrid from "./BlogExplore";
 
 const Blog = () => {
   return (
-    <section className={`flex flex-col ${styles.paddingX} header-bg`}>
+    <section className={`flex flex-col ${styles.paddingX} expertise-Bg`}>
       <div
         className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6 z-10 md:bottom-[10rem] text-center `}
       >
@@ -13,7 +13,7 @@ const Blog = () => {
           Explore Our Insightful  <br />  Market Blogs
           </h1>
           <p className="mt-4 text-center text-white md:text-xl text-sm md:block hidden">
-          Discover expert insights and tips through 
+          Discover expert insights and tips through
             <br />
             our stock market blogs
           </p>

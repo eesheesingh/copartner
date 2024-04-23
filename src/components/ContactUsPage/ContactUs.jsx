@@ -1,8 +1,28 @@
 import React from "react";
 import styles from "../../style";
+import emailjs from 'emailjs-com';
+
 import { call, message, location, contact } from "../../assets";
 
 const ContactUs = () => {
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+    // Get form data
+    const formData = new FormData(event.target);
+    const formDataObj = Object.fromEntries(formData.entries());
+
+    // Send email using EmailJS
+    emailjs.send('service_7jca1u3', 'template_11femgs', formDataObj, 'Ry3RSmTWxRztRv0WG')
+      .then((response) => {
+        console.log('Email sent successfully:', response);
+        // Optionally, show a success message to the user
+      })
+      .catch((error) => {
+        console.error('Email sending failed:', error);
+        // Optionally, show an error message to the user
+      });
+  };
+
   return (
     <div className={`flex flex-col ${styles.paddingY}  header-bg`}>
       <div
@@ -25,7 +45,7 @@ const ContactUs = () => {
             {/* Mail */}
             <div className="flex items-center mb-4">
               <img src={message} alt="Mail" className="w-4 h-4 mr-2" />
-              <p className="text-left">info@copartner.in</p>
+              <a href="mailto:info@copartner.in" className="text-left">info@copartner.in</a>
             </div>
             {/* Location */}
             <div className="flex">
@@ -42,27 +62,27 @@ const ContactUs = () => {
               We'd love to hear from you. Please fill out the form below and we'll get back to you as soon as possible.
             </p>
             {/* Form */}
-            <form className="flex flex-col gap-2">
+            <form className="flex flex-col gap-2" onSubmit={handleFormSubmit}>
               {/* Name and Email Fields */}
               <div className="flex flex-col md:flex-row gap-7 py-5">
                 <div className="flex flex-col w-full md:w-1/2">
-                  <input type="text" id="name" placeholder="Name" className="border border-[#ffffff40] border-opacity-50 bg-transparent py-3 p-2 rounded-xl" />
+                  <input type="text" id="name" name="user_name" placeholder="Name" className="border border-[#ffffff40] border-opacity-50 bg-transparent py-3 p-2 rounded-xl" />
                 </div>
                 <div className="flex flex-col w-full md:w-1/2">
-                  <input type="email" id="email" placeholder="Email" className="border border-[#ffffff3d] border-opacity-50 bg-transparent py-3 p-2 rounded-xl" />
+                  <input type="email" id="email" name="user_email" placeholder="Email" className="border border-[#ffffff3d] border-opacity-50 bg-transparent py-3 p-2 rounded-xl" />
                 </div>
               </div>
               {/* Mobile Number Field */}
               <div className="flex flex-col pb-4">
-                <input type="tel" id="mobile" placeholder="Mobile Number" className="border border-[#ffffff3d] border-opacity-50 bg-transparent py-3 p-2 rounded-xl" />
+                <input type="tel" id="mobile" name="mobile" placeholder="Mobile Number" className="border border-[#ffffff3d] border-opacity-50 bg-transparent py-3 p-2 rounded-xl" />
               </div>
               {/* Message Field */}
               <div className="flex flex-col">
-                <textarea id="message" rows="6" placeholder="Message" className="border border-[#ffffff3d] border-opacity-50 bg-transparent py-3 p-2 rounded-xl"></textarea>
+                <textarea id="message" name="message" rows="6" placeholder="Message" className="border border-[#ffffff3d] border-opacity-50 bg-transparent py-3 p-2 rounded-xl"></textarea>
               </div>
               {/* Submit Button */}
               <div className="text-center md:py-3 py-3">
-                <button type="submit" className="bg-[#fff] text-black py-2 px-7 rounded-md hover:bg-blue-600 transition duration-300">Submit</button>
+                <button type="submit" className="bg-[#fff] hover:bg-[#000] hover:text-[#fff] text-black py-2 px-7 rounded-md transition duration-300">Submit</button>
               </div>
             </form>
           </div>
@@ -73,3 +93,7 @@ const ContactUs = () => {
 };
 
 export default ContactUs;
+
+
+
+
