@@ -42,20 +42,20 @@ const CounterSection = () => {
   }, [controls]);
 
   useEffect(() => {
-    if (isVisible && userCount < 100) {
+    if (isVisible && userCount < 5) {
       const interval = setInterval(() => {
         setUserCount(prevCount => prevCount + 1);
-      }, 50);
+      }, 200);
 
       return () => clearInterval(interval);
     }
   }, [isVisible, userCount]);
 
   useEffect(() => {
-    if (isVisible && registeredRAs < 1200) {
+    if (isVisible && registeredRAs < 2) {
       const interval = setInterval(() => {
-        setRegisteredRAs(prevCount => prevCount + 10);
-      }, 20);
+        setRegisteredRAs(prevCount => prevCount + 1);
+      }, 200);
 
       return () => clearInterval(interval);
     }
@@ -65,7 +65,7 @@ const CounterSection = () => {
     if (isVisible && apEarnings < 25) {
       const interval = setInterval(() => {
         setApEarnings(prevCount => prevCount + 1);
-      }, 200);
+      }, 20);
 
       return () => clearInterval(interval);
     }

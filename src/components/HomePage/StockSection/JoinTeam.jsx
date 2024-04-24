@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { close } from "../../../assets";
+import emailjs from "@emailjs/browser";
 
 const JoinTeam = ({ closeModal }) => {
+  const form = useRef();
   const [uploadedFile, setUploadedFile] = useState(null);
   const [showSuccessPopup, setShowSuccessPopup] = useState(false);
   const [copartnerChecked, setCopartnerChecked] = useState(false);
@@ -13,7 +15,7 @@ const JoinTeam = ({ closeModal }) => {
     experience: "",
     telegramLink: "",
     telegramMembers: "",
-    sebiCertificate: null,
+    my_file: null,
   });
 
   const handleFileChange = (e) => {
@@ -23,24 +25,35 @@ const JoinTeam = ({ closeModal }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add form submission logic here
-    // For demonstration purposes, we'll just show the success popup and reset the form
-    setShowSuccessPopup(true);
-    setFormValues({
-      name: "",
-      mobile: "",
-      email: "",
-      expertise: "",
-      experience: "",
-      telegramLink: "",
-      telegramMembers: "",
-      sebiCertificate: null,
-    });
+    
+    emailjs
+      .sendForm("service_kjbfrlb", "template_0q7an8s", form.current, {
+        publicKey: "t93NEg-srlerr1Vbm",
+      })
+      .then(
+        (result) => {
+          console.log(result.text);
+          setShowSuccessPopup(true);
+          setFormValues({
+            name: "",
+            mobile: "",
+            email: "",
+            expertise: "",
+            experience: "",
+            telegramLink: "",
+            telegramMembers: "",
+            my_file: null,
+          });
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
 
   const handleInputChange = (e) => {
-    const { id, value } = e.target;
-    setFormValues({ ...formValues, [id]: value });
+    const { name, value } = e.target;
+    setFormValues({ ...formValues, [name]: value });
   };
 
   const handleCopartnerChange = () => {
@@ -51,18 +64,24 @@ const JoinTeam = ({ closeModal }) => {
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
       <div className="bg-[#18181B] p-6 rounded-lg relative">
         <button onClick={closeModal} className="absolute top-2 right-2">
-          <img src={close} alt="Close" className="w-6 h-6" />
+          <img src={close} alt="Close" className="w-8 h-8" />
         </button>
         <h2 className="text-3xl font-bold mb-4 subheading-color">
           Join Our Expert Team
         </h2>
         {/* Add your form here */}
-        <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
+        <form
+          ref={form}
+          id="myForm"
+          className="flex flex-col gap-4"
+          onSubmit={handleSubmit}
+        >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {/* Name Field */}
             <div className="relative">
               <input
                 type="text"
+                name="name"
                 id="name"
                 value={formValues.name}
                 onChange={handleInputChange}
@@ -80,7 +99,10 @@ const JoinTeam = ({ closeModal }) => {
             <div className="relative">
               <input
                 type="tel"
+                name="mobile"
                 id="mobile"
+                value={formValues.mobile}
+                onChange={handleInputChange}
                 className="block px-2.5 pb-2.5 pt-4 w-full text-sm text-white bg-transparent rounded-lg border-2 border-[#fff] appearance-none dark:text-white dark:border-[#fff4] dark:focus:border-[#fff] focus:outline-none focus:ring-0 focus:[#fff] peer"
                 placeholder=" "
               />
@@ -96,7 +118,10 @@ const JoinTeam = ({ closeModal }) => {
             <div className="relative">
               <input
                 type="email"
+                name="email"
                 id="email"
+                value={formValues.email}
+                onChange={handleInputChange}
                 className="block px-2.5 pb-2.5 pt-4 w-full text-sm text-white bg-transparent rounded-lg border-2 border-[#fffff49]appearance-none dark:text-white dark:border-[#ffffff49] dark:focus:border-[#fffff49] focus:outline-none focus:ring-0 focus:border-[#fffff49] peer"
                 placeholder=" "
               />
@@ -111,15 +136,24 @@ const JoinTeam = ({ closeModal }) => {
             {/* Expertise In Field */}
             <div className="relative">
               <select
+                name="expertise"
                 id="expertise"
+                value={formValues.expertise}
+                onChange={handleInputChange}
                 className="block px-2.5 pb-2.5 pt-4 w-full text-sm text-white bg-transparent rounded-lg border-2 border-[#fff] appearance-none dark:text-white dark:border-[#fff4] dark:focus:border-[#fff] focus:outline-none focus:ring-0 focus:[#fff] peer"
               >
                 <option value="" disabled selected>
                   Select Expertise
                 </option>
-                <option value="finance" className="bg-[#18181B]">Finance</option>
-                <option value="marketing" className="bg-[#18181B]">Marketing</option>
-                <option value="technology" className="bg-[#18181B]">Technology</option>
+                <option value="1" className="bg-[#18181B]">
+                  Future & Options
+                </option>
+                <option value="2" className="bg-[#18181B]">
+                  Equity
+                </option>
+                <option value="3" className="bg-[#18181B]">
+                  Commodity
+                </option>
                 {/* Add more options as needed */}
               </select>
               <label
@@ -132,18 +166,15 @@ const JoinTeam = ({ closeModal }) => {
 
             {/* Experience Field */}
             <div className="relative">
-              <select
+              <input
+                type="number"
+                name="experience"
                 id="experience"
-                className="block px-2.5 pb-2.5 pt-4 w-full text-sm text-white bg-transparent rounded-lg border-2 border-[#fff] appearance-none dark:text-white dark:border-[#fff4] dark:focus:border-[#fff] focus:outline-none focus:ring-0 focus:[#fff] peer"
-              >
-                <option value="" disabled selected>
-                  How Many Years?
-                </option>
-                <option value="finance" className="bg-[#18181B]">Finance</option>
-                <option value="marketing" className="bg-[#18181B]">Marketing</option>
-                <option value="technology" className="bg-[#18181B]">Technology</option>
-                {/* Add more options as needed */}
-              </select>
+                value={formValues.experience}
+                onChange={handleInputChange}
+                className="block px-2.5 pb-2.5 pt-4 w-full text-sm text-white bg-transparent rounded-lg border-2 border-[#fff] appearance-none dark:text-white dark:border-[#fff4] dark:focus:border-[#fff] focus:outline-none focus:ring-0 focus:[#fff] peer [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                placeholder=" "
+              />
               <label
                 htmlFor="experience"
                 className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-0 bg-[#18181B] px-2 peer-focus:px-2 peer-focus:text-[#fff] peer-focus:dark:text-[#fff] peer-focus:border-2 rounded-md peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1"
@@ -156,7 +187,10 @@ const JoinTeam = ({ closeModal }) => {
             <div className="relative">
               <input
                 type="text"
+                name="telegramLink"
                 id="telegramLink"
+                value={formValues.telegramLink}
+                onChange={handleInputChange}
                 className="block px-2.5 pb-2.5 pt-4 w-full text-sm text-white bg-transparent rounded-lg border-2 border-[#fff] appearance-none dark:text-white dark:border-[#fff4] dark:focus:border-[#fff] focus:outline-none focus:ring-0 focus:[#fff] peer"
                 placeholder=" "
               />
@@ -178,7 +212,10 @@ const JoinTeam = ({ closeModal }) => {
             <div className="relative">
               <input
                 type="text"
+                name="telegramMembers"
                 id="telegramMembers"
+                value={formValues.telegramMembers}
+                onChange={handleInputChange}
                 className="block px-2.5 pb-2.5 pt-4 w-full text-sm text-white bg-transparent rounded-lg border-2 border-[#fff] appearance-none dark:text-white dark:border-[#fff4] dark:focus:border-[#fff] focus:outline-none focus:ring-0 focus:[#fff] peer"
                 placeholder=" "
               />
@@ -200,7 +237,7 @@ const JoinTeam = ({ closeModal }) => {
 
             <div className="relative col-span-2">
               <label
-                htmlFor="sebiCertificate"
+                htmlFor="my_file"
                 className="text-[#ffffff88] block mb-2"
               >
                 Select SEBI Registration Certificate
@@ -208,13 +245,15 @@ const JoinTeam = ({ closeModal }) => {
               <div className="border-2 border-dashed rounded-lg">
                 <input
                   type="file"
-                  id="sebiCertificate"
+                  name="my_file"
+                  id="my_file"
+                  value={formValues.my_file}
                   accept=".pdf,.jpg,.jpeg,.png"
                   onChange={handleFileChange}
                   className="hidden"
                 />
                 <label
-                  htmlFor="sebiCertificate"
+                  htmlFor="my_file"
                   className="block w-full bg-transparent text-white p-20  rounded-md text-center cursor-pointer"
                 >
                   Select
@@ -249,16 +288,17 @@ const JoinTeam = ({ closeModal }) => {
               id="copartnerCheckbox"
               checked={copartnerChecked}
               onChange={handleCopartnerChange}
-              className="md:w-3 w-10 md:h-3 h-10 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+              className="md:w-4 w-10 md:h-4 h-10 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
             />
             <label
               htmlFor="copartnerCheckbox"
               className="ml-3 text-sm text-gray-500 dark:text-gray-400"
             >
-              Become Copartner 
-              <div>Take your team up a level with easy-to-use
-              tools, effortless templates and Terms & Conditions.
-              </div> 
+              Become Copartner
+              <div>
+                Take your team up a level with easy-to-use tools, effortless
+                templates and Terms & Conditions.
+              </div>
             </label>
           </div>
           {/* Submit Button */}

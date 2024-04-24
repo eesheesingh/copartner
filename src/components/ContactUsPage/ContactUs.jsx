@@ -1,26 +1,44 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import styles from "../../style";
-import emailjs from 'emailjs-com';
+import emailjs from "@emailjs/browser";
 
 import { call, message, location, contact } from "../../assets";
 
 const ContactUs = () => {
+
+  const form = useRef();
+  const [formValues, setFormValues] = useState({
+    name: "",
+    mobile: "",
+    email: "",
+    message: ""
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormValues({ ...formValues, [name]: value });
+  };
+
   const handleFormSubmit = (event) => {
     event.preventDefault();
-    // Get form data
-    const formData = new FormData(event.target);
-    const formDataObj = Object.fromEntries(formData.entries());
-
-    // Send email using EmailJS
-    emailjs.send('service_7jca1u3', 'template_11femgs', formDataObj, 'Ry3RSmTWxRztRv0WG')
-      .then((response) => {
-        console.log('Email sent successfully:', response);
-        // Optionally, show a success message to the user
+    emailjs
+      .sendForm("service_kjbfrlb", "template_purmuqx", form.current, {
+        publicKey: "t93NEg-srlerr1Vbm",
       })
-      .catch((error) => {
-        console.error('Email sending failed:', error);
-        // Optionally, show an error message to the user
-      });
+      .then(
+        (result) => {
+          console.log(result.text);
+          setFormValues({
+            name: "",
+            mobile: "",
+            email: "",
+            message: ""
+          });
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
 
   return (
@@ -62,25 +80,21 @@ const ContactUs = () => {
               We'd love to hear from you. Please fill out the form below and we'll get back to you as soon as possible.
             </p>
             {/* Form */}
-            <form className="flex flex-col gap-2" onSubmit={handleFormSubmit}>
-              {/* Name and Email Fields */}
+            <form ref={form} className="flex flex-col gap-2" onSubmit={handleFormSubmit}>
               <div className="flex flex-col md:flex-row gap-7 py-5">
                 <div className="flex flex-col w-full md:w-1/2">
-                  <input type="text" id="name" name="user_name" placeholder="Name" className="border border-[#ffffff40] border-opacity-50 bg-transparent py-3 p-2 rounded-xl" />
+                  <input onChange={handleInputChange} type="text" id="name" name="name" placeholder="Name" className="border border-[#ffffff40] border-opacity-50 bg-transparent py-3 p-2 rounded-xl" />
                 </div>
                 <div className="flex flex-col w-full md:w-1/2">
-                  <input type="email" id="email" name="user_email" placeholder="Email" className="border border-[#ffffff3d] border-opacity-50 bg-transparent py-3 p-2 rounded-xl" />
+                  <input onChange={handleInputChange} type="email" id="email" name="email" placeholder="Email" className="border border-[#ffffff3d] border-opacity-50 bg-transparent py-3 p-2 rounded-xl" />
                 </div>
               </div>
-              {/* Mobile Number Field */}
               <div className="flex flex-col pb-4">
-                <input type="tel" id="mobile" name="mobile" placeholder="Mobile Number" className="border border-[#ffffff3d] border-opacity-50 bg-transparent py-3 p-2 rounded-xl" />
+                <input onChange={handleInputChange} type="tel" id="mobile" name="mobile" placeholder="Mobile Number" className="border border-[#ffffff3d] border-opacity-50 bg-transparent py-3 p-2 rounded-xl" />
               </div>
-              {/* Message Field */}
               <div className="flex flex-col">
-                <textarea id="message" name="message" rows="6" placeholder="Message" className="border border-[#ffffff3d] border-opacity-50 bg-transparent py-3 p-2 rounded-xl"></textarea>
+                <textarea onChange={handleInputChange} id="message" name="message" rows="6" placeholder="Message" className="border border-[#ffffff3d] border-opacity-50 bg-transparent py-3 p-2 rounded-xl"></textarea>
               </div>
-              {/* Submit Button */}
               <div className="text-center md:py-3 py-3">
                 <button type="submit" className="bg-[#fff] hover:bg-[#000] hover:text-[#fff] text-black py-2 px-7 rounded-md transition duration-300">Submit</button>
               </div>
