@@ -76,6 +76,8 @@ import blog3Post from './blogpost3.png'
 import blog4Post from './blogpost4.png'
 import blog5Post from './blogpost5.png'
 import blog6Post from './blog6.png'
+import blog7Post from "./blog7 (1).jpg";
+import blog8Post from "./blog8.jpg"
 import post1 from './post1.png'
 import post2 from './post2.png'
 import post3 from './post3.png'
@@ -186,6 +188,8 @@ export {
     blog4Post,
     blog5Post,
     blog6Post,
+    blog7Post,
+    blog8Post,
     post1,
     post2,
     post3,

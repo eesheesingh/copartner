@@ -1,4 +1,4 @@
-import { ExpertImg, stars, arrow, background, telegram, blog1, svg1, svg2,  svg3, svg4, aboutFeature, aboutFeature2, aboutFeature3, vision, vision2, blog1Post, blog2Post, WhyUs1, WhyUs2, WhyUs3, RA1, blog3Post, blog4Post, blog5Post, blog6Post } from "../../assets";
+import { ExpertImg, stars, arrow, background, telegram, blog1, svg1, svg2,  svg3, svg4, aboutFeature, aboutFeature2, aboutFeature3, vision, vision2, blog1Post, blog2Post, WhyUs1, WhyUs2, WhyUs3, RA1, blog3Post, blog4Post, blog5Post, blog6Post, blog8Post, blog7Post } from "../../assets";
 
 export const expertsData = [
     {
@@ -357,7 +357,7 @@ export  const steps = [
     },
     {
       id: 10007,
-      imageUrl: blog6Post,
+      imageUrl: blog7Post,
       title: "Spot Good Advice: Simple Ways to Evaluate Financial Tips",
       heading1: "Evaluating Financial Advice",
       content1: `Navigating the world of financial advice can be tricky, especially when there are so many sources offering tips and recommendations. As a trader or investor, it's important to be able to spot good advice and differentiate it from misleading or unreliable information. In the context of Copartner, where traders can connect with SEBI-registered analysts, here are some simple ways to evaluate financial tips and make informed decisions: First, consider the source of the advice. Trustworthy tips come from credible experts with a proven track record of success. Copartner exclusively connects traders with SEBI-registered research analysts, ensuring that you receive advice from professionals who are regulated and experienced in the stock market. Next, look for transparency in the advice provided. A good analyst will explain their rationale and the factors they considered when making a recommendation. Copartner's analysts offer in-depth market analysis and clear explanations, helping you understand the reasoning behind their advice. Another important factor to consider is consistency. Reliable analysts provide tips that align with broader market trends and established investment strategies.`,
@@ -368,7 +368,7 @@ export  const steps = [
     },
     {
       id: 10008,
-      imageUrl: blog4Post,
+      imageUrl: blog8Post,
       title: "If Scammed by a Stock Tipping Channel: Know Your Rights & Actions",
       heading1: "Protecting Yourself from Stock Tipping Scams",
       content1: `With the rise of digital platforms and messaging apps, stock market traders have access to a vast array of information and advice from different sources. While this can be beneficial, it also opens the door to scams, especially from unverified stock tipping channels. If you find yourself a victim of a scam from a stock tipping channel, it's essential to know your rights and take steps to protect yourself. Here's what you can do if you've been scammed, with advice from Copartner. First, recognize the signs of a scam. If you receive unsolicited tips promising guaranteed returns, high-pressure sales tactics or insider knowledge, be cautious, scammers often use these tactics to lure traders into risky investments.`,
