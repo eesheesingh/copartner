@@ -73,6 +73,8 @@ text-fill-color: transparent;
     background-size: cover;
     overflow: hidden;
   }
+
+
 }
 
 .main-button {
@@ -149,9 +151,18 @@ text-fill-color: transparent;
 .header-bg{
   background-image: url('./assets/Div.png');
   background-repeat: no-repeat;
-  background-position: 300% 200%;
+  background-position: 235% -7%, -20rem 75rem;
   background-size: 80%;
 }
+
+.blog-item {
+  transition: transform 0.3s ease;
+}
+
+.blog-item:hover {
+  transform: translateY(-5px);
+}
+
 
 @media (max-width: 1060px) {
   .expertise-Bg {
@@ -165,6 +176,15 @@ text-fill-color: transparent;
     background-position: 25% -10%, -25rem 40rem;
     background-size: 45rem, 45rem;
   }
+
+  /* .courseCard > div:nth-child(4) {
+    width: 100% !important;
+  }
+
+  .courseCard > div:nth-child(5) {
+    width: 100% !important;
+  }  */
+
 }
   
 
@@ -172,4 +192,3 @@ text-fill-color: transparent;
   backdrop-filter: blur(10px); /* Apply backdrop blur effect */
   background-color: rgba(6, 3, 14, 0.8); /* Adjust the background color and opacity */
 }
-

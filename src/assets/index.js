@@ -69,6 +69,7 @@ import testimonialRight from './testimonialRight.png';
 import testimonialLeft from './testimonialLeft.png';
 import testimonialProfile from './testimonialProfile.png';
 import video from './Copartner Website Video.mp4'
+import videoImg from './video.png'
 import blog1Post from './best_forex_traders.jpeg'
 import blog2Post from './blogpost2.png'
 import blog3Post from './blogpost3.png'
@@ -90,6 +91,12 @@ import stars from './stars.png'
 import tick from './tick.png'
 import trustTeam from './trustteam.png'
 import RA1 from './RA1.png'
+import calender from './calender.png';
+import chart from './chart.png';
+import price from './Rupee.png';
+import rate from './rateVideo.png';
+import time from './time.png';
+import devices from './devices.png';
 export {
     tick,
     trustTeam,
@@ -166,6 +173,13 @@ export {
     testimonialLeft,
     testimonialProfile,
     video,
+    videoImg,
+    calender,
+    chart,
+    price,
+    rate,
+    time,
+    devices,
     blog1Post,
     blog2Post,
     blog3Post,

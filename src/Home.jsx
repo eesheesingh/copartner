@@ -17,7 +17,7 @@ import Stock from './components/HomePage/StockSection/Stock';
 import Testimonial from './components/Testimoials/Testimonial';
 import BlogSection from './components/HomePage/BlogSection/BlogSection';
 import ExpertiseData from './components/HomePage/ExpertSection/ExpertiseData';
-// import BlogPage from './components/BlogPage';
+import CoursesSection from './components/HomePage/CourseCards/CoursesSection'
 
 const Home = () => {
   return (
@@ -53,6 +53,9 @@ const Home = () => {
           </div>
           <div className={`md:mt-[1rem] mt-[1rem] ${styles.boxWidth}`} id='expertise'>
             <ExpertiseData />
+          </div>
+          <div className={`md:mt-[1rem] mt-[1rem] ${styles.boxWidth}`} id='expertise'>
+            <CoursesSection />
           </div>
           <div className={`md:mt-[5rem] mt-[1rem]${styles.boxWidth}`} >
             <Product />

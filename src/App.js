@@ -10,13 +10,14 @@ import Blog from "./components/BlogPage/Blog.jsx";
 import Home from "./Home";
 import ContactUs from './components/ContactUsPage/ContactUs.jsx'
 import BlogPage from "./components/BlogPage/BlogPage.jsx";
-// import ReferEarn from "./components/ReferEarn.jsx";
 import AboutUsPage from "./components/AboutUsPage/AboutPage.jsx";
 import ExpertisePage from "./components/ExpertisePage/ExpertisePage.jsx";
 import SubscriptionRA from "./components/SubscriptionRAPage/SubscriptionRA.jsx";
 import PrivacyPolicy from "./components/PrivacyAndTermsPage/PrivacyPolicy.jsx";
 import Terms from "./components/PrivacyAndTermsPage/Terms.jsx";
 import FAQ from './components/FaqPage/Faq.jsx'
+import CoursePage from "./components/HomePage/CourseCards/CoursePage.jsx";
+import ExpertCard from "./components/HomePage/CourseCards/ExpertCard.jsx";
 
 function App() {
   const router = createBrowserRouter(
@@ -37,16 +38,13 @@ function App() {
          <Route path="contact-us" element={<ContactUs />} />
          <Route path="about-us" element={<AboutUsPage />} />
           <Route path="/blogs/:blogId" element={<BlogPage />} />
-          {/* <Route path="refer&earn" element={<ReferEarn />} /> */}
           <Route path="experts-explore" element={<ExpertisePage />} />
           <Route path="/subscriptionRA/:id" element={<SubscriptionRA />} />
           <Route path="privacy-policy" element={<PrivacyPolicy />} />
           <Route path="terms-of-services" element={<Terms />} />
           <Route path="faq" element={<FAQ />} />
+          <Route path="course" element={<CoursePage />} />
       </Route>
-      
-
-      
     )
   );
 
