@@ -71,7 +71,7 @@ const Product = () => {
         {steps.map((step, index) => (
           <div
             key={index}
-            className={`flex flex-row text-left border border-[#ffffff39]`}
+            className={`flex flex-row text-left border border-[#ffffff39] ${expandedStep === index ? 'bg-gray-900' : ''}`}
           >
             {/* Left Column */}
             <div className="w-1/3 p-2 flex flex-col justify-between">

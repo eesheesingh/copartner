@@ -21,7 +21,7 @@ const Hero = () => {
           <a target='_blank' rel="noreferrer" href='https://copartner.in/' className='main-button md:text-lg text-sm'>Get Started Today</a>
         </div>
       </div>
-      {showLogin && <SignUp onClose={() => setShowLogin(false)} />}
+      {/* {showLogin && <SignUp onClose={() => setShowLogin(false)} />} */}
 
     </motion.div> // Close the motion.div wrapper
     

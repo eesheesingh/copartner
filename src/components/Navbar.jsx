@@ -118,19 +118,20 @@ const Navbar = () => {
               <button onClick={handleReferEarnClick} className="md:block hidden text-dimWhite text-[11px] py-2 px-4 ms-8 rounded-[36px] border border-solid border-white border-opacity-60  items-center">
                 Refer & Earn
               </button></Link> */}
-             
-              {/* <button
+             <a href="https://copartner.in/">
+              <button
                 className="md:hidden flex text-black text-[11px] py-2 px-4 ms-8 rounded-md border border-none bg-[#fff] hover:bg-[#000] transition duration-300 items-center"
-                onClick={() => setShowLogin(true)}
+                // onClick={() => setShowLogin(true)}
               >
                 Sign Up
               </button>
               <button
-                className="md:block hidden text-black text-[15px] py-1 px-6 ms-8 rounded-md border bg-[#fff] border-none border-opacity-60  items-center"
-                onClick={() => setShowLogin(true)}
+                className="md:block hidden text-black text-[15px] py-1 px-6 ms-8 rounded-md border bg-[#fff] border-none border-opacity-60  items-center hover:bg-[#000] hover:text-[#fff] transition duration-300"
+                // onClick={() => setShowLogin(true)}
               >
                 Sign Up
-              </button> */}
+              </button>
+              </a>
             </div>
 
             <div className="sm:hidden flex flex-1 justify-end items-center">
