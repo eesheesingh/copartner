@@ -407,7 +407,7 @@ export  const steps = [
     //   followers: "Followers",
     //   totalFollowers: "3.1k",
     //   content:
-    //     "Have full control of your business finances on the go using our iOS/Android mobile apps. Because, you know, it’s 2023.",
+    //     "Have full control of your finances on the go",
     //   telegram: telegram,
     //   greet: "Get Free Calls",
     //   arrowIcon: arrow,
@@ -431,7 +431,7 @@ export  const steps = [
     //   followers: "Followers",
     //   totalFollowers: "3.1k",
     //   content:
-    //     "Have full control of your business finances on the go using our iOS/Android mobile apps. Because, you know, it’s 2023.",
+    //     "Have full control of your finances on the go",
     //   telegram: telegram,
     //   greet: "Get Free Calls",
     //   arrowIcon: arrow,
@@ -446,7 +446,7 @@ export  const steps = [
     //   id: "4",
     //   icon: background,
     //   userImg: ExpertImg,
-    //   name: "Salman Khan",
+    //   name: "Ritik Kumar",
     //   title: "DevOps",
     //   ratingIcon: stars,
     //   rating: "4.4",
@@ -455,7 +455,7 @@ export  const steps = [
     //   followers: "Followers",
     //   totalFollowers: "3.1k",
     //   content:
-    //     "Have full control of your business finances on the go using our iOS/Android mobile apps. Because, you know, it’s 2023.",
+    //     "Have full control of your finances on the go",
     //   telegram: telegram,
     //   greet: "Get Free Calls",
     //   arrowIcon: arrow,
@@ -479,7 +479,7 @@ export  const steps = [
     //   followers: "Followers",
     //   totalFollowers: "3.1k",
     //   content:
-    //     "Have full control of your business finances on the go using our iOS/Android mobile apps. Because, you know, it’s 2023.",
+    //     "Have full control of your finances on the go",
     //   telegram: telegram,
     //   greet: "Get Free Calls",
     //   arrowIcon: arrow,
@@ -494,7 +494,7 @@ export  const steps = [
     //   id: "6",
     //   icon: background,
     //   userImg: ExpertImg,
-    //   name: "Dhinchak Pooja",
+    //   name: "Aditya Chauhan",
     //   title: "Stock Market",
     //   ratingIcon: stars,
     //   rating: "4.4",
@@ -503,7 +503,7 @@ export  const steps = [
     //   followers: "Followers",
     //   totalFollowers: "3.1k",
     //   content:
-    //     "Have full control of your business finances on the go using our iOS/Android mobile apps. Because, you know, it’s 2023.",
+    //     "Have full control of your finances on the go",
     //   telegram: telegram,
     //   greet: "Get Free Calls",
     //   arrowIcon: arrow,
