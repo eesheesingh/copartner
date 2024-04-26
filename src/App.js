@@ -18,12 +18,13 @@ import Terms from "./components/PrivacyAndTermsPage/Terms.jsx";
 import FAQ from './components/FaqPage/Faq.jsx'
 import CoursePage from "./components/HomePage/CourseCards/CoursePage.jsx";
 import ExpertCard from "./components/HomePage/CourseCards/ExpertCard.jsx";
+import CourseList from "./components/HomePage/CourseCards/CourseList.jsx";
 
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<Main />}>
-        <Route path="/" element={<Home />} />
+        <Route path="" element={<Home />} />
         <Route
           path="blogs"
           element={
@@ -40,6 +41,7 @@ function App() {
           <Route path="/blogs/:blogId" element={<BlogPage />} />
           <Route path="experts-explore" element={<ExpertisePage />} />
           <Route path="/subscriptionRA/:id" element={<SubscriptionRA />} />
+          <Route path="/subscriptionRA/:id/course" element={<CourseList />} />
           <Route path="privacy-policy" element={<PrivacyPolicy />} />
           <Route path="terms-of-services" element={<Terms />} />
           <Route path="faq" element={<FAQ />} />

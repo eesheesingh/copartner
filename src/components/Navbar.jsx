@@ -46,8 +46,8 @@ const Navbar = () => {
 
   const menuItems = [
     { id: "home", title: "Home" },
-    { id: "features", title: "Features" },
     { id: "expertise", title: "Expertise" },
+    { id: "course", title: "Course" },
     { id: "blogs", title: "Blogs" },
     { id: "contact", title: "Contact Us" },
   ];

@@ -23,7 +23,7 @@ const SubscriptionPaymentPopup = ({ onClose, selectedMonthlyPlan, planMonthlyPri
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-      <div className="bg-[#18181be2] border-[1px] border-[#ffffff24] rounded shadow-md md:w-[400px] relative">
+      <div className="bg-[#18181b] border-[1px] border-[#ffffff24] rounded shadow-md md:w-[400px] relative">
         <button className="absolute top-1 right-1" onClick={handleClose}>
           <img src={close} alt="" className="h-8 w-8" />
         </button>
