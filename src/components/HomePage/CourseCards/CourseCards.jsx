@@ -14,7 +14,7 @@ const CourseCard = ({ courseData }) => {
 
   return (
     // md:w-1/3 add in the 1ist div
-    <div className="w-full p-2 rounded-md mb-8 md:mb-0">
+    <div className="md:w-full md:p-2 rounded-md mb-8 md:mb-0">
       <Link to="course" onClick={scrollToTop}>
       <div className="w-full overflow-hidden relative rounded-lg bg-transparent transition duration-300 ease-in-out transform hover:bg-[#ffffff19]">
         <img
@@ -32,7 +32,7 @@ const CourseCard = ({ courseData }) => {
           <span className="mr-1">4.4</span>
         </div>
 
-        <div className="p-4 relative z-10">
+        <div className="md:p-4 relative z-10">
           {/* Course Title */}
           <h3 className="text-lg font-semibold text-left">{courseData.courseTitle}</h3>
 

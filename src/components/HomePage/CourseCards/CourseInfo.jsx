@@ -51,7 +51,7 @@ const CourseInfo = ({ courseData }) => {
           />
 
           {/* Star image with rating */}
-          <div className="absolute top-0 right-0 z-10 flex items-center mt-2 mr-2">
+          <div className="absolute top-0 right-0 flex items-center mt-2 mr-2">
             <img src={stars} alt="Stars" className="w-6 h-6 mr-1" />
             <p className="text-white text-sm font-semibold">4.4</p>
           </div>
