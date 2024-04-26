@@ -54,7 +54,7 @@ const Home = () => {
           <div className={`md:mt-[1rem] mt-[1rem] ${styles.boxWidth}`} id='expertise'>
             <ExpertiseData />
           </div>
-          <div className={`md:mt-[1rem] mt-[1rem] ${styles.boxWidth}`} id='expertise'>
+          <div className={`md:mt-[1rem] mt-[1rem] ${styles.boxWidth}`} id='course'>
             <CoursesSection />
           </div>
           <div className={`md:mt-[5rem] mt-[1rem]${styles.boxWidth}`} >

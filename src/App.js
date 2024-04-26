@@ -24,7 +24,7 @@ function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<Main />}>
-        <Route path="/" element={<Home />} />
+        <Route path="" element={<Home />} />
         <Route
           path="blogs"
           element={

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   chart,
   videoImg,
@@ -7,8 +8,25 @@ import {
   devices,
   stars,
 } from "../../../assets";
+import CoursePaymentPopup from "../../SubscriptionRAPage/CoursePaymentPopup";
+import { expertise_data } from "../../constants/data";
 
 const CourseInfo = ({ courseData }) => {
+  const [showPopup, setShowPopup] = useState(false);
+  const [selectedPlan, setSelectedPlan] = useState(null);
+  const [planPrice, setPlanPrice] = useState(2999);
+
+  const handleClose = () => {
+    setShowPopup(false);
+  };
+
+  const handleSelectPlan = (plan, price) => {
+    setSelectedPlan(plan);
+    setPlanPrice(price);
+
+    console.log(`User has chosen: ${plan} plan with price ₹${price}`);
+  };
+
   return (
     <div className="text-white border border-solid border-white border-opacity-10 rounded-lg p-3 md:p-8 relative">
       {/* Rating */}
@@ -104,9 +122,20 @@ const CourseInfo = ({ courseData }) => {
               {courseData.price}
             </h2>
             <div className="items-center justify-center">
-              <button className="px-10 py-3 rounded-lg bg-[#fff] text-[#000] text-[15px] font-semibold">
+              <button onClick={() => { setShowPopup(true); handleSelectPlan("Course", 7999); }} className="px-10 py-3 rounded-lg bg-[#fff] text-[#000] text-[15px] font-semibold">
                 Buy Now
               </button>
+              {showPopup && (
+                expertise_data.map((expert, index) => (
+                  <CoursePaymentPopup
+                    key={index}
+                    onClose={handleClose}
+                    selectedPlan={selectedPlan}
+                    planPrice={planPrice}
+                    expertName={expert.name}
+                  />
+                ))
+                )}
             </div>
           </div>
         </div>
