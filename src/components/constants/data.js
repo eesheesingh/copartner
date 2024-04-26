@@ -1,4 +1,4 @@
-import { ExpertImg, stars, arrow, background, telegram, blog1, svg1, svg2,  svg3, svg4, aboutFeature, aboutFeature2, aboutFeature3, vision, vision2, blog1Post, blog2Post, WhyUs1, WhyUs2, WhyUs3, RA1, blog3Post, blog4Post, blog5Post, blog6Post, blog8Post, blog7Post } from "../../assets";
+import { ExpertImg, stars, arrow, background, telegram, blog1, svg1, svg2,  svg3, svg4, aboutFeature, aboutFeature2, aboutFeature3, vision, vision2, blog1Post, blog2Post, WhyUs1, WhyUs2, WhyUs3, RA1, blog3Post, blog4Post, blog5Post, blog6Post, blog8Post, blog7Post, coursePost } from "../../assets";
 
 export const expertsData = [
     {
@@ -111,11 +111,11 @@ export  const steps = [
  export const course_data = [
   {
     id:"123",
-    imageUrl: blog1Post,
+    imageUrl: coursePost,
     courseTitle: "Welcome to the Stock Market",
     duration: "6 hrs 32 min",
     session: "5",
-    price: "₹1,999/-",
+    price: "₹7,999/-",
     icon: background,
     userImg: RA1,
     name: "Shubham Rupchand Gedam",
