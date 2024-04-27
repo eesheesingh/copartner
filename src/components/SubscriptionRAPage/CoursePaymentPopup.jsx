@@ -1,8 +1,13 @@
-import React, { useEffect } from 'react';
-import { close } from '../../assets';
+import React, { useEffect, useState } from 'react';
+import { close, exclamation } from '../../assets';
+import KYCPopup from './KYCPopup';
 
 const CoursePaymentPopup = ({ onClose, selectedPlan, planPrice, expertName }) => {
   const gstRate = 0.18;
+  const [showKYCPopup, setShowKYCPopup] = useState(false);
+  const handlePay = () => {
+    setShowKYCPopup(true); // Show KYC popup when Pay button is clicked
+  };
 
   // Calculate total price including GST
   const total = (planPrice || 0) * (1 + gstRate);
@@ -41,15 +46,22 @@ const CoursePaymentPopup = ({ onClose, selectedPlan, planPrice, expertName }) =>
             <label className="block text-sm text-[#c9c9c9] font-normal">Amount</label>
             <span className="text-sm">₹{planPrice}</span>
           </div>
+          <div className='justify-start items-center flex py-2'>
+            <span className='flex items-center gap-2 md:text-[12px] text-[10px]'>
+                <img src={exclamation} className='w-5 h-5' alt="" />
+                Subscription
+            </span>
+          </div>
           <div className="flex justify-between py-2 mb-4 border-b-[1px] border-t-[1px] border-[#c9c9c962]">
             <label className="block text-lg text-[#c9c9c9] font-semibold">Total</label>
             <span className="text-lg font-semibold">₹{planPrice}</span>
           </div>
-          <button className="main-button">
+          <button className="main-button" onClick={handlePay}>
             Pay
           </button>
         </div>
       </div>
+      {showKYCPopup && <KYCPopup onClose={handleClose} />} {/* Render KYCPopup when showKYCPopup is true */}
     </div>
   );
 };

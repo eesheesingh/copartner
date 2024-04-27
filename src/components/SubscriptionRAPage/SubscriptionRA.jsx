@@ -82,6 +82,7 @@ const SubscriptionRA = () => {
     <section
       className={`flex md:flex-col flex-col md:px-0 px-3 ${styles.paddingY} expertise-Bg`}
     >
+      <div className={`flex md:flex-col flex-col ${styles.boxWidth} md:px-[0.5rem] xl:px-[7rem] px-2`}>
       <div
         key={expertData.id}
         className={`flex-1 ${styles.flexStart} flex-col xl:px-0 md:px-28 z-10 md:bottom-[10rem] font-inter`}
@@ -262,7 +263,7 @@ const SubscriptionRA = () => {
             <div className="text-center">
               <button
                 className="bg-white text-black md:px-12 px-6 md:text-base text-xs py-2 md:rounded-lg rounded border-2"
-                onClick={() => handleBuyNowClick("Monthly", 2999)}
+                onClick={() => handleBuyNowClick("Monthly", 1999)}
               >
                 Buy Now
               </button>
@@ -770,6 +771,7 @@ const SubscriptionRA = () => {
 
       <div id="reviews">
         <Testimonials />
+      </div>
       </div>
     </section>
   );

@@ -78,6 +78,7 @@ import blog4Post from './blogpost4.png'
 import blog5Post from './blogpost5.png'
 import blog6Post from './blog6.png'
 import blog7Post from "./blog7 (1).jpg";
+import exclamation from './exclamation.png'
 import blog8Post from "./blog8.jpg"
 import post1 from './post1.png'
 import post2 from './post2.png'
@@ -203,4 +204,5 @@ export {
     stars,
     RA1,
     coursePost,
+    exclamation,
 }

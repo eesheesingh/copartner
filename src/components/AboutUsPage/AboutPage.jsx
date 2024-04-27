@@ -201,7 +201,7 @@ const About = () => {
           )}
 
         </div>
-        <div className="md:mt-0 mt-10">
+        <div className="md:mt-[5rem] xl:mt-[5rem] mt-10">
 
         <Testimonials />
         </div>
