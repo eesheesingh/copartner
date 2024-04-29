@@ -69,15 +69,6 @@ const Footer = () => {
               Product
             </span>
             {ProductList.map((product) => (
-
-      <a
-        href={product.link}
-        key={product.link}
-        className="font-normal text-[0.9rem] text-left leading-[14.7px] text-dimWhite hover:text-white"
-      >
-        {product.name}
-      </a>
-    ))}
               <Link
                 onClick={scrollToTop}
                 to={product.link}
