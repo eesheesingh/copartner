@@ -3,6 +3,7 @@ import { logo, linkedin, instagram, exclamation } from "../../assets";
 import { Link } from "react-router-dom";
 import { FaExclamationTriangle } from "react-icons/fa";
 
+
 const ProductList = [
   { name: "About Us", link: "/about-us" },
   { name: "FAQ's", link: "/faq" },
@@ -68,7 +69,7 @@ const Footer = () => {
               Product
             </span>
             {ProductList.map((product) => (
- HEAD
+
       <a
         href={product.link}
         key={product.link}
