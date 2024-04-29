@@ -130,11 +130,11 @@ const SubscriptionRA = () => {
               onClick={() => window.open(expertData.telegramLink, "_blank")}
             >
               <button className="flex mx-auto md:py-2 py-2  items-center">
-                <img
+                {/* <img
                   className="md:w-6 w-4 me-3"
                   src={expertData.telegram}
                   alt="telegram icon"
-                />
+                /> */}
                 <span className="md:text-base text-xs">Get Free Calls</span>
                 <img className="w-4 ms-3" src={arrow} alt="arrow icon" />
               </button>

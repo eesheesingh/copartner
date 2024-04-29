@@ -112,11 +112,11 @@ const ExpertiseData = () => {
 
           <div className="md:w-[211px] md:h-[40px] w-[146px] h-[40px] mb-1 flex items-center justify-center rounded-[21.5px] border-[1.5px] border-[#4e4e4ecc] mt-2 md:mt-0" onClick={() => window.open(expert.telegramLink, "_blank")}>
             <div className="flex justify-center items-center gap-2">
-              <img
+              {/* <img
                 src={expert.telegram}
                 alt="Telegram"
                 className="md:w-[24px] md:h-[24px] w-[16px] h-[16px]"
-              />
+              /> */}
               <button className="text-white font-[400] md:text-[15px] text-[12px] leading-[19px]">
                 {expert.greet}
               </button>
