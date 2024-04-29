@@ -61,7 +61,7 @@ const Footer = () => {
             </span>
             {ProductList.map((product) => (
       <a
-        href={product.link} // Update href to the link of the AboutUs page ("/about")
+        href={product.link}
         key={product.link}
         className="font-normal text-[0.9rem] text-left leading-[14.7px] text-dimWhite hover:text-white"
       >

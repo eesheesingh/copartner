@@ -16,7 +16,7 @@ const Main = () => {
       {/* <div className={`md:mt-[5rem] md:px-[2rem] mt-[1rem]${styles.boxWidth}`}>
         <Testimonial />
       </div> */}
-      <div className={`md:my-[5rem] mt-[1rem] ${styles.paddingX}`}>
+      <div className={`md:my-[2rem] mt-[1rem] ${styles.paddingX}`}>
         <Footer />
       </div>
     </div>
