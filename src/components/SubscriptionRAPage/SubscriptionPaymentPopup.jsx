@@ -51,7 +51,7 @@ const SubscriptionPaymentPopup = ({ onClose, selectedMonthlyPlan, planMonthlyPri
           <div className='justify-start items-center flex py-2'>
             <span className='flex items-center gap-2 md:text-[12px] text-[10px]'>
                 <img src={exclamation} className='w-5 h-5' alt="" />
-                Subscription
+                Transferring any amount or communicating outside of Copartner may result in fraudulent experiences and potential loss of your money. Please pay or communicate exclusively through our platform.
             </span>
           </div>
           <div className="flex justify-between py-2 mb-4 border-b-[1px] border-t-[1px] border-[#c9c9c962]">

@@ -60,7 +60,7 @@ const KYCPopup = ({ onClose }) => {
           <div className='justify-start items-center flex py-2'>
             <span className='flex items-center gap-2 md:text-[12px] text-[10px]'>
                 <img src={exclamation} className='w-5 h-5' alt="" />
-                Subscription
+                Users are solely responsible for the accuracy and authenticity of any documents or information submitted for Know Your Customer (KYC) verification. Copartner assumes no liability for any issues or consequences arising from the submission of inaccurate or falsified documents.
             </span>
           </div>
           <button className="bg-[#fff] text-[#000] py-3 px-2 rounded-sm hover:bg-[#000] hover:text-[#fff] transition duration-300">
