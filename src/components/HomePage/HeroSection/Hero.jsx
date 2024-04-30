@@ -6,6 +6,11 @@ import SignUp from '../../SignUp';
 
 const Hero = () => {
   const [showLogin, setShowLogin] = useState(false);
+  
+  const scrollToCourseSection = () => {
+    const courseSection = document.getElementById('course');
+    courseSection.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
     <motion.div // Wrap the entire Hero component with motion.div
@@ -18,7 +23,7 @@ const Hero = () => {
         <h1 className="text-[3rem] md:text-[4.5rem] font-bold mb-4 text-gradient md:leading-[80px] leading-[48px] md:px-20 px-4">Invest, Learn and Earn</h1>
         <p className="text-90 md:text-xl text-[#ffffffbb] mb-6 md:px-20 px-4">Get partnered with our SEBI Registered Research Analysts to start your profitable trading journey. </p>
         <div>
-          <a className='main-button md:text-lg text-sm'>Get Started Today</a>
+          <button className='main-button md:text-lg text-sm' onClick={scrollToCourseSection}>Get Started Today</button>
         </div>
       </div>
       {/* {showLogin && <SignUp onClose={() => setShowLogin(false)} />} */}
