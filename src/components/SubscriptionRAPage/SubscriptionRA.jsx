@@ -406,7 +406,7 @@ const SubscriptionRA = () => {
             <div className="text-center">
               <button
                 className="text-white md:px-12 px-6 md:text-base text-xs py-2 md:rounded-lg rounded border-white border-2"
-                onClick={() => handleBuyNowClick("Yearly", 5999)}
+                onClick={() => handleBuyNowClick("Yearly", 9999)}
               >
                 Buy Now
               </button>
