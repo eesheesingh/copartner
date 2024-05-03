@@ -42,8 +42,8 @@ const ExpertiseData = () => {
   {expertise_data.map((expert, id) => {
     return (
       <Link to={`/subscriptionRA/${expert.id}`}>
-        <div className="sm:w-[384px] sm:h-[460px] w-[240px] h-[300px] rounded-[11px] p-2 relative flex flex-col items-center hover:bg-[#18181B] hover:opacity[50%] transition duration-150 ease-in-out">
-          <div className="w-[72px] h-[98px] sm:w-[384px] sm:h-[219px]  relative profile-image mb-4">
+        <div className="sm:h-[460px] h-[300px] rounded-[11px] p-2 relative flex flex-col items-center hover:bg-[#18181B] hover:opacity[50%] transition duration-150 ease-in-out">
+          <div className="w-[72px] h-[98px] sm:h-[219px]  relative profile-image mb-4">
             <img
               src={expert.icon}
               alt="background"
@@ -112,11 +112,11 @@ const ExpertiseData = () => {
 
           <div className="md:w-[211px] md:h-[40px] w-[146px] h-[40px] mb-1 flex items-center justify-center rounded-[21.5px] border-[1.5px] border-[#4e4e4ecc] mt-2 md:mt-0" onClick={() => window.open(expert.telegramLink, "_blank")}>
             <div className="flex justify-center items-center gap-2">
-              <img
+              {/* <img
                 src={expert.telegram}
                 alt="Telegram"
                 className="md:w-[24px] md:h-[24px] w-[16px] h-[16px]"
-              />
+              /> */}
               <button className="text-white font-[400] md:text-[15px] text-[12px] leading-[19px]">
                 {expert.greet}
               </button>

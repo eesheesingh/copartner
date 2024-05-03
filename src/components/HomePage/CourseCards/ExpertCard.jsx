@@ -33,10 +33,9 @@ const ExpertCard = () => {
             <div className="md:text-lg text-[13px] md:font-semibold md:w-[508px] md:mb-4 py-3 mb-2">
               {expert.content}
             </div>
-            <div className="border-[1px] border-[#f4f4f535] border-opacity-30 md:rounded-3xl rounded-2xl md:w-44 w-32 md:mb-6">
+            <div onClick={() => window.open(expert.telegramLink, "_blank")} className="border-[1px] border-[#f4f4f535] border-opacity-30 md:rounded-3xl rounded-2xl md:w-44 w-32 md:mb-6">
               <button className="flex mx-auto md:py-2 py-1 items-center">
-                <img className="md:w-6 w-4 me-3" src={telegram} alt="telegram icon" />
-                <span className="md:text-base text-xs">Telegram</span>
+                <span className="md:text-base text-xs">Get Free Calls</span>
                 <img className="w-4 ms-3" src={arrow} alt="arrow icon" />
               </button>
             </div>

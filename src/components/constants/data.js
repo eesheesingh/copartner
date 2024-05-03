@@ -468,7 +468,7 @@ export  const steps = [
       content:
         "SEBI Registration number: INH000013420",
       telegram: telegram,
-      telegramLink: "https://t.me/+YAdr5_6oQuI4NDI1",
+      telegramLink: "https://forms.gle/KuURu8btygFhNvZ39",
       greet: "Get Free Calls",
       arrowIcon: arrow,
       keyHighlights: [

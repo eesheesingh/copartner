@@ -6,7 +6,6 @@ import { useParams } from "react-router-dom";
 import {
   arrow,
   stars,
-  tick,
   layer,
   RA1,
   rate,
@@ -130,11 +129,11 @@ const SubscriptionRA = () => {
               onClick={() => window.open(expertData.telegramLink, "_blank")}
             >
               <button className="flex mx-auto md:py-2 py-2  items-center">
-                <img
+                {/* <img
                   className="md:w-6 w-4 me-3"
                   src={expertData.telegram}
                   alt="telegram icon"
-                />
+                /> */}
                 <span className="md:text-base text-xs">Get Free Calls</span>
                 <img className="w-4 ms-3" src={arrow} alt="arrow icon" />
               </button>
@@ -406,7 +405,7 @@ const SubscriptionRA = () => {
             <div className="text-center">
               <button
                 className="text-white md:px-12 px-6 md:text-base text-xs py-2 md:rounded-lg rounded border-white border-2"
-                onClick={() => handleBuyNowClick("Yearly", 5999)}
+                onClick={() => handleBuyNowClick("Yearly", 9999)}
               >
                 Buy Now
               </button>

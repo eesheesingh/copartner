@@ -48,12 +48,6 @@ const SubscriptionPaymentPopup = ({ onClose, selectedMonthlyPlan, planMonthlyPri
             <label className="block text-sm text-[#c9c9c9] font-normal">Amount</label>
             <span className="text-sm">₹{planMonthlyPrice}</span>
           </div>
-          <div className='justify-start items-center flex py-2'>
-            <span className='flex items-center gap-2 md:text-[12px] text-[10px]'>
-                <img src={exclamation} className='w-5 h-5' alt="" />
-                Transferring any amount or communicating outside of Copartner may result in fraudulent experiences and potential loss of your money. Please pay or communicate exclusively through our platform.
-            </span>
-          </div>
           <div className="flex justify-between py-2 mb-4 border-b-[1px] border-t-[1px] border-[#c9c9c962]">
             <label className="block text-lg text-[#c9c9c9] font-semibold">Total</label>
             {/* <span className="text-lg font-semibold">₹{total.toFixed(2)}</span> */}
@@ -63,6 +57,12 @@ const SubscriptionPaymentPopup = ({ onClose, selectedMonthlyPlan, planMonthlyPri
           <button className="main-button" onClick={handlePay}>
             Pay
           </button>
+          <div className='justify-start items-center flex pt-2'>
+            <span className='flex items-center gap-2 md:text-[12px] text-[10px]'>
+                <img src={exclamation} className='w-5 h-5' alt="" />
+                Transferring any amount or communicating outside of Copartner may result in fraudulent experiences and potential loss of your money. Please pay or communicate exclusively through our platform.
+            </span>
+          </div>
         </div>
       </div>
       {showKYCPopup && <KYCPopup onClose={handleClose} />} {/* Render KYCPopup when showKYCPopup is true */}

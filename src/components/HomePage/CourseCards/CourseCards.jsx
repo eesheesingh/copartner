@@ -46,11 +46,6 @@ const CourseCard = ({ courseData }) => {
             <div className="flex-1 flex items-center">
               <p className="text-sm font-medium text-dimWhite">{courseData.name}</p>
             </div>
-
-            {/* Join Telegram */}
-            <div className="flex-1 flex justify-end">
-              <span className="join-Telegram flex text-dimWhite"> Join <img src={telegram} alt="Telegram" className="w-5 h-5 ml-1" /></span>
-            </div>
           </div>
 
           {/* Experience and Followers */}
