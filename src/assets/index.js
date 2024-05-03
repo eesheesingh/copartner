@@ -104,6 +104,8 @@ import devices from './devices.png';
 import paridhi from './paridhi.png'
 import samay from './Samayavif.png'
 import ritik from './Ritik.png'
+import tick2 from "./Vector.png";
+
 export {
     tick,
     trustTeam,
@@ -210,5 +212,6 @@ export {
     exclamation,
     paridhi,
     samay,
-    ritik
+    ritik,
+    tick2
 }

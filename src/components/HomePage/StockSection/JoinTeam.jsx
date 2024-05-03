@@ -1,12 +1,14 @@
-import React, { useRef, useState } from "react";
-import { close } from "../../../assets";
+import React, { useEffect, useRef, useState } from "react";
+import { close, tick2 } from "../../../assets";
 import emailjs from "@emailjs/browser";
+import Confirmation from "./Confirmation";
+import { Link } from "react-router-dom";
 
 const JoinTeam = ({ closeModal }) => {
   const form = useRef();
   const [uploadedFile, setUploadedFile] = useState(null);
   const [showSuccessPopup, setShowSuccessPopup] = useState(false);
-  const [copartnerChecked, setCopartnerChecked] = useState(false);
+  const [copartnerChecked, setCopartnerChecked] = useState(true);
   const [formValues, setFormValues] = useState({
     name: "",
     mobile: "",
@@ -18,6 +20,25 @@ const JoinTeam = ({ closeModal }) => {
     my_file: null,
   });
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [showConfirmation, setShowConfirmation] = useState(false);
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleShowConfirmation = () => {
+    setShowConfirmation(true);
+  };
+
+  const handleCloseConfirmation = () => {
+    setShowConfirmation(false);
+  };
+
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     setUploadedFile(file);
@@ -25,7 +46,13 @@ const JoinTeam = ({ closeModal }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
+    handleShowConfirmation();
+  };
+
+  // Function to handle form submission after confirmation
+  const handleConfirmSubmit = () => {
+    // Send form data using emailjs
     emailjs
       .sendForm("service_kjbfrlb", "template_0q7an8s", form.current, {
         publicKey: "t93NEg-srlerr1Vbm",
@@ -46,9 +73,12 @@ const JoinTeam = ({ closeModal }) => {
           });
         },
         (error) => {
-          console.log(error.text);
+          console.error("Email sending error:", error.text);
         }
       );
+
+    handleCloseConfirmation();
+    handleOpenModal();
   };
 
   const handleInputChange = (e) => {
@@ -59,6 +89,17 @@ const JoinTeam = ({ closeModal }) => {
   const handleCopartnerChange = () => {
     setCopartnerChecked(!copartnerChecked);
   };
+
+  useEffect(() => {
+    if (isModalOpen) {
+      const timer = setTimeout(() => {
+        handleCloseModal();
+        closeModal();
+      }, 1500);
+
+      return () => clearTimeout(timer);
+    }
+  }, [isModalOpen, handleCloseModal]);
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
@@ -236,10 +277,7 @@ const JoinTeam = ({ closeModal }) => {
             {/* SEBI Registration Certificate Field */}
 
             <div className="relative col-span-2">
-              <label
-                htmlFor="my_file"
-                className="text-[#ffffff88] block mb-2"
-              >
+              <label htmlFor="my_file" className="text-[#ffffff88] block mb-2">
                 Select SEBI Registration Certificate
               </label>
               <div className="border-2 border-dashed rounded-lg">
@@ -282,13 +320,13 @@ const JoinTeam = ({ closeModal }) => {
     <label for="link-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"> <h3 className='text-[15px]'>Become Copartner</h3>I agree with the <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">terms and conditions</a>.</label>
                     </div> */}
 
-          <div className="relative flex items-center">
+          <div className="relative flex items-center md:mr-96">
             <input
               type="checkbox"
               id="copartnerCheckbox"
               checked={copartnerChecked}
               onChange={handleCopartnerChange}
-              className="md:w-4 w-8 md:h-4 h-8 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+              className="md:w-4 w-6 md:h-4 h-6 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
             />
             <label
               htmlFor="copartnerCheckbox"
@@ -296,12 +334,33 @@ const JoinTeam = ({ closeModal }) => {
             >
               Become Copartner
               <div>
-                Take your team up a level with easy-to-use tools, effortless
-                templates and Terms & Conditions.
+                Read our{" "}
+                <span className="text-blue-500 cursor-pointer underline">
+                  <Link to="terms-of-services">Terms & Conditions</Link>
+                </span>
               </div>
             </label>
           </div>
-          {/* Submit Button */}
+          <Confirmation isOpen={isModalOpen} onClose={handleCloseModal}>
+            <div className="px-6 pb-6 text-center">
+              <img className="w-12 mx-auto mb-4" src={tick2} alt="tick2" />
+              <p className="text-sm">
+                Your documents have been successfully submitted for
+                verification.
+              </p>
+              <p className="mt-2 text-sm">
+                Kindly wait 72 to 96 hours for the verification email.
+              </p>
+            </div>
+            <div className="text-center">
+              <button
+                onClick={() => {handleCloseModal(); closeModal();}}
+                className="bg-[#fff] text-black py-2 px-4 rounded-md hover:bg-blue-600 transition duration-300"
+              >
+                Close
+              </button>
+            </div>
+          </Confirmation>
           <div className="text-center">
             <button
               type="submit"
@@ -311,6 +370,58 @@ const JoinTeam = ({ closeModal }) => {
             </button>
           </div>
         </form>
+        {showConfirmation && (
+          <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+            <div className="p-4 bg-[#18181B] rounded-lg max-w-lg w-full">
+              <button
+                onClick={handleCloseConfirmation}
+                className="float-right font-bold"
+              >
+                X
+              </button>
+              <h2 className="text-lg font-bold">Terms & Conditions</h2>
+              <div className=" max-h-40 max-w-md mx-auto overflow-y-auto mt-4">
+                {/* Dummy text */}
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  ac lorem ac risus elementum sodales. Fusce vestibulum ante id
+                  velit dictum, a ultricies odio fermentum. Morbi porta eros vel
+                  lacus iaculis, a interdum sapien posuere. Nunc interdum, enim
+                  nec scelerisque convallis, nisi turpis mollis est, nec
+                  faucibus nunc ex et nunc. Ut id dolor sapien.
+                </p>
+                <p>
+                  Integer venenatis viverra neque, et eleifend metus blandit
+                  nec. Phasellus consequat arcu vel tortor consequat, id
+                  dignissim dui vehicula. Duis ut urna vel ligula consequat
+                  congue ac in arcu. Duis auctor auctor felis, vel posuere quam
+                  ultrices at. Nam ullamcorper nisl vitae arcu condimentum
+                  suscipit.
+                </p>
+                {/* More dummy text */}
+              </div>
+              <div className="mt-4 text-center">
+                By clicking this button, you accept our{" "}
+                <Link
+                  className="text-blue-500 cursor-pointer underline"
+                  to="terms-of-services"
+                >
+                  terms & conditions
+                </Link>
+              </div>
+              <div className="flex justify-center mt-4">
+                <button
+                  onClick={() => {
+                    handleConfirmSubmit();
+                  }}
+                  className="bg-blue-500 text-white px-4 py-2 rounded-md mr-2"
+                >
+                  Accept
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
         {/* Success Popup */}
         {showSuccessPopup && (
           <div className="fixed bottom-4 right-4 bg-green-500 text-white py-2 px-4 rounded-md shadow-md">

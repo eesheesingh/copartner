@@ -42,8 +42,8 @@ const ExpertiseData = () => {
   {expertise_data.map((expert, id) => {
     return (
       <Link to={`/subscriptionRA/${expert.id}`}>
-        <div className="sm:w-[384px] sm:h-[460px] w-[240px] h-[300px] rounded-[11px] p-2 relative flex flex-col items-center hover:bg-[#18181B] hover:opacity[50%] transition duration-150 ease-in-out">
-          <div className="w-[72px] h-[98px] sm:w-[384px] sm:h-[219px]  relative profile-image mb-4">
+        <div className="sm:h-[460px] h-[300px] rounded-[11px] p-2 relative flex flex-col items-center hover:bg-[#18181B] hover:opacity[50%] transition duration-150 ease-in-out">
+          <div className="w-[72px] h-[98px] sm:h-[219px]  relative profile-image mb-4">
             <img
               src={expert.icon}
               alt="background"

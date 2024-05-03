@@ -6,7 +6,6 @@ import { useParams } from "react-router-dom";
 import {
   arrow,
   stars,
-  tick,
   layer,
   RA1,
   rate,
