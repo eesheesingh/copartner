@@ -1,7 +1,6 @@
 import React from "react";
-import { logo, linkedin, instagram, exclamation } from "../../assets";
+import { logo, linkedin, instagram } from "../../assets";
 import { Link } from "react-router-dom";
-import { FaExclamationTriangle } from "react-icons/fa";
 
 
 const ProductList = [

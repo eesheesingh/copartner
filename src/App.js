@@ -17,7 +17,6 @@ import PrivacyPolicy from "./components/PrivacyAndTermsPage/PrivacyPolicy.jsx";
 import Terms from "./components/PrivacyAndTermsPage/Terms.jsx";
 import FAQ from './components/FaqPage/Faq.jsx'
 import CoursePage from "./components/HomePage/CourseCards/CoursePage.jsx";
-import ExpertCard from "./components/HomePage/CourseCards/ExpertCard.jsx";
 import CourseList from "./components/HomePage/CourseCards/CourseList.jsx";
 
 function App() {
