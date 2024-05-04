@@ -7,7 +7,7 @@ const CoursesSection = () => {
     <div
     className="text-center"
   >
-    <div className="md:flex md:flex-row md:justify-between text-center w-full md:mt-16 mt-10 md:mb-8 mb-1">
+    <div className="md:flex md:flex-row md:justify-between md:gap-[10rem] text-center w-full md:mt-16 mt-10 md:mb-8 mb-1">
       <div className="flex-col-6 font-inter font-bold md:text-[50px] text-[30px] subheading-color md:leading-[50px] leading-[51px] md:mb-6">
         Course By Expertise
       </div>
@@ -19,7 +19,7 @@ const CoursesSection = () => {
         </span>
       </div>
     </div>
-    <div className="flex md:flex-row justify-start mx-auto w-full md:w-3/3 mb-8">
+    <div className="flex md:flex-row md:justify-start justify-center mx-auto w-full md:w-3/3 mb-8">
       <div className="">
         <CourseList />
       </div>
