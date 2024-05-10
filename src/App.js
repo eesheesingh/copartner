@@ -18,6 +18,7 @@ import Terms from "./components/PrivacyAndTermsPage/Terms.jsx";
 import FAQ from './components/FaqPage/Faq.jsx'
 import CoursePage from "./components/HomePage/CourseCards/CoursePage.jsx";
 import CourseList from "./components/HomePage/CourseCards/CourseList.jsx";
+import RefundPolicy from "./components/PrivacyAndTermsPage/RefundPolicy.jsx";
 
 function App() {
   const router = createBrowserRouter(
@@ -42,6 +43,7 @@ function App() {
           <Route path="/subscriptionRA/:id" element={<SubscriptionRA />} />
           <Route path="/subscriptionRA/:id/course" element={<CourseList />} />
           <Route path="privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="refund-policy" element={<RefundPolicy />} />
           <Route path="terms-of-services" element={<Terms />} />
           <Route path="faq" element={<FAQ />} />
           <Route path="course" element={<CoursePage />} />
