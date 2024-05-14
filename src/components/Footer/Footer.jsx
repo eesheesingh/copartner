@@ -1,7 +1,6 @@
 import React from "react";
-import { logo, linkedin, instagram, exclamation } from "../../assets";
+import { logo, linkedin, instagram } from "../../assets";
 import { Link } from "react-router-dom";
-import { FaExclamationTriangle } from "react-icons/fa";
 
 
 const ProductList = [
@@ -10,14 +9,13 @@ const ProductList = [
   { name: "Features", link: "/" },
   { name: "Blog", link: "/blogs" },
   { name: "Privacy Policy", link: "/privacy-policy" },
+  { name: "Refund Policy", link: "/refund-policy" },
   { name: "Terms of Service", link: "/terms-of-services" },
 ];
 
 const CommunityList = [
   { name: "Subscription", link: "experts-explore" },
-  // { name: "Courses", link: "/courses" },
   { name: "Experts", link: "experts-explore" },
-  // { name: "Webinar", link: "/webinar" },
 ];
 
 const Footer = () => {
@@ -64,7 +62,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex flex-row gap-[4rem] pt-5">
-          <div className="flex flex-col justify-around w-full h-[220px] md:h-[185px]">
+          <div className="flex flex-col justify-around w-full h-[220px] md:h-[220px]">
             <span className="w-[48px] h-[15px] font-medium text-[12.6px] leading-[14.7px] mb-4 text-white">
               Product
             </span>

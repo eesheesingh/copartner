@@ -1,27 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { expertise_data } from "../../constants/data";
 import { Link } from "react-router-dom";
 import { FiChevronRight } from "react-icons/fi";
 
 const ExpertiseData = () => {
-  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 640);
+  
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
   };
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsSmallScreen(window.innerWidth <= 640);
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   return (
     <>
@@ -43,7 +32,7 @@ const ExpertiseData = () => {
     return (
       <Link to={`/subscriptionRA/${expert.id}`}>
         <div className="sm:h-[460px] h-[300px] rounded-[11px] p-2 relative flex flex-col items-center hover:bg-[#18181B] hover:opacity[50%] transition duration-150 ease-in-out">
-          <div className="w-[72px] h-[98px] sm:h-[219px]  relative profile-image mb-4">
+          <div className="h-[98px] sm:h-[219px] relative profile-image mb-4">
             <img
               src={expert.icon}
               alt="background"
@@ -52,7 +41,7 @@ const ExpertiseData = () => {
             <img
               src={expert.userImg}
               alt="User"
-              className="absolute top-0 left-0 w-full h-full object-contain rounded-t-[11px]"
+              className="top-0 left-0 w-full h-full object-contain rounded-t-[11px]"
               style={{
                 maskImage:
                   "linear-gradient(rgba(0, 0, 0, 1) 70%, transparent)",
@@ -104,7 +93,7 @@ const ExpertiseData = () => {
             </div>
           </div>
 
-          <div className="sm:w-[300px] sm:h-[25px] w-[144px] h-[32px] mb-4 sm:block hidden contents text-center">
+          <div className="sm:w-[300px] sm:h-[25px] w-[144px] h-[32px] mb-4 sm:block hidden text-center">
             <span className="text-dimWhite sm:text-[14px] text-[7px] sm:w-[278px] sm:h-[24px] sm:leading-[24px] leading-[11px] mb-[5px]">
               {expert.content}
             </span>
