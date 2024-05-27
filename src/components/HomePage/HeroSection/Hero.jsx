@@ -23,7 +23,9 @@ const Hero = () => {
         <h1 className="text-[3rem] md:text-[4.5rem] font-bold mb-4 text-gradient md:leading-[80px] leading-[48px] md:px-20 px-4">Invest, Learn and Earn</h1>
         <p className="text-90 md:text-xl text-[#ffffffbb] mb-6 md:px-20 px-4">Get partnered with our SEBI Registered Research Analysts to start your profitable trading journey. </p>
         <div>
+          <a href="https://copartner.in/">
           <button className='main-button md:text-lg text-sm' onClick={scrollToCourseSection}>Get Started Today</button>
+          </a>
         </div>
       </div>
       {/* {showLogin && <SignUp onClose={() => setShowLogin(false)} />} */}

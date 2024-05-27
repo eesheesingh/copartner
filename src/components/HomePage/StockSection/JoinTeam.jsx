@@ -174,35 +174,57 @@ const JoinTeam = ({ closeModal }) => {
               </label>
             </div>
 
-            {/* Expertise In Field */}
+            {/* PAN Card Number Field */}
             <div className="relative">
-              <select
-                name="expertise"
-                id="expertise"
-                value={formValues.expertise}
+              <input
+                type="number"
+                name="experience"
+                id="experience"
+                value={formValues.experience}
                 onChange={handleInputChange}
-                className="block px-2.5 pb-2.5 pt-4 w-full text-sm text-white bg-transparent rounded-lg border-2 border-[#fff] appearance-none dark:text-white dark:border-[#fff4] dark:focus:border-[#fff] focus:outline-none focus:ring-0 focus:[#fff] peer"
-              >
-                <option value="" disabled selected>
-                  Select Expertise
-                </option>
-                <option value="1" className="bg-[#18181B]">
-                  Future & Options
-                </option>
-                <option value="2" className="bg-[#18181B]">
-                  Equity
-                </option>
-                <option value="3" className="bg-[#18181B]">
-                  Commodity
-                </option>
-                {/* Add more options as needed */}
-              </select>
+                className="block px-2.5 pb-2.5 pt-4 w-full text-sm text-white bg-transparent rounded-lg border-2 border-[#fff] appearance-none dark:text-white dark:border-[#fff4] dark:focus:border-[#fff] focus:outline-none focus:ring-0 focus:[#fff] peer [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                placeholder=" "
+              />
               <label
-                htmlFor="expertise"
+                htmlFor="experience"
                 className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-0 bg-[#18181B] px-2 peer-focus:px-2 peer-focus:text-[#fff] peer-focus:dark:text-[#fff] peer-focus:border-2 rounded-md peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1"
               >
-                Expertise In
+                PAN Card Number
               </label>
+            </div>
+
+            {/* Expertise In Field */}
+            <div className="relative">
+              <div className="custom-select-wrapper">
+                <select
+                  name="expertise"
+                  id="expertise"
+                  value={formValues.expertise}
+                  onChange={handleInputChange}
+                  className="block px-2.5 pb-2.5 pt-4 w-full text-sm text-white bg-transparent rounded-lg border-2 border-[#fff] appearance-none dark:text-white dark:border-[#fff4] dark:focus:border-[#fff] focus:outline-none focus:ring-0 focus:[#fff] peer"
+                >
+                  <option value="" disabled>
+                    Select Expertise
+                  </option>
+                  <option value="Future & Options" className="bg-[#18181B]">
+                    Future & Options
+                  </option>
+                  <option value="Equity" className="bg-[#18181B]">
+                    Equity
+                  </option>
+                  <option value="Commodity" className="bg-[#18181B]">
+                    Commodity
+                  </option>
+                  {/* Add more options as needed */}
+                </select>
+                <label
+                  htmlFor="expertise"
+                  className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-0 bg-[#18181B] px-2 peer-focus:px-2 peer-focus:text-[#fff] peer-focus:dark:text-[#fff] peer-focus:border-2 rounded-md peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1"
+                >
+                  Expertise In
+                </label>
+                <span className="custom-arrow"></span>
+              </div>
             </div>
 
             {/* Experience Field */}
@@ -221,6 +243,44 @@ const JoinTeam = ({ closeModal }) => {
                 className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-0 bg-[#18181B] px-2 peer-focus:px-2 peer-focus:text-[#fff] peer-focus:dark:text-[#fff] peer-focus:border-2 rounded-md peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1"
               >
                 Experience
+              </label>
+            </div>
+
+            {/* Channel Field */}
+            <div className="relative">
+              <input
+                type="number"
+                name="experience"
+                id="experience"
+                value={formValues.experience}
+                onChange={handleInputChange}
+                className="block px-2.5 pb-2.5 pt-4 w-full text-sm text-white bg-transparent rounded-lg border-2 border-[#fff] appearance-none dark:text-white dark:border-[#fff4] dark:focus:border-[#fff] focus:outline-none focus:ring-0 focus:[#fff] peer [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                placeholder=" "
+              />
+              <label
+                htmlFor="experience"
+                className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-0 bg-[#18181B] px-2 peer-focus:px-2 peer-focus:text-[#fff] peer-focus:dark:text-[#fff] peer-focus:border-2 rounded-md peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1"
+              >
+                Channel Name
+              </label>
+            </div>
+
+            {/* Sebi Registration Field */}
+            <div className="relative">
+              <input
+                type="number"
+                name="experience"
+                id="experience"
+                value={formValues.experience}
+                onChange={handleInputChange}
+                className="block px-2.5 pb-2.5 pt-4 w-full text-sm text-white bg-transparent rounded-lg border-2 border-[#fff] appearance-none dark:text-white dark:border-[#fff4] dark:focus:border-[#fff] focus:outline-none focus:ring-0 focus:[#fff] peer [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                placeholder=" "
+              />
+              <label
+                htmlFor="experience"
+                className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-0 bg-[#18181B] px-2 peer-focus:px-2 peer-focus:text-[#fff] peer-focus:dark:text-[#fff] peer-focus:border-2 rounded-md peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1"
+              >
+                SEBI Registration Number
               </label>
             </div>
 
@@ -245,7 +305,7 @@ const JoinTeam = ({ closeModal }) => {
                 htmlFor="telegramLink"
                 className="absolute md:hidden text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-0 bg-[#18181B] px-2 peer-focus:px-2 peer-focus:text-[#fff] peer-focus:dark:text-[#fff] peer-focus:border-2 rounded-md peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1"
               >
-                Telegram Channel Link
+                Channel Link
               </label>
             </div>
 
@@ -304,21 +364,6 @@ const JoinTeam = ({ closeModal }) => {
               </div>
             </div>
           </div>
-
-          {/* <div className="relative flex items-start">
-                        <input
-                            type="checkbox"
-                            id="becomeCopartner"
-                            checked={formValues.becomeCopartner}
-                            onChange={handleInputChange}
-                            className="mr-2 appearance-none bg-transparent border-2 border-[#fff] rounded-md w-4 h-4 focus:outline-none focus:ring-0 focus:[#fff] peer"
-                        />
-                        <label htmlFor="becomeCopartner" className="text-sm text-gray-500 dark:text-gray-400">
-                            Become Copartner <br/> Take your team up a level with easy-to-use tools, effortless templates and Terms & Conditions.
-                        </label>
-                        <input id="link-checkbox" type="checkbox" value="" class="w-[15px] h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-    <label for="link-checkbox" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"> <h3 className='text-[15px]'>Become Copartner</h3>I agree with the <a href="#" class="text-blue-600 dark:text-blue-500 hover:underline">terms and conditions</a>.</label>
-                    </div> */}
 
           <div className="relative flex items-center md:mr-96">
             <input

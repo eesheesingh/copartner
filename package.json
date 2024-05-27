@@ -9,6 +9,7 @@
     "proxy": "https://copartners.in:5181"
   },
   "dependencies": {
+    "@devnomic/marquee": "^1.0.2",
     "@emailjs/browser": "^4.3.3",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -51,6 +52,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "tailwindcss": "^3.4.3"
   }
 }

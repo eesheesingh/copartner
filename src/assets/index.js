@@ -105,8 +105,10 @@ import paridhi from './paridhi.png'
 import samay from './Samayavif.png'
 import ritik from './Ritik.png'
 import tick2 from "./Vector.png";
+import userBack from "./userBck.png";
 
 export {
+    userBack,
     tick,
     trustTeam,
     layer,
