@@ -7,6 +7,7 @@ const JoinTeam = () => {
   const [showSuccessPopup, setShowSuccessPopup] = useState(false);
   const [copartnerChecked, setCopartnerChecked] = useState(true);
   const [formValues, setFormValues] = useState({
+    legalName: "",  // Added state for legal name
     name: "",
     expertsType: "",
     sebiNo: "",
@@ -58,6 +59,7 @@ const JoinTeam = () => {
           console.log(result.text);
           setShowSuccessPopup(true);
           setFormValues({
+            legalName: "",
             name: "",
             expertsType: "",
             sebiNo: "",
@@ -114,8 +116,8 @@ const JoinTeam = () => {
   }, [isModalOpen]);
 
   return (
-    <div className="flex items-center justify-center min-h-screen p-6 mt-[5rem]">
-      <div className=" border-[1px] border-[#ffffff3c] p-8 rounded-lg w-full max-w-3xl shadow-lg">
+    <div className="flex items-center justify-center min-h-screen p-6 mt-[5rem] header-bg">
+      <div className=" border-[1px] border-[#ffffff3c] p-8 rounded-lg w-full max-w-5xl shadow-lg">
         <h2 className="text-3xl font-bold mb-6 text-white text-center">
           Join Our Expert Team
         </h2>
@@ -128,10 +130,29 @@ const JoinTeam = () => {
           <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
             <div className="relative">
               <label
+                htmlFor="legalName"
+                className="block text-sm font-medium text-gray-300"
+              >
+                LEGAL Name <span className="text-red-500">*</span>
+              </label>
+              <input
+                type="text"
+                name="legalName"
+                id="legalName"
+                value={formValues.legalName}
+                onChange={handleInputChange}
+                className="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                placeholder="Enter your legal name"
+                required
+              />
+            </div>
+
+            <div className="relative">
+              <label
                 htmlFor="name"
                 className="block text-sm font-medium text-gray-300"
               >
-                Name
+                Name <span className="text-red-500">*</span>
               </label>
               <input
                 type="text"
@@ -141,6 +162,7 @@ const JoinTeam = () => {
                 onChange={handleInputChange}
                 className="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
                 placeholder="Enter your name"
+                required
               />
             </div>
 
@@ -149,7 +171,7 @@ const JoinTeam = () => {
                 htmlFor="expertsType"
                 className="block text-sm font-medium text-gray-300"
               >
-                Experts Type
+                Experts Type <span className="text-red-500">*</span>
               </label>
               <select
                 name="expertsType"
@@ -157,6 +179,7 @@ const JoinTeam = () => {
                 value={formValues.expertsType}
                 onChange={handleInputChange}
                 className="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                required
               >
                 <option value="" disabled>
                   Select Expertise
@@ -173,7 +196,7 @@ const JoinTeam = () => {
                 htmlFor="sebiNo"
                 className="block text-sm font-medium text-gray-300"
               >
-                SEBI NO.
+                SEBI Number. <span className="text-red-500">*</span>
               </label>
               <input
                 type="text"
@@ -183,6 +206,7 @@ const JoinTeam = () => {
                 onChange={handleInputChange}
                 className="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
                 placeholder="Enter SEBI number"
+                required
               />
             </div>
 
@@ -191,7 +215,7 @@ const JoinTeam = () => {
                 htmlFor="email"
                 className="block text-sm font-medium text-gray-300"
               >
-                Email
+                Email <span className="text-red-500">*</span>
               </label>
               <input
                 type="email"
@@ -201,6 +225,7 @@ const JoinTeam = () => {
                 onChange={handleInputChange}
                 className="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
                 placeholder="Enter your email"
+                required
               />
             </div>
 
@@ -209,7 +234,7 @@ const JoinTeam = () => {
                 htmlFor="experience"
                 className="block text-sm font-medium text-gray-300"
               >
-                Experience (in years)
+                Experience (in years) <span className="text-red-500">*</span>
               </label>
               <input
                 type="number"
@@ -219,6 +244,7 @@ const JoinTeam = () => {
                 onChange={handleInputChange}
                 className="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
                 placeholder="Enter your experience"
+                required
               />
             </div>
 
@@ -227,7 +253,7 @@ const JoinTeam = () => {
                 htmlFor="mobile"
                 className="block text-sm font-medium text-gray-300"
               >
-                Mobile Number
+                Mobile Number <span className="text-red-500">*</span>
               </label>
               <input
                 type="tel"
@@ -237,6 +263,7 @@ const JoinTeam = () => {
                 onChange={handleInputChange}
                 className="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
                 placeholder="Enter your mobile number"
+                required
               />
             </div>
 
@@ -245,7 +272,7 @@ const JoinTeam = () => {
                 htmlFor="channelName"
                 className="block text-sm font-medium text-gray-300"
               >
-                Channel Name
+                Channel Name <span className="text-red-500">*</span>
               </label>
               <input
                 type="text"
@@ -255,6 +282,7 @@ const JoinTeam = () => {
                 onChange={handleInputChange}
                 className="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
                 placeholder="Enter channel name"
+                required
               />
             </div>
 
@@ -263,7 +291,7 @@ const JoinTeam = () => {
                 htmlFor="panCard"
                 className="block text-sm font-medium text-gray-300"
               >
-                PAN Card
+                PAN Card <span className="text-red-500">*</span>
               </label>
               <input
                 type="text"
@@ -273,6 +301,7 @@ const JoinTeam = () => {
                 onChange={handleInputChange}
                 className="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
                 placeholder="Enter PAN card number"
+                required
               />
             </div>
 
@@ -281,7 +310,7 @@ const JoinTeam = () => {
                 htmlFor="address"
                 className="block text-sm font-medium text-gray-300"
               >
-                Address
+                Address <span className="text-red-500">*</span>
               </label>
               <input
                 type="text"
@@ -291,6 +320,7 @@ const JoinTeam = () => {
                 onChange={handleInputChange}
                 className="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
                 placeholder="Enter your address"
+                required
               />
             </div>
 
@@ -299,7 +329,7 @@ const JoinTeam = () => {
                 htmlFor="state"
                 className="block text-sm font-medium text-gray-300"
               >
-                State
+                State <span className="text-red-500">*</span>
               </label>
               <input
                 type="text"
@@ -309,6 +339,7 @@ const JoinTeam = () => {
                 onChange={handleInputChange}
                 className="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
                 placeholder="Enter your state"
+                required
               />
             </div>
 
@@ -317,7 +348,7 @@ const JoinTeam = () => {
                 htmlFor="gstNumber"
                 className="block text-sm font-medium text-gray-300"
               >
-                GST Number
+                GST Number <span className="text-red-500">*</span>
               </label>
               <input
                 type="text"
@@ -327,6 +358,7 @@ const JoinTeam = () => {
                 onChange={handleInputChange}
                 className="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
                 placeholder="Enter GST number"
+                required
               />
             </div>
 
@@ -335,7 +367,7 @@ const JoinTeam = () => {
                 htmlFor="telegramLink"
                 className="block text-sm font-medium text-gray-300"
               >
-                Free Telegram Channel Link
+                Free Telegram Channel Link <span className="text-red-500">*</span>
               </label>
               <input
                 type="text"
@@ -345,6 +377,7 @@ const JoinTeam = () => {
                 onChange={handleInputChange}
                 className="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
                 placeholder="Enter your Telegram channel link"
+                required
               />
             </div>
 
@@ -353,7 +386,7 @@ const JoinTeam = () => {
                 htmlFor="premiumTelegramLink"
                 className="block text-sm font-medium text-gray-300"
               >
-                Premium Telegram Channel Link
+                Premium Telegram Channel Link <span className="text-red-500">*</span>
               </label>
               <input
                 type="text"
@@ -363,6 +396,7 @@ const JoinTeam = () => {
                 onChange={handleInputChange}
                 className="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
                 placeholder="Enter your premium Telegram channel link"
+                required
               />
             </div>
 
@@ -371,7 +405,7 @@ const JoinTeam = () => {
                 htmlFor="telegramMembers"
                 className="block text-sm font-medium text-gray-300"
               >
-                Followers on Telegram Channel
+                Followers on Telegram Channel <span className="text-red-500">*</span>
               </label>
               <input
                 type="text"
@@ -381,6 +415,7 @@ const JoinTeam = () => {
                 onChange={handleInputChange}
                 className="mt-1 block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-white placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
                 placeholder="Enter number of followers"
+                required
               />
             </div>
 
@@ -389,7 +424,7 @@ const JoinTeam = () => {
                 htmlFor="profileImage"
                 className="block text-sm font-medium text-gray-300"
               >
-                Profile Image
+                Profile Image <span className="text-red-500">*</span>
               </label>
               <div className="mt-1 border-2 border-dashed rounded-lg p-4">
                 <input
@@ -399,6 +434,7 @@ const JoinTeam = () => {
                   accept=".jpg,.jpeg,.png"
                   onChange={handleFileChange}
                   className="hidden"
+                  required
                 />
                 <label
                   htmlFor="profileImage"
@@ -419,7 +455,7 @@ const JoinTeam = () => {
                 htmlFor="signature"
                 className="block text-sm font-medium text-gray-300"
               >
-                Signature (Image)
+                Signature (Image) <span className="text-red-500">*</span>
               </label>
               <div className="mt-1 border-2 border-dashed rounded-lg p-4">
                 <input
@@ -429,6 +465,7 @@ const JoinTeam = () => {
                   accept=".jpg,.jpeg,.png"
                   onChange={handleFileChange}
                   className="hidden"
+                  required
                 />
                 <label
                   htmlFor="signature"
@@ -449,7 +486,7 @@ const JoinTeam = () => {
                 htmlFor="my_file"
                 className="block text-sm font-medium text-gray-300"
               >
-                SEBI Registration Certificate (Image, Doc)
+                SEBI Registration Certificate (Image, Doc) <span className="text-red-500">*</span>
               </label>
               <div className="mt-1 border-2 border-dashed rounded-lg p-4">
                 <input
@@ -459,6 +496,7 @@ const JoinTeam = () => {
                   accept=".pdf,.jpg,.jpeg,.png"
                   onChange={handleFileChange}
                   className="hidden"
+                  required
                 />
                 <label
                   htmlFor="my_file"
@@ -482,6 +520,7 @@ const JoinTeam = () => {
               checked={copartnerChecked}
               onChange={handleCopartnerChange}
               className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+              required
             />
             <label
               htmlFor="copartnerCheckbox"

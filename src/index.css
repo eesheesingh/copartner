@@ -188,6 +188,12 @@ text-fill-color: transparent;
   transform: translateY(-5px);
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
 @media (max-width: 1060px) {
   .expertise-Bg {
