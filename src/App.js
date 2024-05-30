@@ -20,6 +20,7 @@ import CoursePage from "./components/HomePage/CourseCards/CoursePage.jsx";
 import CourseList from "./components/HomePage/CourseCards/CourseList.jsx";
 import RefundPolicy from "./components/PrivacyAndTermsPage/RefundPolicy.jsx";
 import JoinTeamForm from "./components/HomePage/StockSection/JoinTeamForm.jsx";
+import ExpertTerms from "./components/HomePage/StockSection/ExpertTerms.jsx";
 
 function App() {
   const router = createBrowserRouter(
@@ -49,6 +50,7 @@ function App() {
           <Route path="faq" element={<FAQ />} />
           <Route path="course" element={<CoursePage />} />
           <Route path="/joinTeam" element={<JoinTeamForm />} />
+          <Route path="/terms-and-conditions-for-experts" element={<ExpertTerms />} />
       </Route>
     )
   );

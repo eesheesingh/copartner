@@ -43,9 +43,12 @@ const Stock = () => {
             }}
           />
           <div className="md:hidden">
-            <Link to="/joinTeam" className="main-button">
+            {/* <Link to="/joinTeam" className="main-button">
               Join Expert Team
-            </Link>
+            </Link> */}
+            <a href="https://forms.gle/kx5TwUbSUwHFEGZcA" target="_blank" rel="noreferrer" className="main-button">
+              Join Expert Team
+            </a> 
           </div>
         </div>
       </div>

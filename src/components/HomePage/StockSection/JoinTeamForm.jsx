@@ -26,6 +26,7 @@ const JoinTeam = () => {
     signature: null,
     my_file: null,
   });
+  
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [showConfirmation, setShowConfirmation] = useState(false);
@@ -43,6 +44,8 @@ const JoinTeam = () => {
     const { name, files } = e.target;
     setFormValues({ ...formValues, [name]: files[0] });
   };
+
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -429,7 +432,7 @@ const JoinTeam = () => {
               <div className="mt-1 border-2 border-dashed rounded-lg p-4">
                 <input
                   type="file"
-                  name="profileImage"
+                  name="upload"
                   id="profileImage"
                   accept=".jpg,.jpeg,.png"
                   onChange={handleFileChange}
@@ -460,7 +463,7 @@ const JoinTeam = () => {
               <div className="mt-1 border-2 border-dashed rounded-lg p-4">
                 <input
                   type="file"
-                  name="signature"
+                  name="upload"
                   id="signature"
                   accept=".jpg,.jpeg,.png"
                   onChange={handleFileChange}
@@ -491,7 +494,7 @@ const JoinTeam = () => {
               <div className="mt-1 border-2 border-dashed rounded-lg p-4">
                 <input
                   type="file"
-                  name="my_file"
+                  name="upload"
                   id="my_file"
                   accept=".pdf,.jpg,.jpeg,.png"
                   onChange={handleFileChange}
